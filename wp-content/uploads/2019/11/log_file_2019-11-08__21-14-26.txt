@@ -1,0 +1,80 @@
+
+---Downloaded files---
+The import files for: Demo One were successfully downloaded!
+Initial max execution time = 30
+Files info:
+Site URL = https://alphadevsite2.site
+Data file = /home/theal029/alphadevsite2.site/wp-content/themes/seolounge/inc/import/content.xml
+Widget file = /home/theal029/alphadevsite2.site/wp-content/themes/seolounge/inc/import/widgets.wie
+Customizer file = not defined!
+Redux files:
+seolounge_theme_option -> /home/theal029/alphadevsite2.site/wp-content/themes/seolounge/inc/import/redux.json 
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+Widgets in Menu : 
+
+Navigation Menu - Essential - Widget already exists
+Navigation Menu - Appearance - Widget already exists
+Navigation Menu - Creative - Widget already exists
+Navigation Menu - Modern - Widget already exists
+Navigation Menu - Featured Services - Widget already exists
+Navigation Menu -   - Widget already exists
+Navigation Menu - SEO Whitepaper - Widget already exists
+Text - &nbsp; - Widget already exists
+
+Sidebar : 
+
+Search - No Title - Widget already exists
+Recent Posts - No Title - Widget already exists
+Recent Comments - No Title - Widget already exists
+Archives - No Title - Widget already exists
+Categories - No Title - Widget already exists
+Meta - No Title - Widget already exists
+Search - Search - Widget already exists
+Categories - Categories - Widget already exists
+Recent Posts - Recent Posts - Widget already exists
+Tag Cloud - Tags - Widget already exists
+
+Footer | #1 : 
+
+Text - About Us - Widget already exists
+
+Footer | #2 : 
+
+Navigation Menu - Important Links - Widget already exists
+
+Footer | #3 : 
+
+Navigation Menu - Featured Services - Widget already exists
+
+Footer | #4 : 
+
+Text - Contact Us - Widget already exists
+
+Hamburger | Sidebar : 
+
+Text - No Title - Widget already exists
+RadiantThemes Recent Posts With Thumbnail Widget - No Title - Widget already exists
+RadiantThemes Contact Box - No Title - Widget already exists
+RadiantThemes Social - No Title - Widget already exists
+
+
+
+---Importing Redux settings---
+Redux settings import for: seolounge_theme_option finished successfully!
+
+---pt-ocdi/after_import---
+

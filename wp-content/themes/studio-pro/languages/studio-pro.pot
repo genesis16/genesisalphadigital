@@ -1,0 +1,126 @@
+# Copyright (C) 2019 Studio Pro 2.3.0
+# This file is distributed under the same license as the Studio Pro 2.3.0 package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Studio Pro 2.3.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: includes/customize.php:60
+msgid "Logo Size"
+msgstr ""
+
+#: includes/customize.php:61
+msgid "Set the logo size in pixels. Default is 100."
+msgstr ""
+
+#: includes/customize.php:82
+msgid "Enable sticky header"
+msgstr ""
+
+#: includes/customize.php:102
+msgid "Blog Layout"
+msgstr ""
+
+#: includes/customize.php:125
+msgid " Color"
+msgstr ""
+
+#: includes/enqueue.php:44, includes/enqueue.php:45
+msgid "Menu"
+msgstr ""
+
+#: includes/hero.php:135
+msgid "Latest Posts"
+msgstr ""
+
+#: includes/hero.php:144
+msgid "Not found, error 404"
+msgstr ""
+
+#: includes/hero.php:153
+msgid "Search results for: "
+msgstr ""
+
+#: includes/setup.php:61
+msgid "Header Menu"
+msgstr ""
+
+#: includes/setup.php:147
+msgid "Hero Image"
+msgstr ""
+
+#: includes/setup.php:153
+msgid "Narrow Content"
+msgstr ""
+
+#: includes/widgets.php:22
+msgid "Front Page 1"
+msgstr ""
+
+#: includes/widgets.php:23
+msgid "Front page 1 widget area."
+msgstr ""
+
+#: includes/widgets.php:31
+msgid "Front Page 2"
+msgstr ""
+
+#: includes/widgets.php:32
+msgid "Front page 2 widget area."
+msgstr ""
+
+#: includes/widgets.php:38
+msgid "Front Page 3"
+msgstr ""
+
+#: includes/widgets.php:39
+msgid "Front page 3 widget area."
+msgstr ""
+
+#: includes/widgets.php:45
+msgid "Front Page 4"
+msgstr ""
+
+#: includes/widgets.php:46
+msgid "Front page 4 widget area."
+msgstr ""
+
+#: includes/widgets.php:52
+msgid "Front Page 5"
+msgstr ""
+
+#: includes/widgets.php:53
+msgid "Front page 5 widget area."
+msgstr ""
+
+#: includes/widgets.php:59
+msgid "Front Page 6"
+msgstr ""
+
+#: includes/widgets.php:60
+msgid "Front page 6 widget area."
+msgstr ""
+
+#: includes/widgets.php:66
+msgid "Before Footer"
+msgstr ""
+
+#: includes/widgets.php:67
+msgid "Before Footer widget area."
+msgstr ""
+
+#: templates/page-builder.php:5
+msgid "Page Builder"
+msgstr ""
+
+#: templates/page-landing.php:5
+msgid "Landing Page"
+msgstr ""

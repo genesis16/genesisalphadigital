@@ -1,0 +1,80 @@
+[03-Dec-2019 02:56:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/plugins/radiantthemes-addons/portfolio-slider/template/template-portfolio-slider-style-two.php on line 49
+[03-Dec-2019 02:56:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/plugins/radiantthemes-addons/portfolio-slider/template/template-portfolio-slider-style-two.php on line 49
+[03-Dec-2019 03:02:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/plugins/radiantthemes-addons/portfolio-slider/template/template-portfolio-slider-style-two.php on line 49
+[03-Dec-2019 03:02:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/plugins/radiantthemes-addons/portfolio-slider/template/template-portfolio-slider-style-two.php on line 49
+[09-Dec-2019 00:42:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/plugins/radiantthemes-addons/portfolio-slider/template/template-portfolio-slider-style-two.php on line 49
+[09-Dec-2019 00:42:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/plugins/radiantthemes-addons/portfolio-slider/template/template-portfolio-slider-style-two.php on line 49
+[09-Dec-2019 05:36:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/plugins/radiantthemes-addons/portfolio-slider/template/template-portfolio-slider-style-two.php on line 49
+[09-Dec-2019 05:36:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/plugins/radiantthemes-addons/portfolio-slider/template/template-portfolio-slider-style-two.php on line 49
+[09-Dec-2019 23:23:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/plugins/radiantthemes-addons/portfolio-slider/template/template-portfolio-slider-style-two.php on line 49
+[09-Dec-2019 23:23:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/plugins/radiantthemes-addons/portfolio-slider/template/template-portfolio-slider-style-two.php on line 49
+[09-Dec-2019 23:29:08 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/plugins/radiantthemes-addons/portfolio-slider/template/template-portfolio-slider-style-two.php on line 49
+[09-Dec-2019 23:29:08 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/plugins/radiantthemes-addons/portfolio-slider/template/template-portfolio-slider-style-two.php on line 49
+[09-Dec-2019 23:29:08 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/plugins/radiantthemes-addons/portfolio-slider/template/template-portfolio-slider-style-two.php on line 49
+[09-Dec-2019 23:29:08 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/plugins/radiantthemes-addons/portfolio-slider/template/template-portfolio-slider-style-two.php on line 49
+[15-Feb-2020 01:41:11 UTC] PHP Warning:  array_merge(): Argument #1 is not an array in /home/theal029/public_html/wp-content/themes/seolounge/inc/tgmpa/tgmpa.php on line 51
+[15-Feb-2020 01:41:11 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/themes/seolounge/inc/tgmpa/class-tgm-plugin-activation.php on line 2123
+[16-Feb-2020 10:20:07 UTC] PHP Warning:  array_merge(): Argument #1 is not an array in /home/theal029/public_html/wp-content/themes/seolounge/inc/tgmpa/tgmpa.php on line 51
+[16-Feb-2020 10:20:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/themes/seolounge/inc/tgmpa/class-tgm-plugin-activation.php on line 2123
+[17-Feb-2020 00:04:00 UTC] PHP Warning:  array_merge(): Argument #1 is not an array in /home/theal029/public_html/wp-content/themes/seolounge/inc/tgmpa/tgmpa.php on line 51
+[17-Feb-2020 00:04:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/theal029/public_html/wp-content/themes/seolounge/inc/tgmpa/class-tgm-plugin-activation.php on line 2123
+[24-Mar-2020 23:32:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function as_get_scheduled_actions() in /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php:918
+Stack trace:
+#0 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php(909): mailchimp_delete_as_jobs()
+#1 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php(949): mailchimp_flush_database_tables()
+#2 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/uninstall.php(52): mailchimp_clean_database()
+#3 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/uninstall.php(56): mailchimp_woocommerce_uninstall()
+#4 /home/theal029/public_html/wp-admin/includes/plugin.php(1209): include('/home/theal029/...')
+#5 /home/theal029/public_html/wp-admin/includes/plugin.php(944): uninstall_plugin('mailchimp-for-w...')
+#6 /home/theal029/public_html/wp-admin/includes/ajax-actions.php(4541): delete_plugins(Array)
+#7 /home/theal029/public_html/wp-includes/class-wp-hoo in /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php on line 918
+[25-Mar-2020 00:12:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function as_get_scheduled_actions() in /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php:918
+Stack trace:
+#0 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php(909): mailchimp_delete_as_jobs()
+#1 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php(949): mailchimp_flush_database_tables()
+#2 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/uninstall.php(52): mailchimp_clean_database()
+#3 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/uninstall.php(56): mailchimp_woocommerce_uninstall()
+#4 /home/theal029/public_html/wp-admin/includes/plugin.php(1209): include('/home/theal029/...')
+#5 /home/theal029/public_html/wp-admin/includes/plugin.php(944): uninstall_plugin('mailchimp-for-w...')
+#6 /home/theal029/public_html/wp-admin/includes/ajax-actions.php(4541): delete_plugins(Array)
+#7 /home/theal029/public_html/wp-includes/class-wp-hoo in /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php on line 918
+[25-Mar-2020 00:12:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function as_get_scheduled_actions() in /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php:918
+Stack trace:
+#0 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php(909): mailchimp_delete_as_jobs()
+#1 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php(949): mailchimp_flush_database_tables()
+#2 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/uninstall.php(52): mailchimp_clean_database()
+#3 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/uninstall.php(56): mailchimp_woocommerce_uninstall()
+#4 /home/theal029/public_html/wp-admin/includes/plugin.php(1209): include('/home/theal029/...')
+#5 /home/theal029/public_html/wp-admin/includes/plugin.php(944): uninstall_plugin('mailchimp-for-w...')
+#6 /home/theal029/public_html/wp-admin/includes/ajax-actions.php(4541): delete_plugins(Array)
+#7 /home/theal029/public_html/wp-includes/class-wp-hoo in /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php on line 918
+[25-Mar-2020 00:13:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function as_get_scheduled_actions() in /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php:918
+Stack trace:
+#0 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php(909): mailchimp_delete_as_jobs()
+#1 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php(949): mailchimp_flush_database_tables()
+#2 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/uninstall.php(52): mailchimp_clean_database()
+#3 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/uninstall.php(56): mailchimp_woocommerce_uninstall()
+#4 /home/theal029/public_html/wp-admin/includes/plugin.php(1209): include('/home/theal029/...')
+#5 /home/theal029/public_html/wp-admin/includes/plugin.php(944): uninstall_plugin('mailchimp-for-w...')
+#6 /home/theal029/public_html/wp-admin/includes/ajax-actions.php(4541): delete_plugins(Array)
+#7 /home/theal029/public_html/wp-includes/class-wp-hoo in /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php on line 918
+[25-Mar-2020 00:13:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function as_get_scheduled_actions() in /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php:918
+Stack trace:
+#0 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php(909): mailchimp_delete_as_jobs()
+#1 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php(949): mailchimp_flush_database_tables()
+#2 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/uninstall.php(52): mailchimp_clean_database()
+#3 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/uninstall.php(56): mailchimp_woocommerce_uninstall()
+#4 /home/theal029/public_html/wp-admin/includes/plugin.php(1209): include('/home/theal029/...')
+#5 /home/theal029/public_html/wp-admin/includes/plugin.php(944): uninstall_plugin('mailchimp-for-w...')
+#6 /home/theal029/public_html/wp-admin/includes/ajax-actions.php(4541): delete_plugins(Array)
+#7 /home/theal029/public_html/wp-includes/class-wp-hoo in /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php on line 918
+[25-Mar-2020 00:13:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function as_get_scheduled_actions() in /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php:918
+Stack trace:
+#0 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php(909): mailchimp_delete_as_jobs()
+#1 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php(949): mailchimp_flush_database_tables()
+#2 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/uninstall.php(52): mailchimp_clean_database()
+#3 /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/uninstall.php(56): mailchimp_woocommerce_uninstall()
+#4 /home/theal029/public_html/wp-admin/includes/plugin.php(1209): include('/home/theal029/...')
+#5 /home/theal029/public_html/wp-admin/includes/plugin.php(944): uninstall_plugin('mailchimp-for-w...')
+#6 /home/theal029/public_html/wp-admin/includes/ajax-actions.php(4541): delete_plugins(Array)
+#7 /home/theal029/public_html/wp-includes/class-wp-hoo in /home/theal029/public_html/wp-content/plugins/mailchimp-for-woocommerce/bootstrap.php on line 918
