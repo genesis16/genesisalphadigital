@@ -930,7 +930,7 @@ a.alignright, img.alignright, .wp-caption.alignright {
   margin-bottom: 0;
 }
 .site-title a, .site-title a:focus, .site-title a:hover {
-  color: #333;
+  color: #fff;
   text-decoration: none;
 }
 .site-description, .wp-custom-logo .site-title {
@@ -973,7 +973,7 @@ a.alignright, img.alignright, .wp-caption.alignright {
   opacity: 1;
 }
 .genesis-nav-menu a {
-  color: #333;
+  color: #fff;
   display: block;
   font-size: 15px;
   font-weight: 400;
