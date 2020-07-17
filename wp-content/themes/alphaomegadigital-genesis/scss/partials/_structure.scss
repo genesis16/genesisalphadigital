@@ -7,7 +7,10 @@
 .site-container {
 	animation: fadein 1s;
 	word-wrap: break-word;
-}
+	background: $cornflower-blue;
+
+
+	
 
 @keyframes fadein {
 
@@ -28,14 +31,17 @@
 	clear: both;
 	margin: 0 auto;
 	padding: 60px 30px 0;
-	background: $cornflower-blue;
 	height: 100vh;
+	max-width: none;
 	
 	.genesis-title-hidden & {
 	    padding-top: 0;
 	}
 
-	@media only screen and (min-width: $standard-screen-width) {
-		max-width: 1140px;
-	}
+	@media only screen and (max-width: 1023px)
+     .site-inner {
+      padding-left: 0%;
+      padding-right: 0%;
+      }
+ }
 }

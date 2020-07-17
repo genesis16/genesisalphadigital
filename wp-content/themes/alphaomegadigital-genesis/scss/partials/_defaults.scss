@@ -108,6 +108,10 @@ h1 {
 
 h2 {
 	font-size: $h2--font-size;
+	
+}
+.entry-header {
+    color: $white;
 }
 
 h3 {
@@ -117,7 +121,9 @@ h3 {
 h4 {
 	font-size: $h4--font-size;
 }
-
+.entry-content {
+    color: $white;
+}
 .entry-content h3,
 .entry-content h4 {
 	font-weight: $font-weight--semibold;

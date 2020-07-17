@@ -287,16 +287,22 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
 }
 h1 {
-  font-size: 30px;
+  font-size: 60px;
 }
 h2 {
-  font-size: 27px;
+  font-size: 40px;
+}
+.entry-header {
+  color: #fff;
 }
 h3 {
   font-size: 24px;
 }
 h4 {
   font-size: 20px;
+}
+.entry-content {
+  color: #fff;
 }
 .entry-content h3, .entry-content h4 {
   font-weight: 600;
@@ -510,6 +516,9 @@ td:last-child, th:last-child {
 .site-container {
   animation: fadein 1s;
   word-wrap: break-word;
+  background: #4379de;
+  /* Site Inner
+   --------------------------------------------- */
 }
 @keyframes fadein {
   from {
@@ -519,21 +528,21 @@ td:last-child, th:last-child {
     opacity: 1;
   }
 }
-/* Site Inner
- --------------------------------------------- */
-.site-inner {
+.site-container .site-inner {
   clear: both;
   margin: 0 auto;
   padding: 60px 30px 0;
-  background: #4379de;
   height: 100vh;
+  max-width: none;
 }
-.genesis-title-hidden .site-inner {
+.genesis-title-hidden .site-container .site-inner {
   padding-top: 0;
 }
-@media only screen and (min-width: 960px) {
-  .site-inner {
-    max-width: 1140px;
+@media only screen and (max-width: 1023px)
+     .site-inner {
+  .site-container .site-inner {
+    padding-left: 0%;
+    padding-right: 0%;
   }
 }
 /* Common Classes
@@ -892,7 +901,7 @@ a.alignright, img.alignright, .wp-caption.alignright {
 /* Site Header
  ---------------------------------------------------------------------------- */
 .site-header {
-  background-color: #fff;
+  background-color: #4379de;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   padding: 0 30px;
 }
