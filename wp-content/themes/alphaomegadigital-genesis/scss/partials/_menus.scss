@@ -5,7 +5,11 @@
 	clear: both;
 	line-height: $line-height--smaller;
 	width: 100%;
-
+	
+   .sub-menu a {
+       color: $cornflower-blue;
+       
+   }
 	.menu-item {
 		display: block;
 		float: none;
