@@ -8,6 +8,7 @@
 	animation: fadein 1s;
 	word-wrap: break-word;
 	background: $cornflower-blue;
+	
 
 
 	
@@ -23,6 +24,9 @@
 	}
 
 }
+.site-container .has-large-font-size {
+    font-size: 40px;
+}
 
 /* Site Inner
 --------------------------------------------- */
@@ -33,6 +37,7 @@
 	padding: 60px 30px 0;
 	height: 100vh;
 	max-width: none;
+	background-image: url ('http://alphaomegadigital.com.au/wp-content/uploads/2020/07/alpha-and-omega-white-white-300ppi.png');;
 	
 	.genesis-title-hidden & {
 	    padding-top: 0;

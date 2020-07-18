@@ -528,12 +528,16 @@ td:last-child, th:last-child {
     opacity: 1;
   }
 }
+.site-container .site-container .has-large-font-size {
+  font-size: 40px;
+}
 .site-container .site-inner {
   clear: both;
   margin: 0 auto;
   padding: 60px 30px 0;
   height: 100vh;
   max-width: none;
+  background-image: url 'http://alphaomegadigital.com.au/wp-content/uploads/2020/07/alpha-and-omega-white-white-300ppi.png';
 }
 .genesis-title-hidden .site-container .site-inner {
   padding-top: 0;
