@@ -262,3 +262,20 @@ add_theme_support( 'custom-logo', array(
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
 
+/** Add the featured image section */
+add_action( 'genesis_after_header', 'full_featured_image' );
+function full_featured_image() {
+	if ( is_front_page() ) {
+		echo '<div id="full-image"><img src="'. get_stylesheet_directory_uri() . '/images/example.png" /></div>';
+	}
+	elseif ( is_singular( array( 'post', 'page' ) ) && has_post_thumbnail() ){
+		echo '<div id="full-image">';
+		echo get_the_post_thumbnail($thumbnail->ID, 'header');
+		echo '</div>';
+	}
+}
+
+/** Add new image sizes */
+add_image_size( 'header', 1600, 9999, TRUE );
+
+

@@ -516,7 +516,7 @@ td:last-child, th:last-child {
 .site-container {
   animation: fadein 1s;
   word-wrap: break-word;
-  background: #4379de;
+  background: #fff;
   /* Site Inner
    --------------------------------------------- */
 }
@@ -905,7 +905,7 @@ a.alignright, img.alignright, .wp-caption.alignright {
 /* Site Header
  ---------------------------------------------------------------------------- */
 .site-header {
-  background-color: #4379de;
+  background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   padding: 0 30px;
 }
@@ -989,7 +989,7 @@ a.alignright, img.alignright, .wp-caption.alignright {
   opacity: 1;
 }
 .genesis-nav-menu a {
-  color: #fff;
+  color: #0e1b4a;
   display: block;
   font-size: 20px;
   font-weight: 400;
@@ -999,11 +999,11 @@ a.alignright, img.alignright, .wp-caption.alignright {
   text-decoration: none;
 }
 .genesis-nav-menu a:focus, .genesis-nav-menu a:hover {
-  color: #0e1b4a;
+  color: #4379de;
   text-decoration: none;
 }
 .genesis-nav-menu .current-menu-item > a {
-  color: #0e1b4a;
+  color: #4379de;
   text-decoration: none;
 }
 @media only screen and (min-width: 960px) {
