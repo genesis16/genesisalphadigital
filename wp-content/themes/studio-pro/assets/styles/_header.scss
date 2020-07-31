@@ -1,0 +1,257 @@
+/* ## Site Header
+--------------------------------------------- */
+
+.site-header {
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	background-color: transparent;
+
+	@include transition;
+
+	.has-fixed-header & {
+		position: fixed;
+
+		&.shrink {
+			background-color: $accent;
+			box-shadow: 0 0 2rem rgba($dark, 0.382);
+		}
+	}
+
+	> .wrap {
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		@include breakpoint(md) {
+			padding: 0;
+			flex-wrap: nowrap;
+		}
+	}
+}
+
+/* ## Title Area
+--------------------------------------------- */
+
+.title-area {
+	display: block;
+	position: relative;
+	max-width: 20rem;
+	height: 100%;
+	margin: 0 auto 0 0;
+	padding: 1em 0;
+	flex: 1;
+
+	@include transition;
+
+	@include breakpoint(md) {
+		padding: 1.382em 0;
+	}
+
+	@include breakpoint(lg) {
+		padding: 1.618em 0;
+	}
+
+	.fixed-header .shrink & {
+		padding: 0.382em 0;
+	}
+
+	.wp-custom-logo & {
+		max-width: 10rem;
+
+		@include breakpoint(md) {
+			padding: 0;
+		}
+	}
+}
+
+.site-title {
+	margin-bottom: 0;
+	font-family: $font-heading;
+	font-size: 2rem;
+	font-weight: $bold;
+	line-height: 1;
+
+	@include breakpoint(md) {
+		font-size: 2.4rem;
+	}
+
+	a {
+		color: $white;
+		text-decoration: none;
+	}
+}
+
+.site-description {
+	margin-bottom: 0;
+	color: $white;
+	font-size: 1rem;
+	line-height: 1;
+
+	@include breakpoint(md) {
+		font-size: 1.2rem;
+		line-height: 1.382;
+		text-align: left;
+	}
+}
+
+/* ## Header Right
+--------------------------------------------- */
+
+.header-widget-area {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	margin-left: 1px;
+	padding: 1em 0;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+	transform: translateY(140%);
+
+	@include breakpoint(md) {
+		width: auto;
+		opacity: 1;
+		transition: none;
+		transform: none;
+	}
+
+	.activated & {
+		opacity: 1;
+		transition-delay: 0.82s;
+		transform: translateY(0);
+	}
+
+	.widget {
+		background-color: transparent;
+
+		@include breakpoint(md) {
+			margin-left: 1em;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	.simple-social-icons {
+
+		.alignright,
+		.aligncenter {
+			float: left;
+			justify-content: flex-start;
+
+			@include breakpoint(md) {
+				float: right;
+				justify-content: flex-end;
+			}
+		}
+	}
+}
+
+/* ## Custom Header
+--------------------------------------------- */
+
+.wp-custom-header {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	object-fit: cover;
+	object-position: center;
+
+	.woocommerce & img,
+	img,
+	video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+
+	iframe {
+		position: absolute;
+		top: -37.5%;
+		right: -37.5%;
+		bottom: -37.5%;
+		left: -37.5%;
+		width: 175%;
+		min-width: 100%;
+		max-width: 175%;
+		height: 175%;
+		min-height: 56.25vw; // 16:9 aspect ratio.
+		max-height: none;
+		margin: auto;
+	}
+
+	img {
+		display: none;
+	}
+}
+
+.wp-custom-header-video-button {
+	display: none;
+}
+
+/* ## Hero Section
+--------------------------------------------- */
+
+.hero-section {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	padding: 10rem 0 5rem;
+	color: $white;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+
+	@include overlay;
+
+	@include breakpoint(md) {
+		padding: 14rem 0 6rem;
+	}
+
+	@include breakpoint(lg) {
+		padding: 16rem 0 7rem;
+	}
+
+	.has-nav-secondary & {
+
+		@include breakpoint(md) {
+			padding-top: 23rem;
+		}
+
+		@include breakpoint(lg) {
+			padding-top: 25rem;
+		}
+	}
+
+	.wrap {
+		position: relative;
+		z-index: 2;
+		max-width: map-get($breakpoints, sm);
+	}
+
+	h1 {
+		width: 100%;
+		margin-bottom: 0;
+		line-height: 1.236;
+	}
+
+	p {
+		width: 100%;
+		margin: 1em 0 0;
+	}
+
+	.widget {
+		background: transparent;
+	}
+}
+
