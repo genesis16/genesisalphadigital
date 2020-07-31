@@ -114,6 +114,10 @@ function instant_ide_manager_update() {
 	// Update to Instant IDE Manager 1.7.1
 	if ( version_compare( get_option( 'instant_ide_manager_version_number' ), '1.7.1', '<' ) )
 		update_option( 'instant_ide_manager_version_number', '1.7.1' );
+
+	// Update to Instant IDE Manager 1.7.2
+	if ( version_compare( get_option( 'instant_ide_manager_version_number' ), '1.7.2', '<' ) )
+		update_option( 'instant_ide_manager_version_number', '1.7.2' );
 	
 	// Finalize the update sequence.
 	instant_ide_manager_activate_post();

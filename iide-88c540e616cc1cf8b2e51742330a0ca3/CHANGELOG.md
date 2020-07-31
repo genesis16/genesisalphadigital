@@ -2,6 +2,10 @@
 
 https://cobaltapps.com/downloads/instant-ide-manager-plugin/
 
+## [1.7.2] - 2020-07-18
+### Changed
+- Adjusted iide-constants.php code by adding NOT EMPTY checks on certain server constants to account for scenarios where iIDE is run from a command line.
+
 ## [1.7.1] - 2020-07-09
 ### Changed
 - Replaced Community Forum "Help" links with the Cobalt Apps YouTube Channel and Cobalt Apps Support links.

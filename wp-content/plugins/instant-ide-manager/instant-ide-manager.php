@@ -1,7 +1,7 @@
 <?php 
 /*
 Plugin Name: Instant IDE Manager
-Version: 1.7.1
+Version: 1.7.2
 Plugin URI: https://cobaltapps.com/downloads/instant-ide-manager-plugin/
 Description: The manager Plugin for the Instant IDE dev tool.
 Author: Cobalt Apps
@@ -34,10 +34,10 @@ if ( ! defined( 'CAABM_URL' ) )
 	define( 'CAABM_URL', IIDEM_URL );
 	
 if ( ! defined( 'IIDEM_VERSION' ) )
-	define( 'IIDEM_VERSION', '1.7.1' );
+	define( 'IIDEM_VERSION', '1.7.2' );
 	
 if ( ! defined( 'IIDE_LATEST_VERSION' ) )
-	define( 'IIDE_LATEST_VERSION', '1.7.1' );
+	define( 'IIDE_LATEST_VERSION', '1.7.2' );
 	
 // Require general functions.
 require_once( IIDEM_DIR . 'lib/functions/general.php' );

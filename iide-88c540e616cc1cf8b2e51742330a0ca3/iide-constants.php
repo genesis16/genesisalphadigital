@@ -16,13 +16,15 @@ function instant_ide_url() {
 
         if ( ! empty( $_SERVER['HTTPS'] ) )
             $url = $_SERVER['HTTPS'] !== 'off' ? 'https://' : 'http://';
-        else
+        elseif ( ! empty( $_SERVER['SERVER_PORT'] ) )
             $url = $_SERVER['SERVER_PORT'] == 443 ? 'https://' : 'http://';
+        else
+            $url = '//';
 
     }
         
-    $url .= $_SERVER['HTTP_HOST'];
-    $url .= $_SERVER['REQUEST_URI'];
+    $url .= ! empty( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : '';
+    $url .= ! empty( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '';
     // Strip out query strings.
     $url = strtok( $url,'?' );
     
@@ -61,4 +63,4 @@ if ( ! defined( 'IIDE_URL' ) )
     define( 'IIDE_URL', instant_ide_url() );
     
 if ( ! defined( 'IIDE_VERSION' ) )
-    define( 'IIDE_VERSION', '1.7.1' );
+    define( 'IIDE_VERSION', '1.7.2' );

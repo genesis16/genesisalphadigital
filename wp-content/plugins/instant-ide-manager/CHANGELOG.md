@@ -2,6 +2,10 @@
 
 https://cobaltapps.com/downloads/instant-ide-manager-plugin/
 
+## [1.7.2] - 2020-07-18
+### Changed
+- Updated the Instant IDE files to latest version.
+
 ## [1.7.1] - 2020-07-09
 ### Changed
 - Updated the Instant IDE files to latest version.
