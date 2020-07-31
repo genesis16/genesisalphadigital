@@ -1,0 +1,82 @@
+
+---Downloaded files---
+The import files for: Demo Import were successfully downloaded!
+Initial max execution time = 300
+Files info:
+Site URL = https://alphaomegadigital.com.au
+Data file = /home/theal029/public_html/wp-content/themes/studio-pro/sample.xml
+Widget file = /home/theal029/public_html/wp-content/themes/studio-pro/widgets.wie
+Customizer file = not defined!
+Redux files:
+not defined!
+
+------
+New AJAX call!
+[WARNING] Failed to import product_cat AdWords
+[WARNING] Failed to import product_cat SEO
+[WARNING] Failed to import product_cat Web Design
+
+
+---Importing widgets---
+Header Right : 
+
+Simple Social Icons - No Title - Imported
+
+Primary Sidebar : 
+
+Custom HTML - Primary Sidebar - Widget already exists
+Search - No Title - Widget already exists
+Tag Cloud - No Title - Widget already exists
+Recent Posts - No Title - Widget already exists
+Simple Social Icons - No Title - Widget already exists
+
+Front Page 1 : 
+
+Custom HTML - Meet the new Studio Pro. - Imported
+
+Front Page 2 : 
+
+Icon - Customizable - Imported
+Icon - Optimized - Imported
+Icon - Responsive - Imported
+
+Front Page 3 : 
+
+Custom HTML - Our latest work. - Imported
+
+Front Page 4 : 
+
+Image - No Title - Imported
+Testimonials - Happy customers. - Imported
+
+Front Page 5 : 
+
+Custom HTML - No Title - Imported
+
+Front Page 6 : 
+
+Genesis - Featured Posts - Latest from the blog. - Imported
+
+Before Footer : 
+
+Image - No Title - Imported
+Custom HTML - Create a stunning website with Studio Pro. - Imported
+
+Footer 1 : 
+
+Navigation Menu - Contact - Widget already exists
+
+Footer 2 : 
+
+Navigation Menu - Navigation - Widget already exists
+
+Footer 3 : 
+
+Navigation Menu - Store - Widget already exists
+
+Footer 4 : 
+
+Simple Social Icons - Follow us. - Imported
+Genesis - eNews Extended - Newsletter - Imported
+
+
