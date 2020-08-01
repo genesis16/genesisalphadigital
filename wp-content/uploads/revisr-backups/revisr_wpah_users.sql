@@ -27,12 +27,12 @@ CREATE TABLE `wpah_users` (
   KEY `user_login_key` (`user_login`),
   KEY `user_nicename` (`user_nicename`),
   KEY `user_email` (`user_email`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `wpah_users` WRITE;
 /*!40000 ALTER TABLE `wpah_users` DISABLE KEYS */;
-INSERT INTO `wpah_users` VALUES (1,'rdoRp9HioP','$P$BL.8cPTE5t9K73elye33hWcViLbmQg.','rdorp9hiop','heny.jon112@gmail.com','https://alphaomegadigital.com.au','2019-11-08 20:03:13','',0,'rdoRp9HioP');
+INSERT INTO `wpah_users` VALUES (1,'rdoRp9HioP','$P$BL.8cPTE5t9K73elye33hWcViLbmQg.','rdorp9hiop','heny.jon112@gmail.com','https://alphaomegadigital.com.au','2019-11-08 20:03:13','',0,'rdoRp9HioP'),(2,'Jane','$P$BwoqHh7ku9Mmy.vuDgMI38LUvMpJE9.','jane','','','2020-07-31 05:44:32','',0,'Jane');
 /*!40000 ALTER TABLE `wpah_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
