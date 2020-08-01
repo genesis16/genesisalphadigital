@@ -11,6 +11,7 @@
 	padding: 6rem 0;
 	border-bottom: $site-border;
 	background-color: $white;
+	font-family:$font-heading;
 
 	@include breakpoint(sm) {
 		padding: 12rem 0;
@@ -41,6 +42,7 @@
 
 .front-page-1 {
 	display: flex;
+	font-family: $font-heading;
 	position: relative;
 	z-index: 1;
 	min-height: 100vh;
@@ -81,12 +83,14 @@
 
 		p:last-of-type {
 			margin-bottom: 2em;
+			font-family: "poppins";
 		}
 	}
 
 	h1 {
 		margin: 0 0 0.382em;
 		line-height: 1.236;
+		font-family: "poppins";
 	}
 }
 
@@ -101,6 +105,7 @@
 	.widget-title {
 		margin: 0.5rem auto 1rem;
 		font-size: 1.5em;
+		font-family: "poppins";
 	}
 
 	p:last-of-type {

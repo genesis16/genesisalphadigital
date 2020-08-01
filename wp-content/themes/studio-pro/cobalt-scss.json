@@ -1,0 +1,14 @@
+{
+    "Primary Styles" : {
+        "Import Path": "/assets/styles/",
+        "Formatter": "Expanded",
+        "PreCSS File Path": "/assets/styles/style.scss",
+        "CSS File Path": "/style.css"
+    },
+    "WC Styles" : {
+        "Import Path": "/assets/styles/",
+        "Formatter": "Expanded",
+        "PreCSS File Path": "/assets/styles/woocommerce.scss",
+        "CSS File Path": "/woocommerce.css"
+    }
+}

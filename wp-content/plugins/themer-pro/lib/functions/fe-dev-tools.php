@@ -67,8 +67,8 @@ function themer_pro_fe_dev_tools_enqueue_scripts() {
 	wp_enqueue_style( 'themer_pro_jquery_ui_css', '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css', false, THMRPRO_VERSION, false );
 	wp_enqueue_script( 'jquery-ui-resizable' );
 	wp_enqueue_script( 'themer_pro_fe_dev_tools_scripts', THMRPRO_URL . 'lib/js/fe-dev-tools.js', array( 'jquery', 'jquery-ui-draggable' ), THMRPRO_VERSION, true );
-	wp_enqueue_script( 'ace', THMRPRO_URL . 'lib/js/ace/ace.js', array(), THMRPRO_VERSION, true );
-	wp_enqueue_script( 'ace-language-tools', THMRPRO_URL . 'lib/js/ace/ext-language_tools.js', array(), THMRPRO_VERSION, true );
+	wp_enqueue_script( 'themer_pro_ace', THMRPRO_URL . 'lib/js/ace/ace.js', array(), THMRPRO_VERSION, true );
+	wp_enqueue_script( 'themer_pro_ace_autocomplete', THMRPRO_URL . 'lib/js/ace/ext-language_tools.js', array(), THMRPRO_VERSION, true );
 	
 	$enable_ace_editor_syntax_validation = themer_pro_get_settings( 'enable_ace_editor_syntax_validation' );
 	$ace_editor_syntax_validation = ! empty( $enable_ace_editor_syntax_validation ) ? true : false;
