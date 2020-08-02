@@ -9,7 +9,6 @@
 .front-page-6 {
 	width: 100%;
 	padding: 6rem 0;
-	border-bottom: $site-border;
 	background-color: $white;
 	font-family:$font-heading;
 
@@ -315,7 +314,8 @@
 }
 
 .front-page-6 {
-	background-color: $light;
+	background-color: $dark-blue;
+	color: $white;
 
 	.widget {
 		width: 100%;
@@ -367,6 +367,8 @@
 
 		&:first-of-type {
 			margin-left: 0;
+			background-color: $white;
+			color: $dark-blue;
 		}
 
 		> a {
