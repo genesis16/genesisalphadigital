@@ -2,6 +2,11 @@
 
 https://cobaltapps.com/downloads/themer-pro-plugin/
 
+## [1.4.2] - 2020-07-23
+### Fixed
+- Fixed Front-End DEV Tools Ace Editor script conflict with certain Plugins such as Beaver Builder.
+- Fixed Cobalt Apps WP admin bar bug where not all Genesis DevKit admin pages were displaying.
+
 ## [1.4.1] - 2020-07-09
 ### Changed
 - Updated the Cobalt Apps Admin Bar Menu to include Extender Pro Extender Blocks page and remove redundant Instant IDE page.

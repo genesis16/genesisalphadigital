@@ -227,6 +227,7 @@ input[type="submit"] {
 	&.white {
 		color: $accent;
 		background-color: $white;
+		padding: 20px 25px;
 	}
 
 	&.small {
@@ -263,6 +264,22 @@ input[type="search"]::-webkit-search-results-button {
 
 fieldset {
 	margin-bottom: 1em;
+}
+// contact form 7
+.wpcf7 {
+	background: $purple;
+	padding: 25px 30px;
+	border-radius: 20px;
+	width: 80%;
+	font-weight:$boldest;
+	color: $white;
+
+}
+.wpcf7-form-control .wpcf7-submit {
+    align-content: center;
+}
+.wpcf7-form-control .wpcf7-submit:hover {
+    color: blue;
 }
 
 /* ## Objects

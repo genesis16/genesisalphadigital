@@ -93,6 +93,7 @@
 	}
 }
 
+
 .front-page-2 {
 
 	.widget {
@@ -110,6 +111,7 @@
 	p:last-of-type {
 		margin-bottom: 0;
 	}
+	
 }
 
 .front-page-3 {
@@ -255,9 +257,10 @@
 .front-page-4 {
 	overflow: hidden;
 	position: relative;
-	color: $white;
+	color: $light-blue;
 	background-color: transparent;
 	text-align: center;
+	color: $dark-blue;
 
 	@include overlay;
 
@@ -297,10 +300,13 @@
 
 .front-page-5 {
 	text-align: center;
+	background-color: $light-blue;
+	color: $white;
 
 	.widget {
 		max-width: map-get($breakpoints, md);
 		margin: 0 auto;
+		font-size: 30px;
 
 		@include breakpoint(sm) {
 			margin: 0 auto;
@@ -314,8 +320,8 @@
 }
 
 .front-page-6 {
-	background-color: $dark-blue;
-	color: $white;
+	background-color: $white;
+	color: $dark-blue;
 
 	.widget {
 		width: 100%;
@@ -369,6 +375,10 @@
 			margin-left: 0;
 			background-color: $white;
 			color: $dark-blue;
+		}
+		&:first-of-type:hover{
+			filter: drop-shadow(20px 10px 4px #6577b8);
+			transform: scale(1.05);
 		}
 
 		> a {

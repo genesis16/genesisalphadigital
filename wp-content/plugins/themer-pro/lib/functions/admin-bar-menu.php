@@ -205,7 +205,7 @@ function cobalt_apps_admin_bar_menu() {
         		'href' => admin_url( 'admin.php?page=genesis-devkit-dashboard' ),
             ) );
             
-            if ( file_exists( get_stylesheet_directory() . '/devkit-init.php' ) ) {
+            if ( file_exists( get_stylesheet_directory() . '/devkit/devkit-init.php' ) ) {
 
                 $wp_admin_bar->add_node( array(
                 	'parent' => 'genesis-devkit-wp-admin-bar',

@@ -609,6 +609,7 @@ input[type="search"] {
 .view-all-portfolio a.white, .button.white, button.white, input[type="button"].white, input[type="reset"].white, input[type="submit"].white {
   color: #006cff;
   background-color: #fff;
+  padding: 20px 25px;
 }
 .view-all-portfolio a.small, .button.small, button.small, input[type="button"].small, input[type="reset"].small, input[type="submit"].small {
   font-size: 1.2rem;
@@ -637,6 +638,20 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 }
 fieldset {
   margin-bottom: 1em;
+}
+.wpcf7 {
+  background: #cd78de;
+  padding: 25px 30px;
+  border-radius: 20px;
+  width: 80%;
+  font-weight: 700;
+  color: #fff;
+}
+.wpcf7-form-control .wpcf7-submit {
+  align-content: center;
+}
+.wpcf7-form-control .wpcf7-submit:hover {
+  color: blue;
 }
 /* ## Objects
  --------------------------------------------- */
@@ -1421,7 +1436,7 @@ a.alignright, img.alignright, .wp-caption.alignright {
   align-self: center;
 }
 .wp-block-image {
-  width: 100%;
+  width: 50%;
   margin: 2em auto;
   display: flex;
 }
@@ -2470,8 +2485,9 @@ p.entry-meta {
  --------------------------------------------- */
 .site-footer {
   width: 100%;
-  background-color: #fff;
+  background-color: #0e1b4a;
   font-size: 1.8rem;
+  color: #fff;
 }
 .site-footer > .wrap {
   position: relative;
@@ -2499,6 +2515,7 @@ p.entry-meta {
 }
 .site-footer > .wrap p:last-of-type {
   margin-bottom: 0;
+  display: none;
 }
 @media (min-width: 768px) {
   .site-footer .widget-area {
@@ -3014,9 +3031,10 @@ div.gs-faq .gs-faq__answer:last-of-type {
 .front-page-4 {
   overflow: hidden;
   position: relative;
-  color: #fff;
+  color: #42a7f5;
   background-color: transparent;
   text-align: center;
+  color: #0e1b4a;
 }
 .front-page-4:before {
   display: block;
@@ -3065,10 +3083,13 @@ div.gs-faq .gs-faq__answer:last-of-type {
 }
 .front-page-5 {
   text-align: center;
+  background-color: #42a7f5;
+  color: #fff;
 }
 .front-page-5 .widget {
   max-width: 896px;
   margin: 0 auto;
+  font-size: 30px;
 }
 @media (min-width: 768px) {
   .front-page-5 .widget {
@@ -3080,8 +3101,8 @@ div.gs-faq .gs-faq__answer:last-of-type {
   line-height: 1.618;
 }
 .front-page-6 {
-  background-color: #0e1b4a;
-  color: #fff;
+  background-color: #fff;
+  color: #0e1b4a;
 }
 .front-page-6 .widget {
   width: 100%;
@@ -3133,6 +3154,10 @@ div.gs-faq .gs-faq__answer:last-of-type {
   margin-left: 0;
   background-color: #fff;
   color: #0e1b4a;
+}
+.front-page-6 .entry:first-of-type:hover {
+  filter: drop-shadow(20px 10px 4px #6577b8);
+  transform: scale(1.05);
 }
 .front-page-6 .entry > a {
   display: block;
