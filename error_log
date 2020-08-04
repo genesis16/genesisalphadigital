@@ -361,3 +361,7 @@ Stack trace:
 #7 /home/theal029/public_html/wp-includes/general-template.php(2884): do_action('wp_head')
 #8 /home/theal029/public_html/wp-content/themes/genesis/header.php(35): wp_head()
 #9 /home/theal029/public_html/wp-i in /home/theal029/public_html/wp-content/themes/EA-Genesis-Child-master/functions.php on line 47
+[03-Aug-2020 06:52:02 UTC] PHP Warning:  exec(): Unable to fork ['git' '--git-dir=/home/theal029/public_html/.git' '--work-tree=/home/theal029/public_html' 'config' '--get' 'revisr.current-remote' 2&gt;&amp;1] in /home/theal029/public_html/wp-content/plugins/revisr/classes/class-revisr-git.php on line 113
+[03-Aug-2020 06:52:02 UTC] PHP Warning:  exec(): Unable to fork ['git' '--git-dir=/home/theal029/public_html/.git' '--work-tree=/home/theal029/public_html' 'rev-parse' '--show-toplevel' 2&gt;&amp;1] in /home/theal029/public_html/wp-content/plugins/revisr/classes/class-revisr-git.php on line 113
+[03-Aug-2020 06:52:02 UTC] PHP Warning:  exec(): Unable to fork ['git' '--git-dir=/home/theal029/public_html/.git' '--work-tree=/home/theal029/public_html' 'rev-parse' '--show-toplevel' 2&gt;&amp;1] in /home/theal029/public_html/wp-content/plugins/revisr/classes/class-revisr-git.php on line 113
+[03-Aug-2020 06:52:02 UTC] PHP Warning:  exec(): Unable to fork ['git' '--git-dir=/home/theal029/public_html/.git' '--work-tree=/home/theal029/public_html' 'rev-parse' '--show-toplevel' 2&gt;&amp;1] in /home/theal029/public_html/wp-content/plugins/revisr/classes/class-revisr-git.php on line 113

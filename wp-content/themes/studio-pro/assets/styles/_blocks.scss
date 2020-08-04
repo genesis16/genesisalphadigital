@@ -30,9 +30,14 @@
 
 	// Columns block.
 	&-columns {
-
-		@media (max-width: map_get($breakpoints, md)) {
+	        background-color: $lightest-blue;
+			align-items: center;
+			padding: 20px 40px;
+			
+			&-columns {
+            @media (max-width: map_get($breakpoints, md)) {
 			flex-wrap: wrap;
+			
 		}
 	}
 
@@ -207,4 +212,5 @@
 	// Verse block.
 	&-verse {
 	}
+ }
 }

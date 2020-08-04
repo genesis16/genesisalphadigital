@@ -586,7 +586,6 @@ input[type="search"] {
   padding: 1.1em 2.4em;
   border: 0;
   border-radius: 9rem;
-  color: #fff;
   background-color: #393e4b;
   box-shadow: 0 3rem 2rem -0.5rem rgba(57, 62, 75, 0.2);
   font-size: 1.5rem;
@@ -1400,72 +1399,77 @@ a.alignright, img.alignright, .wp-caption.alignright {
 }
 /* ## Blocks
  --------------------------------------------- */
+.wp-block-columns {
+  background-color: #add8e6;
+  align-items: center;
+  padding: 20px 40px;
+}
 @media (max-width: 896px) {
-  .wp-block-columns {
+  .wp-block-columns-columns {
     flex-wrap: wrap;
   }
 }
 @media (max-width: 896px) {
-  .wp-block-column {
+  .wp-block-columns-column {
     flex: none;
     width: 100%;
   }
 }
 @media (min-width: 896px) {
-  .wp-block-column {
+  .wp-block-columns-column {
     margin-left: 2.5641025641%;
   }
-  .wp-block-column:first-of-type {
+  .wp-block-columns-column:first-of-type {
     margin-left: 0;
   }
 }
-.wp-block-embed {
+.wp-block-columns-embed {
   margin: 2em auto;
 }
-.wp-block-gallery {
+.wp-block-columns-gallery {
   margin: 2em auto;
 }
-.entry-content .wp-block-gallery {
+.entry-content .wp-block-columns-gallery {
   padding-left: 0;
   margin-left: 0;
 }
-.entry-content .wp-block-gallery.alignfull {
+.entry-content .wp-block-columns-gallery.alignfull {
   margin-left: -50vw;
 }
-.wp-block-gallery .blocks-gallery-item img {
+.wp-block-columns-gallery .blocks-gallery-item img {
   align-self: center;
 }
-.wp-block-image {
+.wp-block-columns-image {
   width: 50%;
   margin: 2em auto;
   display: flex;
 }
-.wp-block-image img {
+.wp-block-columns-image img {
   width: 100%;
 }
-.wp-block-image.alignleft {
+.wp-block-columns-image.alignleft {
   margin-right: 1em;
 }
-.wp-block-image.alignright {
+.wp-block-columns-image.alignright {
   margin-left: 1em;
 }
-.wp-block-image.alignwide {
+.wp-block-columns-image.alignwide {
   max-width: 120%;
 }
-.wp-block-image.alignfull {
+.wp-block-columns-image.alignfull {
   max-width: none;
 }
-.wp-block-pullquote {
+.wp-block-columns-pullquote {
   margin: 2em auto;
   border-left: 0;
 }
-.wp-block-pullquote.aligncenter {
+.wp-block-columns-pullquote.aligncenter {
   margin: 2em auto;
 }
-.wp-block-quote {
+.wp-block-columns-quote {
   border-left: 1px solid #f0f1f2;
 }
-.wp-block-table th, .wp-block-table td {
+.wp-block-columns-table th, .wp-block-columns-table td {
   border-color: #f0f1f2;
 }
 /* ## Site Header
@@ -2894,8 +2898,10 @@ div.gs-faq .gs-faq__answer:last-of-type {
   margin-bottom: 0;
 }
 .front-page-3 {
-  background-color: #f6f7f8;
-  text-align: center;
+  background: #5950d7;
+  display: flex;
+  color: white;
+  border-bottom: none;
 }
 @media (min-width: 768px) {
   .front-page-3 {
@@ -3031,7 +3037,7 @@ div.gs-faq .gs-faq__answer:last-of-type {
 .front-page-4 {
   overflow: hidden;
   position: relative;
-  color: #42a7f5;
+  color: #348feb;
   background-color: transparent;
   text-align: center;
   color: #0e1b4a;
@@ -3083,8 +3089,8 @@ div.gs-faq .gs-faq__answer:last-of-type {
 }
 .front-page-5 {
   text-align: center;
-  background-color: #42a7f5;
-  color: #fff;
+  background-color: #fff;
+  color: #0e1b4a;
 }
 .front-page-5 .widget {
   max-width: 896px;
@@ -3101,7 +3107,7 @@ div.gs-faq .gs-faq__answer:last-of-type {
   line-height: 1.618;
 }
 .front-page-6 {
-  background-color: #fff;
+  background-color: #add8e6;
   color: #0e1b4a;
 }
 .front-page-6 .widget {
@@ -3124,6 +3130,10 @@ div.gs-faq .gs-faq__answer:last-of-type {
   margin: 2rem auto 0;
   background-color: #adb5bd;
   content: "";
+}
+.front-page-6 .projects {
+  display: flex;
+  justify-content: center;
 }
 .front-page-6 .entry {
   padding: 3rem;
@@ -3148,16 +3158,13 @@ div.gs-faq .gs-faq__answer:last-of-type {
   }
 }
 .front-page-6 .entry:hover, .front-page-6 .entry:focus {
-  box-shadow: 0 3rem 2rem -1rem rgba(57, 62, 75, 0.1);
+  background: #fff;
+  box-shadow: 0 3rem 2rem -1rem rgba(14, 27, 74, 0.6);
+  transform: scale(1.05);
 }
 .front-page-6 .entry:first-of-type {
   margin-left: 0;
-  background-color: #fff;
   color: #0e1b4a;
-}
-.front-page-6 .entry:first-of-type:hover {
-  filter: drop-shadow(20px 10px 4px #6577b8);
-  transform: scale(1.05);
 }
 .front-page-6 .entry > a {
   display: block;

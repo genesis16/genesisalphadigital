@@ -115,8 +115,10 @@
 }
 
 .front-page-3 {
-	background-color: $light;
-	text-align: center;
+    background: $light-purple;
+	display: flex;
+	color: white; 
+	border-bottom: none;
 
 	@include breakpoint(sm) {
 		padding-bottom: 12rem;
@@ -300,8 +302,8 @@
 
 .front-page-5 {
 	text-align: center;
-	background-color: $light-blue;
-	color: $white;
+	background-color: $white;
+	color: $dark-blue;
 
 	.widget {
 		max-width: map-get($breakpoints, md);
@@ -320,7 +322,7 @@
 }
 
 .front-page-6 {
-	background-color: $white;
+	background-color: $lightest-blue;
 	color: $dark-blue;
 
 	.widget {
@@ -348,11 +350,17 @@
 			content: "";
 		}
 	}
+	.projects {
+	display: flex;
+	justify-content: center;
+}
 
 	.entry {
 		padding: 3rem;
 		border: $site-border;
 		box-shadow: 0 1rem 2rem -1rem rgba($dark, 0);
+		
+		    
 
 		@include transition;
 
@@ -368,17 +376,16 @@
 		}
 
 		@include hover-focus {
-			box-shadow: 0 3rem 2rem -1rem rgba($dark, 0.1);
+		    background: $white;
+			box-shadow: 0 3rem 2rem -1rem rgba($dark-blue, 0.6);
+			transform: scale(1.05);
+
+		
 		}
 
 		&:first-of-type {
 			margin-left: 0;
-			background-color: $white;
 			color: $dark-blue;
-		}
-		&:first-of-type:hover{
-			filter: drop-shadow(20px 10px 4px #6577b8);
-			transform: scale(1.05);
 		}
 
 		> a {
@@ -393,6 +400,7 @@
 			display: flex;
 			font-size: 1.6rem;
 			flex-wrap: wrap;
+			
 
 			a {
 				margin-top: 1rem;
