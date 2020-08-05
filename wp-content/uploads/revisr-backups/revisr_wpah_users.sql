@@ -32,7 +32,7 @@ CREATE TABLE `wpah_users` (
 
 LOCK TABLES `wpah_users` WRITE;
 /*!40000 ALTER TABLE `wpah_users` DISABLE KEYS */;
-INSERT INTO `wpah_users` VALUES (1,'rdoRp9HioP','$P$BL.8cPTE5t9K73elye33hWcViLbmQg.','rdorp9hiop','heny.jon112@gmail.com','https://alphaomegadigital.com.au','2019-11-08 20:03:13','',0,'rdoRp9HioP'),(2,'Jane','$P$BwoqHh7ku9Mmy.vuDgMI38LUvMpJE9.','jane','','','2020-07-31 05:44:32','',0,'Jane');
+INSERT INTO `wpah_users` VALUES (1,'rdoRp9HioP','$P$BL.8cPTE5t9K73elye33hWcViLbmQg.','rdorp9hiop','heny.jon112@gmail.com','https://alphaomegadigital.com.au','2019-11-08 20:03:13','',0,'Jane James'),(2,'Jane','$P$BwoqHh7ku9Mmy.vuDgMI38LUvMpJE9.','jane','','','2020-07-31 05:44:32','',0,'Jane');
 /*!40000 ALTER TABLE `wpah_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
