@@ -20,7 +20,7 @@
 	display: block;
 	position: relative;
 	width: 100%;
-	padding: 0;
+	padding: 10px;
 
 	@include breakpoint(md) {
 		display: inline-block;
@@ -51,6 +51,9 @@
 		span {
 			display: block;
 			position: relative;
+			color: $navy;
+			
+			
 
 			&:after {
 				display: block;
@@ -76,16 +79,18 @@
 			width: 100%;
 		}
 	}
-}
+ }
 
 /* ## Sub Menus
 --------------------------------------------- */
 
 .sub-menu {
-	display: none;
 	font-size: 1.6rem;
+	color: $navy;
 
 	@include clearfix;
+
+
 
 	@include breakpoint(md) {
 		position: absolute;
@@ -104,8 +109,19 @@
 
 		@include clearfix;
 
+		@include hover-focus {
+			color: $navy;
+			font-weight: 800;
+		}
+
+		@include hover-focus {
+			font-weight: bold;
+			color: $accent;
+		}
+
 		.nav-primary & {
 			transform: translateY(0);
+			
 		}
 
 		.nav-primary.activated & {
@@ -175,6 +191,7 @@
 
 .nav-primary {
 	overflow: auto;
+	Color: $white;
 	position: fixed;
 	top: 0;
 	right: -100%;
@@ -271,6 +288,7 @@
 
 		a {
 			float: left;
+			color: $white;
 		}
 	}
 }
@@ -303,11 +321,12 @@
 
 		a {
 			margin: 0 0 0.5em;
-			color: $dark;
+			color: $white;
 
 			@include breakpoint(sm) {
 				margin: 0 0 1.618em;
 				padding: 0;
+				color: $white;
 			}
 
 			@include hover-focus {

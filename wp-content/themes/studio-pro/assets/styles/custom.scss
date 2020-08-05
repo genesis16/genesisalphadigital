@@ -1,6 +1,36 @@
 // Custom SCSS styles 
 
-.projects {
-	display: flex;
-	justify-content: center;
+.front-page-2 .wrap {
+    display: flex;
+	
+    flex-wrap: wrap;
+	padding-right: 30px;
+	padding-left: 30px;
+	
+}
+.front-page-2 .widget {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+.front-page-2 .widget .wpicon {
+	margin-bottom: 30px;
+}
+.front-page-2 .widget-title {
+    margin: 0.5rem auto 1rem;
+    font-size: 1em;
+    font-family: "poppins";
+}
+.button.white:hover {
+	background-color: #484dff;
+	color: white;
+}
+
+	
+
+.front-page-6 {
+	background-color: ffffff;
+}
+
+a {
+	color: #000000;
 }

@@ -553,7 +553,7 @@ input, select, textarea {
   border: 1px solid #f0f1f2;
   border-color: #e3e4e6;
   border-radius: 2em;
-  color: #adb5bd;
+  color: #000;
   background-color: #f6f7f8;
   font-size: 1.5rem;
   font-weight: 300;
@@ -1400,12 +1400,22 @@ a.alignright, img.alignright, .wp-caption.alignright {
 /* ## Blocks
  --------------------------------------------- */
 .wp-block-columns {
+  margin-top: 90px;
   background-color: #add8e6;
   align-items: center;
   padding: 20px 40px;
 }
+.wp-block-columns h2 {
+  text-shadow: 2px 1px 1px #777;
+  color: #fff;
+}
+.wp-block-columns:hover, .wp-block-columns:focus {
+  transform: scale(1.05);
+  transition: all 0.8s ease-out;
+  box-shadow: 4px 4px #adb5bd;
+}
 @media (max-width: 896px) {
-  .wp-block-columns-columns {
+  .wp-block-columns:hover-columns, .wp-block-columns:focus-columns {
     flex-wrap: wrap;
   }
 }
@@ -1747,7 +1757,7 @@ a.alignright, img.alignright, .wp-caption.alignright {
   display: block;
   position: relative;
   width: 100%;
-  padding: 0;
+  padding: 10px;
 }
 @media (min-width: 896px) {
   .menu-item {
@@ -1782,6 +1792,7 @@ a.alignright, img.alignright, .wp-caption.alignright {
 .menu-item a span {
   display: block;
   position: relative;
+  color: #0e1b4a;
 }
 .menu-item a span:after {
   display: block;
@@ -1808,8 +1819,8 @@ a.alignright, img.alignright, .wp-caption.alignright {
 /* ## Sub Menus
  --------------------------------------------- */
 .sub-menu {
-  display: none;
   font-size: 1.6rem;
+  color: #0e1b4a;
   clear: both;
 }
 .sub-menu:before, .sub-menu:after {
@@ -1838,6 +1849,14 @@ a.alignright, img.alignright, .wp-caption.alignright {
   display: block;
   clear: both;
   content: "";
+}
+.sub-menu li:hover, .sub-menu li:focus {
+  color: #0e1b4a;
+  font-weight: 800;
+}
+.sub-menu li:hover, .sub-menu li:focus {
+  font-weight: bold;
+  color: #006cff;
 }
 .nav-primary .sub-menu li {
   transform: translateY(0);
@@ -1901,6 +1920,7 @@ a.alignright, img.alignright, .wp-caption.alignright {
  --------------------------------------------- */
 .nav-primary {
   overflow: auto;
+  Color: #fff;
   position: fixed;
   top: 0;
   right: -100%;
@@ -1995,6 +2015,7 @@ a.alignright, img.alignright, .wp-caption.alignright {
 }
 .nav-primary .menu-item a {
   float: left;
+  color: #fff;
 }
 .nav-secondary {
   width: 100%;
@@ -2023,12 +2044,13 @@ a.alignright, img.alignright, .wp-caption.alignright {
 }
 .site-footer .menu-item a {
   margin: 0 0 0.5em;
-  color: #393e4b;
+  color: #fff;
 }
 @media (min-width: 768px) {
   .site-footer .menu-item a {
     margin: 0 0 1.618em;
     padding: 0;
+    color: #fff;
   }
 }
 .site-footer .menu-item a:hover, .site-footer .menu-item a:focus {
@@ -2891,7 +2913,7 @@ div.gs-faq .gs-faq__answer:last-of-type {
 }
 .front-page-2 .widget-title {
   margin: 0.5rem auto 1rem;
-  font-size: 1.5em;
+  font-size: 0.8em;
   font-family: "poppins";
 }
 .front-page-2 p:last-of-type {
@@ -2911,6 +2933,10 @@ div.gs-faq .gs-faq__answer:last-of-type {
 .front-page-3 .widget {
   width: 100%;
   margin-bottom: 0;
+}
+.front-page-3 .projects {
+  display: flex;
+  justify-content: center;
 }
 .front-page-3 .widget-title {
   margin-bottom: 4rem;
@@ -3089,8 +3115,8 @@ div.gs-faq .gs-faq__answer:last-of-type {
 }
 .front-page-5 {
   text-align: center;
-  background-color: #fff;
-  color: #0e1b4a;
+  background-color: #800080;
+  color: #fff;
 }
 .front-page-5 .widget {
   max-width: 896px;
@@ -3130,10 +3156,6 @@ div.gs-faq .gs-faq__answer:last-of-type {
   margin: 2rem auto 0;
   background-color: #adb5bd;
   content: "";
-}
-.front-page-6 .projects {
-  display: flex;
-  justify-content: center;
 }
 .front-page-6 .entry {
   padding: 3rem;
@@ -3326,4 +3348,32 @@ div.gs-faq .gs-faq__answer:last-of-type {
   dl, ol, ul {
     page-break-before: avoid;
   }
+}
+.front-page-2 .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.front-page-2 .widget {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.front-page-2 .widget .wpicon {
+  margin-bottom: 30px;
+}
+.front-page-2 .widget-title {
+  margin: 0.5rem auto 1rem;
+  font-size: 1em;
+  font-family: "poppins";
+}
+.button.white:hover {
+  background-color: #484dff;
+  color: white;
+}
+.front-page-6 {
+  background-color: ffffff;
+}
+a {
+  color: #000;
 }

@@ -30,14 +30,26 @@
 
 	// Columns block.
 	&-columns {
+	        margin-top: 90px;
 	        background-color: $lightest-blue;
 			align-items: center;
 			padding: 20px 40px;
+			
+			h2 {
+			    text-shadow:  02px 1px 1px #777;
+			    color: $white;
+			}
+			
+			@include hover-focus {
+			transform: scale(1.05);
+			transition: all .8s ease-out;
+			box-shadow: 4px 4px $gray;
 			
 			&-columns {
             @media (max-width: map_get($breakpoints, md)) {
 			flex-wrap: wrap;
 			
+            }
 		}
 	}
 
