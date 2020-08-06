@@ -549,6 +549,7 @@ h6 {
  --------------------------------------------- */
 input, select, textarea {
   width: 100%;
+  margin-right: 20px;
   padding: 0.5em 1.382em;
   border: 1px solid #f0f1f2;
   border-color: #e3e4e6;
@@ -639,12 +640,12 @@ fieldset {
   margin-bottom: 1em;
 }
 .wpcf7 {
-  background: #cd78de;
+  background: #d3a0de;
   padding: 25px 30px;
   border-radius: 20px;
   width: 80%;
   font-weight: 700;
-  color: #fff;
+  color: #393e4b;
 }
 .wpcf7-form-control .wpcf7-submit {
   align-content: center;
@@ -1404,10 +1405,6 @@ a.alignright, img.alignright, .wp-caption.alignright {
   background-color: #add8e6;
   align-items: center;
   padding: 20px 40px;
-}
-.wp-block-columns h2 {
-  text-shadow: 2px 1px 1px #777;
-  color: #fff;
 }
 .wp-block-columns:hover, .wp-block-columns:focus {
   transform: scale(1.05);
@@ -2920,7 +2917,7 @@ div.gs-faq .gs-faq__answer:last-of-type {
   margin-bottom: 0;
 }
 .front-page-3 {
-  background: #5950d7;
+  background: #d3a0de;
   display: flex;
   color: white;
   border-bottom: none;
@@ -2966,6 +2963,7 @@ div.gs-faq .gs-faq__answer:last-of-type {
 .front-page-3 a {
   margin: 0;
   float: left;
+  color: #fff;
 }
 .front-page-3 .widget-wrap {
   width: 100%;
@@ -3115,7 +3113,7 @@ div.gs-faq .gs-faq__answer:last-of-type {
 }
 .front-page-5 {
   text-align: center;
-  background-color: #800080;
+  background-color: #d3a0de;
   color: #fff;
 }
 .front-page-5 .widget {

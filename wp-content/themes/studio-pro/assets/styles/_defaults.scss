@@ -151,6 +151,7 @@ input,
 select,
 textarea {
 	width: 100%;
+	margin-right: 20px;
 	padding: 0.5em 1.382em;
 	border: $site-border;
 	border-color: $outline;
@@ -271,7 +272,7 @@ fieldset {
 	border-radius: 20px;
 	width: 80%;
 	font-weight:$boldest;
-	color: $white;
+	color: $dark;
 
 }
 .wpcf7-form-control .wpcf7-submit {

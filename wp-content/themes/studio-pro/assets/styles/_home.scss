@@ -115,7 +115,7 @@
 }
 
 .front-page-3 {
-    background: $light-purple;
+    background: $purple;
 	display: flex;
 	color: white; 
 	border-bottom: none;
@@ -161,6 +161,7 @@
 	a {
 		margin: 0;
 		float: left;
+		color: $white;
 	}
 
 	.widget-wrap {
@@ -306,7 +307,7 @@
 
 .front-page-5 {
 	text-align: center;
-	background-color: $dark-purple;
+	background-color: $purple;
 	color: $white;
 
 	.widget {

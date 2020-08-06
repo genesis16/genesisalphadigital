@@ -35,10 +35,6 @@
 			align-items: center;
 			padding: 20px 40px;
 			
-			h2 {
-			    text-shadow:  02px 1px 1px #777;
-			    color: $white;
-			}
 			
 			@include hover-focus {
 			transform: scale(1.05);
