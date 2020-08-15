@@ -1402,14 +1402,16 @@ a.alignright, img.alignright, .wp-caption.alignright {
  --------------------------------------------- */
 .wp-block-columns {
   margin-top: 90px;
-  background-color: #add8e6;
+  color: #fff;
+  font-weight: 600;
+  background-color: #3a9de7;
   align-items: center;
   padding: 20px 40px;
 }
 .wp-block-columns:hover, .wp-block-columns:focus {
   transform: scale(1.05);
-  transition: all 0.8s ease-out;
-  box-shadow: 4px 4px #adb5bd;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 8px 8px 5px #adb5bd;
 }
 @media (max-width: 896px) {
   .wp-block-columns:hover-columns, .wp-block-columns:focus-columns {
