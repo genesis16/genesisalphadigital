@@ -137,13 +137,6 @@ function themer_pro_file_editor_admin_styles() {
 	$screen = get_current_screen();
 	$ace_editor_read_only = ( $screen->id == 'themer-pro_page_themer-pro-parent-editor' && themer_pro_get_settings( 'parent_editor_read_only' ) ) ? true : false;
 	
-	if ( file_exists( themer_pro_get_theme_directory( $parent = false ) . '/cobalt-scss.json' ) )
-		$build_tools = 'scss';
-	elseif ( file_exists( themer_pro_get_theme_directory( $parent = false ) . '/cobalt-less.json' ) )
-		$build_tools = 'less';
-	else
-		$build_tools = false;
-	
 	$vars = array(
 		'themerAjaxNonce' => wp_create_nonce( 'themer-ajax-nonce' ),
 		'aceEditorSyntaxValidation' => $ace_editor_syntax_validation,
@@ -158,7 +151,6 @@ function themer_pro_file_editor_admin_styles() {
 		'readOnlyText' => __( 'Read Only', 'themer-pro' ),
 		'copyCodeText' => __( 'Copy Code', 'themer-pro' ),
 		'copiedText' => __( 'Copied!', 'themer-pro' ),
-		'buildTools' => $build_tools,
 	);
 	
 	wp_localize_script( 'themer_pro_file_editor', 'themerEditorL10n', $vars );

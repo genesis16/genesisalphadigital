@@ -130,7 +130,7 @@ function themer_pro_file_tree_dir( $directory, $parent, $first_call = true ) {
 		$file_tree .= '>';
 		if ( $first_call ) {
 			
-			$file_tree .= '<li id="ctft-root-directory" class="ctft-directory" data-file-name="/"><i class="fa fa-caret-down ctft-directory-icon" aria-hidden="true"></i><a href="#">' . $theme_name . '</a></li>';
+			$file_tree .= '<li id="ctft-root-directory" class="ctft-directory" data-file-name="/"><span class="dashicons dashicons-arrow-down ctft-directory-icon"></span><a href="#">' . $theme_name . '</a></li>';
 			$first_call = false;
 			
 		}
@@ -146,7 +146,7 @@ function themer_pro_file_tree_dir( $directory, $parent, $first_call = true ) {
 					$rel_folder_path_array = explode( $wp_content_folder . '/' . $themes_folder . '/' . themer_pro_get_theme_folder_name( $parent ), $directory . '/' . urlencode( $this_file ) );
 					$rel_folder_path = $rel_folder_path_array[1];
 
-					$file_tree .= '<li class="ctft-directory" data-file-name="' . $rel_folder_path . '"><i class="fa fa-caret-right ctft-directory-icon" aria-hidden="true"></i><a href="#">' . htmlspecialchars( $this_file ) . '</a>';
+					$file_tree .= '<li class="ctft-directory" data-file-name="' . $rel_folder_path . '"><span class="dashicons dashicons-arrow-right ctft-directory-icon"></span><a href="#">' . htmlspecialchars( $this_file ) . '</a>';
 					$file_tree .= themer_pro_file_tree_dir( $directory . '/' . $this_file, $parent, $first_call = false );
 					$file_tree .= '</li>';
 					

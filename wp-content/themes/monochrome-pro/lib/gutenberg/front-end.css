@@ -14,6 +14,10 @@
 
 /* Custom Classes
 ---------------------------------------------------------------------------- */
+.content-block {
+    margin-top: 10px;
+}
+}
 .site-container .wp-block-columns {
     margin-bottom: 30px;
     color: #ffffff;

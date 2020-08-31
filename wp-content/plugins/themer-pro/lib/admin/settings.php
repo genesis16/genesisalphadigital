@@ -67,7 +67,7 @@ function themer_pro_settings_defaults() {
 		'enable_child_image_manager' => 0,
 		'enable_ace_editor_syntax_validation' => 1,
 		'ace_editor_key_bindings' => 'ace',
-		'ace_editor_font_size' => '13',
+		'ace_editor_font_size' => '14',
 		'ace_editor_theme' => 'tomorrow_night_eighties',
 	);
 	

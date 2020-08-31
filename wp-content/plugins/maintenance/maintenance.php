@@ -3,12 +3,12 @@
 	Plugin Name: Maintenance
 	Plugin URI: http://wordpress.org/plugins/maintenance/
 	Description: Put your site in maintenance mode, away from the public view. Use maintenance plugin if your website is in development or you need to change a few things, run an upgrade. Make it only accessible to logged in users.
-	Version: 3.90
+	Version: 3.96
 	Author: WP Maintenance
 	Author URI: https://wpmaintenancemode.com/
 	License: GPL2
 
-  Copyright 2013-2019  WebFactory Ltd  (email : support@webfactoryltd.com)
+  Copyright 2013-2020  WebFactory Ltd  (email : support@webfactoryltd.com)
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as

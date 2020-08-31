@@ -36,6 +36,23 @@ a:hover, a:active  {
 	clear: both;
 }
 
+#themer-pro-admin-heading {
+	float: left;
+}
+
+.themer-pro-keyboard-shortcuts-container {
+	float: right;
+}
+
+.themer-pro-keyboard-shortcuts {
+	margin: 8px 0 0 10px;
+	padding: 5px 10px 6px;
+	color: #555;
+	font-size: 14px;
+	border-radius: 3px;
+	display: inline-block;
+}
+
 #themer-pro-admin-wrap,
 .themer-pro-settings-wrap,
 .themer-pro-settings-wrap h3,
@@ -280,14 +297,13 @@ a:hover, a:active  {
 
 .themer-pro-file-editor-heading {
 	background: #eee;
-	border: 1px solid #ddd;
-	margin: 4px 107px 0 0;
-	padding: 5px 13px 6px 17px;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	margin-right: 107px;
+	padding: 8px 13px 9px 16px;
 	color: #333;
 	font-weight: normal;
 	float: right;
-	-webkit-border-radius: 10px 2px 0 0;
-	border-radius: 10px 2px 0 0;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -509,16 +525,15 @@ a:hover, a:active  {
 }
 
 .themer-pro-file-tree li .ctft-directory-icon {
-	margin: 0 3px 0 -7px;
+	margin: -1px 0 0 -7px;
 	color: #333;
 }
 
-.themer-pro-file-tree li .fa.fa-caret-down.ctft-directory-icon {
-	margin: 0 5px 0 -9px;
+.themer-pro-file-tree li .dashicons.dashicons-arrow-down.ctft-directory-icon {
+	margin: -1px 2px 0 -9px;
 }
 
 .themer-pro-ace-active-theme-dark .themer-pro-file-tree li .ctft-directory-icon {
-	width: 5px;
 	color: #eee;
 }
 
@@ -1090,19 +1105,6 @@ img.themer-pro-listed-image {
 	color: #444;
 	font-size: 20px;
 	vertical-align: bottom;
-}
-
-.fa-sass,
-.fa-less {
-	padding-top: 7px;
-	color: #333;
-	font-size: 20px;
-	font-weight: 100;
-}
-
-.themer-pro-ace-active-theme-dark .fa-sass,
-.themer-pro-ace-active-theme-dark .fa-less {
-	color: #fff;
 }
 
 .themer-pro-settings-button.button,

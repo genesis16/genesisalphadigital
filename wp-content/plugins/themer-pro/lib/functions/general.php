@@ -26,6 +26,10 @@ function themer_pro_active_theme_check( $child = false ) {
 		$active_theme = false != $child ? 'genesis-sample' : 'genesis';
 	elseif ( defined( 'OCEANWP_THEME_VERSION' ) )
 		$active_theme = false != $child ? 'oceanwp-child-theme' : 'oceanwp';
+	elseif ( defined( 'KADENCE_VERSION' ) )
+		$active_theme = false != $child ? 'kadence-child' : 'kadence';
+	elseif ( defined( 'WPBF_VERSION' ) )
+		$active_theme = false != $child ? 'page-builder-framework-child' : 'page-builder-framework';
 	elseif ( function_exists( 'twentysixteen_setup' ) )
 		$active_theme = false != $child ? 'twentysixteen-child' : 'twentysixteen';
 	elseif ( function_exists( 'twentyseventeen_setup' ) )
@@ -239,6 +243,18 @@ function themer_pro_child_theme_select_array() {
 
 		$themer_pro_child_theme_select_array = array(
 			'OceanWP Child' => 'oceanwp_child',
+		);
+
+	} elseif ( themer_pro_active_theme_check() == 'kadence' ) {
+
+		$themer_pro_child_theme_select_array = array(
+			'Kadence Child' => 'kadence-child',
+		);
+
+	} elseif ( themer_pro_active_theme_check() == 'page-builder-framework' ) {
+
+		$themer_pro_child_theme_select_array = array(
+			'Page Builder Framework Child' => 'page-builder-framework-child',
 		);
 		
 	} elseif ( themer_pro_active_theme_check() == 'twentysixteen' ) {

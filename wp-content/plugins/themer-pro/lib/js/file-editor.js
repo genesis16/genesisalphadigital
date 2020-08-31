@@ -59,10 +59,21 @@ jQuery(document).ready(function($) {
 		$('.ace_editor').height($('#themer-pro-file-tree-container').height() - 35);
 		$('.ace_content').height($('#themer-pro-file-tree-container').height() - 35);
 	};
+	function resizeTreeEditor() {
+		var file_tree_position = $('#themer-pro-file-tree-editor-container').position();
+		if($('#themer-pro-file-tree-editor-container').hasClass('themer-pro-file-tree-editor-expanded')) {
+			$('#themer-pro-file-tree-container').height($( window ).height());
+			$('#themer-pro-theme-editor-container').height($( window ).height());
+		} else {
+			$('#themer-pro-file-tree-container').height($(window).height() - file_tree_position.top - 115);
+			$('#themer-pro-theme-editor-container').height($(window).height() - file_tree_position.top - 114);
+		}
+		resizeAce();
+	};
 	// listen for changes
-	$(window).resize(resizeAce);
+	$(window).resize(resizeTreeEditor);
 	// set initially
-	resizeAce();
+	resizeTreeEditor();
 	
 	/* PHP File Tree */
 	
@@ -116,10 +127,10 @@ jQuery(document).ready(function($) {
 	$('.themer-pro-file-tree').find('ul').hide();
 
 	$('.ctft-directory a').click(function() {
-		if($(this).parent().find('.fa:first').hasClass('fa-caret-right')) {
-			$(this).parent().not('#ctft-root-directory').find('.fa:first').removeClass('fa-caret-right').addClass('fa-caret-down');
+		if($(this).parent().find('.dashicons:first').hasClass('dashicons-arrow-right')) {
+			$(this).parent().not('#ctft-root-directory').find('.dashicons:first').removeClass('dashicons-arrow-right').addClass('dashicons-arrow-down');
 		} else {
-			$(this).parent().not('#ctft-root-directory').find('.fa:first').removeClass('fa-caret-down').addClass('fa-caret-right');
+			$(this).parent().not('#ctft-root-directory').find('.dashicons:first').removeClass('dashicons-arrow-down').addClass('dashicons-arrow-right');
 		}
 		$(this).parent().find('ul:first').slideToggle('medium');
 		if($(this).parent().attr('className') == 'ctft-directory') return false;
@@ -168,7 +179,6 @@ jQuery(document).ready(function($) {
 			textarea += save_button;
 			textarea += '<img class="themer-pro-ajax-save-spinner" src="'+themerEditorL10n.pluginUrl+'/lib/css/images/ajax-save-in-progress.gif" />';
 			textarea += '<span class="themer-pro-saved"></span>';
-			textarea += '<span class="themer-pro-build-tools"></span>';
 			textarea += '<span class="themer-pro-file-editor-heading">functions.php</span>';
 			textarea += '</h3>';
 			
@@ -214,7 +224,7 @@ jQuery(document).ready(function($) {
 				var evt = document.createEvent('HTMLEvents');
 				evt.initEvent('resize', true, false);
 				window.dispatchEvent(evt);
-				resizeAce();
+				resizeTreeEditor();
 			};
 			
 			/* END Expand */
@@ -248,15 +258,6 @@ jQuery(document).ready(function($) {
 	
 	function themer_pro_file_tree_li_clicked(file_name, li_id) {
 		var textarea_id = li_id.slice(0,-3);
-		$('.themer-pro-build-tools').html('');
-		if(false !== themerEditorL10n.buildTools && file_name.slice(-4) === themerEditorL10n.buildTools) {
-			if(themerEditorL10n.buildTools === 'scss') {
-				var build_tool_class = 'fa-sass';
-			} else {
-				var build_tool_class = 'fa-less';
-			}
-			$('.themer-pro-build-tools').html('<i class="fab '+build_tool_class+'"></i>');
-		}
 		$('.themer-pro-file-editor-heading').text(file_name);
 		$('.themer-pro-file-editor-textarea-container').hide();
 		$('#'+textarea_id).show();

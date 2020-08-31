@@ -185,6 +185,10 @@
 	color: $menu-toggle--font-color-hover;
 }
 
+.site-header .dashicons-before::before {
+	transition: none;
+}
+
 .menu-toggle {
 	float: right;
 	line-height: $line-height--big;

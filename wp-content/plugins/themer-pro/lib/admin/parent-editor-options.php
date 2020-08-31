@@ -18,6 +18,10 @@ function themer_pro_parent_editor_options() {
 		<div id="icon-options-general" class="icon32"></div>
 		
 		<h2 id="themer-pro-admin-heading"><?php _e( 'Parent Theme Editor', 'themer-pro' ); ?></h2>
+
+		<div class="themer-pro-keyboard-shortcuts-container">
+			<code class="themer-pro-keyboard-shortcuts">Cmd/Ctrl + s &xrarr; Save Changes</code><code class="themer-pro-keyboard-shortcuts">Cmd/Ctrl + e &xrarr; Toggle Fullscreen</code>
+		</div>
 		
 		<div id="themer-pro-admin-wrap">
 			

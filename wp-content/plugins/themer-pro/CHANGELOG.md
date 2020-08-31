@@ -2,6 +2,21 @@
 
 https://cobaltapps.com/downloads/themer-pro-plugin/
 
+## [1.5.1] - 2020-08-27
+### Added
+- Added Page Builder Framework to supported theme frameworks.
+- Added Kadence Theme and Page Builder Framework hooks to hooks map array.
+
+## [1.5.0] - 2020-08-24
+### Added
+- Added Kadence Theme to supported theme frameworks.
+- Added Theme Editor keyboard shortcut tips in admin heading area.
+
+### Changed
+- Updated Genesis Sample Theme to version 3.3.1.
+- Made it so the Theme Editor height does a better job at filling the available screen space.
+- Changed Theme Editor right and down folder arrows from Font Awesome icons to WP Dashicons.
+
 ## [1.4.2] - 2020-07-23
 ### Fixed
 - Fixed Front-End DEV Tools Ace Editor script conflict with certain Plugins such as Beaver Builder.

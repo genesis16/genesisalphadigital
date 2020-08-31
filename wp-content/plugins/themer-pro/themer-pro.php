@@ -1,7 +1,7 @@
 <?php 
 /*
 Plugin Name: Themer Pro
-Version: 1.4.2
+Version: 1.5.1
 Plugin URI: https://cobaltapps.com/downloads/themer-pro-plugin/
 Description: The full-blown WordPress Theme IDE built right into your Dashboard.
 Author: Cobalt Apps
@@ -36,6 +36,8 @@ function themer_pro_compatible_theme_check( $frameworks = false ) {
 			'generatepress' => 'GeneratePress',
 			'genesis' => 'Genesis',
 			'oceanwp' => 'OceanWP',
+			'kadence' => 'Kadence',
+			'page-builder-framework' => 'Page Builder Framework',
 		);
 		
 	} else {
@@ -47,6 +49,8 @@ function themer_pro_compatible_theme_check( $frameworks = false ) {
 			'generatepress' => 'GeneratePress',
 			'genesis' => 'Genesis',
 			'oceanwp' => 'OceanWP',
+			'kadence' => 'Kadence',
+			'page-builder-framework' => 'Page Builder Framework',
 			'twentysixteen' => 'Twenty Sixteen',
 			'twentyseventeen' => 'Twenty Seventeen',
 			'twentynineteen' => 'Twenty Nineteen',
@@ -83,7 +87,7 @@ if ( false === themer_pro_compatible_theme_check() ) {
 	if ( ! defined( 'CAABM_URL' ) )
 		define( 'CAABM_URL', THMRPRO_URL );
 		
-	define( 'THMRPRO_VERSION', '1.4.2' );
+	define( 'THMRPRO_VERSION', '1.5.1' );
 	
 	/**
 	 * Require options file.
