@@ -16,12 +16,12 @@
 ---------------------------------------------------------------------------- */
 .content-block {
     margin-top: 10px;
-}
+
 }
 .site-container .wp-block-columns {
     margin-bottom: 30px;
-    color: #ffffff;
-    background: rgba(0, 0, 0.5, 0.5);
+    color: #000;
+    background: #fff;
     padding: 30px;
 }
 
