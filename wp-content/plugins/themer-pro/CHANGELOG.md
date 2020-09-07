@@ -2,6 +2,10 @@
 
 https://cobaltapps.com/downloads/themer-pro-plugin/
 
+## [1.5.2] - 2020-09-02
+### Changed
+- Made it so that exported Genesis Child Theme language file names are being properly reflected by the custom name given to cloned Child Themes.
+
 ## [1.5.1] - 2020-08-27
 ### Added
 - Added Page Builder Framework to supported theme frameworks.

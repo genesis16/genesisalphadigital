@@ -193,7 +193,62 @@ function themer_pro_genesis_theme_create( $theme_name, $theme_uri, $theme_descri
 				
 			}
 			// END file/folder scan.
+
+			// Create new .pot file for the child theme based on the user-specified information.
+			$pot_content = htmlentities( file_get_contents( $tmp_theme . '/languages/genesis-sample.pot' ) );
 			
+			$old_id_version = themer_pro_get_line_of_text( $pot_content, 'Project-Id-Version' );
+			$new_id_version = '"Project-Id-Version: ' . $theme_name . ' ' . $theme_version_number . '\n"';
+			$pot_content = themer_pro_replace_line_of_text( $pot_content, $old_id_version[0], $new_id_version );
+			
+			$pot_content = html_entity_decode( $pot_content );
+			
+			themer_pro_write_file( $tmp_theme . '/languages/genesis-sample.pot', $pot_content, $stripslashes = false );
+			rename( $tmp_theme . '/languages/genesis-sample.pot', $tmp_theme . '/languages/' . themer_pro_sanatize_string( $theme_name, $underscore = false ) . '.pot' );
+			// END .pot file creation.
+			
+		} else {
+
+			// Scan all files and folders and find/replace any instance of pre-cloned Theme name with new Child Theme name.
+			$theme_files = themer_pro_rsearch( $tmp_theme . '/', '/.*php/' );
+			$active_theme = wp_get_theme();
+			
+			foreach( $theme_files as $file ) {
+			    
+			    if ( basename( $file ) == 'CHANGELOG.txt' ||
+			        basename( $file ) == 'CONTRIBUTING.txt' ||
+			        basename( $file ) == 'README.txt' )
+			        continue;
+				
+				$file_content = htmlentities( file_get_contents( $file ) );
+				$file_content = str_replace( "'" . themer_pro_sanatize_string( $active_theme->get( 'Name' ), $underscore = false ) . "'", "'" . themer_pro_sanatize_string( $theme_name, $underscore = false ) . "'", $file_content );
+				$file_content = str_replace( ' * ' . $active_theme->get( 'Name' ), ' * ' . $theme_name, $file_content );
+				$file_content = str_replace( '@package ' . $active_theme->get( 'Name' ), '@package ' . $theme_name, $file_content );
+				$file_content = str_replace( ' * @author  ' . $active_theme->get( 'Author' ), ' * @author  ' . $theme_author, $file_content );
+				$file_content = str_replace( ' * @link    ' . $active_theme->get( 'AuthorURI' ), ' * @link    ' . $theme_author_uri, $file_content );
+				$file_content = str_replace( themer_pro_sanatize_string( $active_theme->get( 'Name' ), $underscore = true ) . '_', themer_pro_sanatize_string( $theme_name, $underscore = true ) . '_', $file_content );
+				$file_content = html_entity_decode( $file_content );
+				
+				$rel_file_path = str_replace( $tmp_theme, '', $file );
+				
+				themer_pro_write_file( $tmp_theme . '/' . $rel_file_path, $file_content, $stripslashes = false );
+				
+			}
+			// END file/folder scan.
+
+			// Create new .pot file for the child theme based on the user-specified information.
+			$pot_content = htmlentities( file_get_contents( $tmp_theme . '/languages/' . themer_pro_sanatize_string( $active_theme->get( 'Name' ), $underscore = false ) . '.pot' ) );
+			
+			$old_id_version = themer_pro_get_line_of_text( $pot_content, 'Project-Id-Version' );
+			$new_id_version = '"Project-Id-Version: ' . $theme_name . ' ' . $theme_version_number . '\n"';
+			$pot_content = themer_pro_replace_line_of_text( $pot_content, $old_id_version[0], $new_id_version );
+			
+			$pot_content = html_entity_decode( $pot_content );
+			
+			themer_pro_write_file( $tmp_theme . '/languages/' . themer_pro_sanatize_string( $active_theme->get( 'Name' ), $underscore = false ) . '.pot', $pot_content, $stripslashes = false );
+			rename( $tmp_theme . '/languages/' . themer_pro_sanatize_string( $active_theme->get( 'Name' ), $underscore = false ) . '.pot', $tmp_theme . '/languages/' . themer_pro_sanatize_string( $theme_name, $underscore = false ) . '.pot' );
+			// END .pot file creation.
+
 		}
 		
 		if ( $child_theme_select == 'clone-child-theme' && defined( 'CHILD_THEME_NAME' ) ) {
@@ -263,23 +318,6 @@ Text Domain: " . themer_pro_sanatize_string( $theme_name, $underscore = false ) 
 		if ( $child_theme_select == 'genesis-sample-sass' )
 			themer_pro_write_file( $tmp_theme . '/scss/style.scss', $scss_style_content, $stripslashes = false );
 		// END style.css file creation.
-		
-		if ( $child_theme_select != 'clone-child-theme' ) {
-			
-			// Create new .pot file for the child theme based on the user-specified information.
-			$pot_content = htmlentities( file_get_contents( $tmp_theme . '/languages/genesis-sample.pot' ) );
-			
-			$old_id_version = themer_pro_get_line_of_text( $pot_content, 'Project-Id-Version' );
-			$new_id_version = '"Project-Id-Version: ' . $theme_name . ' ' . $theme_version_number . '\n"';
-			$pot_content = themer_pro_replace_line_of_text( $pot_content, $old_id_version[0], $new_id_version );
-			
-			$pot_content = html_entity_decode( $pot_content );
-			
-			themer_pro_write_file( $tmp_theme . '/languages/genesis-sample.pot', $pot_content, $stripslashes = false );
-			rename( $tmp_theme . '/languages/genesis-sample.pot', $tmp_theme . '/languages/' . themer_pro_sanatize_string( $theme_name, $underscore = false ) . '.pot' );
-			// END .pot file creation.
-			
-		}
 		
 		// Add custom screenshot image file if it has been uploaded.
 		if ( file_exists( themer_pro_get_uploads_path() . '/screenshot.png' ) )

@@ -1,7 +1,7 @@
 <?php 
 /*
 Plugin Name: Themer Pro
-Version: 1.5.1
+Version: 1.5.2
 Plugin URI: https://cobaltapps.com/downloads/themer-pro-plugin/
 Description: The full-blown WordPress Theme IDE built right into your Dashboard.
 Author: Cobalt Apps
@@ -87,7 +87,7 @@ if ( false === themer_pro_compatible_theme_check() ) {
 	if ( ! defined( 'CAABM_URL' ) )
 		define( 'CAABM_URL', THMRPRO_URL );
 		
-	define( 'THMRPRO_VERSION', '1.5.1' );
+	define( 'THMRPRO_VERSION', '1.5.2' );
 	
 	/**
 	 * Require options file.
