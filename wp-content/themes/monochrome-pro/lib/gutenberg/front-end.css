@@ -168,6 +168,9 @@
 
 .site-container .wp-block-columns {
 	margin-bottom: 30px;
+	display: flex;
+	align-items: center;
+	background: rgba(0,0,0,0.2);
 }
 
 .site-container .wp-block-columns.alignfull {
@@ -461,6 +464,9 @@ hr.wp-block-separator {
 
 .wp-block-table.is-style-stripes {
 	border-bottom-width: 0;
+}
+.wp-block-image img {
+    margin-top: 25px;
 }
 
 /* Media Queries
