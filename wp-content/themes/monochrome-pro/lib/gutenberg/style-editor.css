@@ -522,6 +522,10 @@ table {
 .wp-block[data-align="full"] .wp-block-columns > .editor-inner-blocks {
 	padding: 0 30px;
 }
+.wp-block-column {
+    padding-top: 20px;
+}
+
 
 /* Atomic Blocks
 ---------------------------------------------------------------------------- */
@@ -542,6 +546,7 @@ table {
 .ab-block-pricing-table-inside {
 	box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.05);
 }
+
 .site-container .wp-block-columns {
     margin-bottom: 30px;
     background: rgba(0, 0, 0, 0.5);

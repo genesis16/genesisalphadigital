@@ -468,6 +468,9 @@ hr.wp-block-separator {
 .wp-block-image img {
     margin-top: 25px;
 }
+.wp-block-column {
+    padding-top: 20px;
+}
 
 /* Media Queries
 ---------------------------------------------------------------------------- */
