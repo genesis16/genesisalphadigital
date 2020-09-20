@@ -271,6 +271,11 @@ function monochrome_content_limit_read_more_markup( $output, $content, $link ) {
 	return $output;
 
 }
+// add inine-form CSS to MC4WP form
+add_filter('mc4wp_form_css_classes', function($classes) {
+  $classes[] = 'form-inline';
+  return $classes;
+});
 
 // Removes entry meta in entry footer.
 remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_open', 5 );
@@ -300,7 +305,7 @@ remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
 remove_action( 'genesis_footer', 'genesis_do_footer' );
 remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
 
-// Adds site footer.
+/* Adds site footer
 add_action( 'genesis_after', 'genesis_footer_markup_open', 5 );
 add_action( 'genesis_after', 'genesis_do_footer' );
 add_action( 'genesis_after', 'genesis_footer_markup_close', 15 );
@@ -330,3 +335,68 @@ genesis_register_sidebar(
 		'description' => __( 'This is the before footer CTA section.', 'monochrome-pro' ),
 	]
 );
+
+// Register Horizontal Opt-in widget area
+genesis_register_widget_area(
+	array(
+		'id'          => 'horizontal-opt-in',
+		'name'        => __( 'Horizontal Opt-in', 'alphaomegadigital' ),
+		'description' => __( 'This is the horizontal opt-in section.', 'alphaomegadigital' ),
+	)
+);
+
+// Display Horizontal Opt-in widget area below header
+add_action( 'genesis_after_header', 'ao_horizontal_optin' );
+function ao_horizontal_optin() {
+	genesis_widget_area( 'horizontal-opt-in', array(
+		'before'	=> '<div class="horizontal-opt-in widget-area"><div class="wrap">',
+		'after'		=> '</div></div>',
+	) );
+}
+// Register before header widget areas
+genesis_register_sidebar( array(
+	'id'          => 'before-header',
+	'name'        => __( 'Before Header', '$text_domain' ),
+	'description' => __( 'Before Header Widget Area Site Wide', '$text_domain' ),
+) );
+
+
+add_action( 'genesis_before_header', 'add_widget_before_header', 5 );
+
+function add_widget_before_header() {
+
+	if( is_active_sidebar('before-header') ) {
+	
+		genesis_widget_area( 'before-header', array(
+			'before' => '<div class="before-header" class="widget-area">',
+			'after'	 => '</div>',
+		) );
+	}}
+//Remove Existing Footer
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+/**
+ * Add Footer Widget to Genesis
+ */
+ add_action( 'widgets_init', 'alphaomegadigital_extra_widgets' );
+// Add in new Widget area
+function alphaomegadigital_extra_widgets() {	
+	genesis_register_sidebar( array(
+		'id'            => 'footercontent',
+		'name'          => __( 'Footer', 'alphaomegadigital' ),
+		'description'   => __( 'This is the general footer area', 'alphaomegadigital' ),
+		'before_widget' => '<div class="footercontent">',
+	    	'after_widget'  => '</div>',
+	));
+}
+	
+add_action('genesis_footer','alphaomegadigital_footer_widget', 5 );	
+// Position the Footer Area
+function alphaomegadigital_footer_widget() {
+	genesis_widget_area ('footercontent', array(
+		'before' => '<div class ="footercontainer">',
+		'after'  => '</div>',
+	));
+}
+
+	
+	

@@ -1,8 +1,7 @@
 /*
-Theme Name: Monochrome Pro
-Theme URI: https://my.studiopress.com/themes/monochrome/
-Description: Monochrome showcases the sleek difference that white space and typography make in minimal design.
-Author: StudioPress
+Theme Name: Alpha Omega Digital
+Theme URI: https://alphaomegadigital.com.au
+Description: Melbourne Wordpress Developer ad digital marketer
 Author URI: https://www.studiopress.com/
 
 Version: 1.5.0
@@ -1048,7 +1047,6 @@ figcaption,
 ---------------------------------------------------------------------------- */
 
 .widget {
-	margin-bottom: 40px;
 	word-wrap: break-word;
 }
 
@@ -1347,6 +1345,15 @@ figcaption,
 .site-header .custom-logo-link .custom-logo {
 	height: 50px;
 	width: auto;
+}
+.before-header {
+	background: #f5f5f5;
+	padding-top: 5px;
+}
+.form-banner {
+	background: #000;
+	color: #fff;
+	display: inline-flex;
 }
 
 /* Site Navigation
