@@ -101,3 +101,59 @@ Stack trace:
 [19-Sep-2020 22:39:55 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'alphaomegadigital_extra_widgets' not found or invalid function name in /home/theal029/public_html/wp-includes/class-wp-hook.php on line 287
 [19-Sep-2020 22:40:55 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'alphaomegadigital_extra_widgets' not found or invalid function name in /home/theal029/public_html/wp-includes/class-wp-hook.php on line 287
 [19-Sep-2020 22:41:14 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'alphaomegadigital_extra_widgets' not found or invalid function name in /home/theal029/public_html/wp-includes/class-wp-hook.php on line 287
+[25-Sep-2020 23:33:40 UTC] PHP Fatal error:  Uncaught Unauthorized. API Key Invalid. API key has been disabled
+
+Request: 
+GET https://us20.api.mailchimp.com/3.0/lists?count=5&offset=0&fields=total_items,lists.id,lists.name,lists.web_id,lists.stats.member_count
+
+
+Response: 
+401 Unauthorized
+{"type":"http://developer.mailchimp.com/documentation/mailchimp/guides/error-glossary/","title":"API Key Invalid","status":401,"detail":"API key has been disabled","instance":"6b6e192a-3d06-451b-94d5-aa21500c97d9"}
+  thrown in /home/theal029/public_html/wp-content/plugins/mailchimp-for-wordpress-master/includes/api/class-api-v3-client.php on line 201
+[25-Sep-2020 23:33:55 UTC] PHP Fatal error:  Uncaught Unauthorized. API Key Invalid. API key has been disabled
+
+Request: 
+GET https://us20.api.mailchimp.com/3.0/lists?count=5&offset=0&fields=total_items,lists.id,lists.name,lists.web_id,lists.stats.member_count
+
+
+Response: 
+401 Unauthorized
+{"type":"http://developer.mailchimp.com/documentation/mailchimp/guides/error-glossary/","title":"API Key Invalid","status":401,"detail":"API key has been disabled","instance":"503809cd-e421-4757-8fd1-8b9dd4f34743"}
+  thrown in /home/theal029/public_html/wp-content/plugins/mailchimp-for-wordpress-master/includes/api/class-api-v3-client.php on line 201
+[25-Sep-2020 23:34:22 UTC] PHP Fatal error:  Uncaught Unauthorized. API Key Invalid. API key has been disabled
+
+Request: 
+GET https://us20.api.mailchimp.com/3.0/lists?count=5&offset=0&fields=total_items,lists.id,lists.name,lists.web_id,lists.stats.member_count
+
+
+Response: 
+401 Unauthorized
+{"type":"http://developer.mailchimp.com/documentation/mailchimp/guides/error-glossary/","title":"API Key Invalid","status":401,"detail":"API key has been disabled","instance":"f9e54717-d167-4c30-9b0d-f7e6ff741c95"}
+  thrown in /home/theal029/public_html/wp-content/plugins/mailchimp-for-wordpress-master/includes/api/class-api-v3-client.php on line 201
+[25-Sep-2020 23:35:15 UTC] PHP Fatal error:  Uncaught Unauthorized. API Key Invalid. API key has been disabled
+
+Request: 
+GET https://us20.api.mailchimp.com/3.0/lists?count=5&offset=0&fields=total_items,lists.id,lists.name,lists.web_id,lists.stats.member_count
+
+
+Response: 
+401 Unauthorized
+{"type":"http://developer.mailchimp.com/documentation/mailchimp/guides/error-glossary/","title":"API Key Invalid","status":401,"detail":"API key has been disabled","instance":"217ebed1-9a15-4b17-8fea-fb2d70072145"}
+  thrown in /home/theal029/public_html/wp-content/plugins/mailchimp-for-wordpress-master/includes/api/class-api-v3-client.php on line 201
+[25-Sep-2020 23:35:45 UTC] PHP Fatal error:  Uncaught Unauthorized. API Key Invalid. API key has been disabled
+
+Request: 
+GET https://us20.api.mailchimp.com/3.0/lists?count=5&offset=0&fields=total_items,lists.id,lists.name,lists.web_id,lists.stats.member_count
+
+
+Response: 
+401 Unauthorized
+{"type":"http://developer.mailchimp.com/documentation/mailchimp/guides/error-glossary/","title":"API Key Invalid","status":401,"detail":"API key has been disabled","instance":"1228e3f8-b106-47e0-8dc0-86c8d4a9a192"}
+  thrown in /home/theal029/public_html/wp-content/plugins/mailchimp-for-wordpress-master/includes/api/class-api-v3-client.php on line 201
+[26-Sep-2020 00:02:46 UTC] PHP Deprecated:  Non-static method Leadin\admin\Connection::delete_metadata() should not be called statically in /home/theal029/public_html/wp-content/plugins/leadin/src/admin/class-connection.php on line 78
+[26-Sep-2020 00:02:46 UTC] PHP Deprecated:  Non-static method Leadin\admin\Connection::add_metadata() should not be called statically in /home/theal029/public_html/wp-content/plugins/leadin/src/admin/class-connection.php on line 47
+[26-Sep-2020 00:02:47 UTC] PHP Deprecated:  Non-static method Leadin\admin\Connection::delete_metadata() should not be called statically in /home/theal029/public_html/wp-content/plugins/leadin/src/admin/class-connection.php on line 78
+[26-Sep-2020 00:02:47 UTC] PHP Deprecated:  Non-static method Leadin\admin\Connection::add_metadata() should not be called statically in /home/theal029/public_html/wp-content/plugins/leadin/src/admin/class-connection.php on line 47
+[26-Sep-2020 00:02:49 UTC] PHP Deprecated:  Non-static method Leadin\admin\Connection::delete_metadata() should not be called statically in /home/theal029/public_html/wp-content/plugins/leadin/src/admin/class-connection.php on line 78
+[26-Sep-2020 00:02:49 UTC] PHP Deprecated:  Non-static method Leadin\admin\Connection::add_metadata() should not be called statically in /home/theal029/public_html/wp-content/plugins/leadin/src/admin/class-connection.php on line 47
