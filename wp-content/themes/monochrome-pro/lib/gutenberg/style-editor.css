@@ -160,6 +160,10 @@ p.has-small-font-size.has-drop-cap:not(:focus)::first-letter {
 .wp-block-image img {
     margin-top: 25px;
 }
+.entry {
+    border: 4px solid grey;
+    padding: 30px;
+}
 
 @media only screen and (min-width: 1563px) {
 

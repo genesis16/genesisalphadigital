@@ -69,11 +69,11 @@ class Links {
 	 */
 	private static function get_iframe_search_string() {
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		return isset( $_GET['leadin_search'] ) ? esc_url_raw( wp_unslash( $_GET['leadin_search'] ) ) : '';
+		return isset( $_GET['leadin_search'] ) ? esc_url_raw( wp_unslash( '&' . $_GET['leadin_search'] ) ) : '';
 	}
 
 	/**
-	 * Return query string from object.
+	 * Return query string from object
 	 *
 	 * @param array $arr query parameters to stringify.
 	 */
@@ -242,6 +242,7 @@ class Links {
 	 */
 	public static function get_iframe_src() {
 		$leadin_onboarding     = 'leadin_onboarding';
+		$leadin_new_portal     = 'leadin_new_portal';
 		$browser_search_string = '';
 
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
@@ -250,6 +251,7 @@ class Links {
 			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			if ( isset( $_GET['is_new_portal'] ) ) {
 				$extra = '&isNewPortal=true';
+				set_transient( $leadin_new_portal, 'true' );
 			}
 			return self::get_connection_src() . $extra;
 		}
@@ -257,11 +259,15 @@ class Links {
 		if ( get_transient( $leadin_onboarding ) ) {
 			delete_transient( $leadin_onboarding );
 			$browser_search_string = '&justConnected=true';
+			if ( get_transient( $leadin_new_portal ) ) {
+				delete_transient( $leadin_new_portal );
+				$browser_search_string = $browser_search_string . '&isNewPortal=true';
+			}
 		}
 
 		$sub_routes_array      = self::get_iframe_route();
 		$inframe_search_string = self::get_iframe_search_string();
-		$browser_search_string = $browser_search_string . "&$inframe_search_string";
+		$browser_search_string = $browser_search_string . $inframe_search_string;
 
 		if ( empty( LeadinOptions::get_portal_id() ) ) {
 			$wp_user    = wp_get_current_user();
@@ -270,7 +276,7 @@ class Links {
 				return self::get_unauthed_src( $wp_user_id );
 			} else {
 				set_transient( $leadin_onboarding, 'true' );
-				$route = '/wordpress-plugin-ui/intro';
+				$route = '/wordpress-plugin-ui/onboarding';
 			}
 		} else {
 			$page_id = self::get_page_id();

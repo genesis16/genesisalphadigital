@@ -1,5 +1,5 @@
 export function getContactProperties() {
-  return window.childFrameConnection.promise.then(child =>
+  return window.leadinChildFrameConnection.promise.then(child =>
     child.getContactProperties()
   );
 }

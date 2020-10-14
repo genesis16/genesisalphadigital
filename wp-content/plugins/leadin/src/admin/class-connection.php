@@ -63,7 +63,7 @@ class Connection {
 	}
 
 	/**
-	 * Store the options needed for unauthed preview
+	 * Store the options needed for Preview mode
 	 *
 	 * @param String $default_app landing page on the unauthed use.
 	 */
@@ -72,7 +72,7 @@ class Connection {
 	}
 
 	/**
-	 * Remove the option that will load the unauthed preview
+	 * Remove the option that will load Preview mode
 	 */
 	public static function exit_intro() {
 		self::delete_metadata( 'leadin_default_app' );

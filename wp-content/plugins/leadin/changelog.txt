@@ -1,3 +1,11 @@
+= 7.45.4 (2020.10.12)
+- Fix iframe communication for IE11
+- Fix for JS error when it is re-executed by jQuery and attempting to modify an immutable object 
+
+= 7.44.6 (2020.09.30)
+- Added a demo of the tools for new users
+- Redesigned the intro page
+
 = 7.43.4 (2020.09.14) =
 - Fix login flow from the gutenberg block
 - Log error when requests are blocked by a browser extension

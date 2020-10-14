@@ -1,5 +1,4 @@
-import connectToChild from 'penpal/lib/connectToChild';
-import { ERR_CONNECTION_TIMEOUT } from 'penpal/lib/errorCodes';
+import Penpal from 'penpal';
 import Raven from './Raven';
 import {
   syncRoute,
@@ -36,32 +35,23 @@ const UNAUTHORIZED = 'unauthorized';
 const REDIRECT = 'REDIRECT';
 const hubspotBaseUrl = leadinConfig.hubspotBaseUrl;
 
-function createConnectionToiFrame(iframe) {
-  return connectToChild({
+function createConnectionToIframe(iframe) {
+  return Penpal.connectToChild({
+    url: iframe.src,
     // The iframe to which a connection should be made
     iframe,
-    childOrigin: hubspotBaseUrl, // the plugin will reject all connections not coming from the iframe
-    timeout: 7000,
     // Methods the parent is exposing to the child
     methods,
   });
 }
 
 export function initInterframe(iframe) {
-  if (!iframe) return;
-
-  if (!window.childFrameConnection) {
-    window.childFrameConnection = createConnectionToiFrame(iframe);
-    window.childFrameConnection.promise.catch(error => {
-      if (error.code === ERR_CONNECTION_TIMEOUT) {
-        Raven.captureException(error, {
-          fingerprint: ['IFRAME BLOCKED'],
-        });
-      } else {
-        Raven.captureException(error, {
-          fingerprint: ['INTERFRAME_CONNECTION_ERROR'],
-        });
-      }
+  if (!window.leadinChildFrameConnection) {
+    window.leadinChildFrameConnection = createConnectionToIframe(iframe);
+    window.leadinChildFrameConnection.promise.catch(error => {
+      Raven.captureException(error, {
+        fingerprint: ['INTERFRAME_CONNECTION_ERROR'],
+      });
     });
   }
 
@@ -104,11 +94,13 @@ export function initInterframe(iframe) {
   };
 
   const currentPage = getQueryParam('page');
-  const triedConnectingPortal = getQueryParam('leadin_connect');
+  // TODO: Commented for WP058
+  // const triedConnectingPortal = getQueryParam('leadin_connect');
   if (currentPage !== 'leadin_settings' && currentPage !== 'leadin') {
     window.addEventListener('message', redirectToLogin);
-  } else if (triedConnectingPortal) {
-    window.addEventListener('message', handleUnauthorizedConnection);
+    // TODO: Commented for WP058
+    // } else if (triedConnectingPortal) {
+    //   window.addEventListener('message', handleUnauthorizedConnection);
   }
 
   window.addEventListener('message', handleNavigation);

@@ -882,6 +882,7 @@ button#php-builder-output-copied-button {
 }
 
 .themer-pro-child-theme-images-list-item {
+	background-color: #eee;
 	border: 1px solid #ddd;
 	width: 100%;
 	max-width: 280px;
@@ -907,8 +908,7 @@ button#php-builder-output-copied-button {
 
 .themer-pro-listed-image-name {
 	border: 0 !important;
-	width: 100%;
-	max-width: 212px;
+	width: 75%;
 	padding: 5px;
 	font-size: 12px;
 	font-weight: bold;
@@ -929,6 +929,10 @@ button#php-builder-output-copied-button {
 	float: right;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+.themer-pro-image-rename-button {
+	width: calc(25% - 2px);
 }
 
 .themer-pro-image-info-button,

@@ -2,6 +2,14 @@
 
 https://cobaltapps.com/downloads/themer-pro-plugin/
 
+## [1.5.3] - 2020-10-11
+### Added
+- Added new GeneratePress Hooks to Hooksmap feature.
+
+### Changed
+- Updated GeneratePress Child Theme files.
+- Changed Image Manager items background color to light gray so that transparent images are visible.
+
 ## [1.5.2] - 2020-09-02
 ### Changed
 - Made it so that exported Genesis Child Theme language file names are being properly reflected by the custom name given to cloned Child Themes.

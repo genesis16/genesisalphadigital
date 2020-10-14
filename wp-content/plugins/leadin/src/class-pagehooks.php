@@ -134,7 +134,7 @@ class PageHooks {
 				$form_div_uuid = $this->generate_div_uuid();
 				return '
 					<script>
-						hbsptReady({
+						hbspt.enqueueForm({
 							portalId: ' . $portal_id . ',
 							formId: "' . $id . '",
 							target: "#hbspt-form-' . $form_div_uuid . '",
@@ -143,7 +143,7 @@ class PageHooks {
 						});
 					</script>
 					<div class="hbspt-form" id="hbspt-form-' . $form_div_uuid . '"></div>
-					<' . 'script charset="utf-8" type="text/javascript" src="' . LEADIN_FORMS_SCRIPT_URL . '" defer onload="window.hbsptReady()"></script>
+					<' . 'script charset="utf-8" type="text/javascript" src="' . LEADIN_FORMS_SCRIPT_URL . '" defer></script>
         ';
 			case 'cta':
 				return '
@@ -174,19 +174,29 @@ class PageHooks {
 		?>
 			<script>
 				(function() {
-					var formObjects = [];
-					window.hbsptReady = function(formObject) {
-						if (!formObject) {
-							for (var i in formObjects) {
-								hbspt.forms.create(formObjects[i]);
-							};
-							formObjects = [];
-						} else if (window.hbspt && window.hbspt.forms) {
-							hbspt.forms.create(formObject);
+					var hbspt = window.hbspt = window.hbspt || {};
+					hbspt.forms = hbspt.forms || {};
+					hbspt._wpFormsQueue = [];
+					hbspt.enqueueForm = function(formDef) {
+						if (hbspt.forms && hbspt.forms.create) {
+							hbspt.forms.create(formDef);
 						} else {
-							formObjects.push(formObject);
+							hbspt._wpFormsQueue.push(formDef);
 						}
-					};
+					}
+					Object.defineProperty(window.hbspt.forms, 'create', {
+						configurable: true,
+						get: function() {
+							return hbspt._wpCreateForm;
+						},
+						set: function(value) {
+							hbspt._wpCreateForm = value;
+							for (var i = 0; i < hbspt._wpFormsQueue.length; i++) {
+								var formDef = hbspt._wpFormsQueue[i];
+								hbspt._wpCreateForm.call(hbspt.forms, formDef);
+							}
+						},
+					})
 				})();
 			</script>
 		<?php
