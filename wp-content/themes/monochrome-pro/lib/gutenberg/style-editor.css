@@ -399,7 +399,7 @@ table {
 /* Buttons
 ---------------------------------------------------------------------------- */
 
-.ab-button {
+.gb-button {
 	background-color: #222;
 	font-family: "Open Sans Condensed", sans-serif;
 	font-weight: 300;
@@ -426,8 +426,8 @@ table {
 	padding: 13px 28px;
 }
 
-.ab-button:focus,
-.ab-button:hover,
+.gb-button:focus,
+.gb-button:hover,
 .wp-block-button.is-style-outline .wp-block-button__link:focus,
 .wp-block-button.is-style-outline .wp-block-button__link:hover,
 .wp-block-button .wp-block-button__link:focus,
@@ -534,8 +534,8 @@ table {
 /* Atomic Blocks
 ---------------------------------------------------------------------------- */
 
-.ab-block-container h3,
-.ab-block-post-grid header .ab-block-post-grid-title {
+.gb-block-container h3,
+.gb-block-post-grid header .gb-block-post-grid-title {
 	font-size: 16px;
 	font-weight: 500;
 	letter-spacing: -0.5px;
@@ -543,11 +543,11 @@ table {
 	text-transform: uppercase;
 }
 
-.ab-block-post-grid header .ab-block-post-grid-title {
+.gb-block-post-grid header .gb-block-post-grid-title {
 	margin-bottom: 5px;
 }
 
-.ab-block-pricing-table-inside {
+.gb-block-pricing-table-inside {
 	box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.05);
 }
 

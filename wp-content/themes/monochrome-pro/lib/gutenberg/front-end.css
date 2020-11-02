@@ -534,8 +534,8 @@
 /* Atomic Blocks
 ---------------------------------------------------------------------------- */
 
-.ab-block-container h3,
-.ab-block-post-grid .ab-post-grid-items .ab-block-post-grid-title {
+.gb-block-container h3,
+.gb-block-post-grid .ab-post-grid-items .ab-block-post-grid-title {
 	font-size: 16px;
 	font-weight: 500;
 	letter-spacing: -0.5px;
@@ -543,15 +543,15 @@
 	text-transform: uppercase;
 }
 
-.ab-block-post-grid .ab-post-grid-items .ab-block-post-grid-title {
+.gb-block-post-grid .ab-post-grid-items .ab-block-post-grid-title {
 	margin-bottom: 5px;
 }
 
-.ab-block-post-grid .ab-post-grid-items .ab-block-post-grid-title a {
+.gb-block-post-grid .ab-post-grid-items .ab-block-post-grid-title a {
 	color: #000;
 }
 
-.ab-block-pricing-table-inside {
+.gb-block-pricing-table-inside {
 	box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.05);
 }
 
