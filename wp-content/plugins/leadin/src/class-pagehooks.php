@@ -2,12 +2,15 @@
 
 namespace Leadin;
 
+use Leadin\LeadinFilters;
 use Leadin\wp\User;
 
 /**
  * Class responsible of adding the script loader to the website, as well as rendering forms, live chat, etc.
  */
 class PageHooks {
+	const HUBSPOT_FORMS_SCRIPT_CLASS = 'hbspt-forms-script';
+
 	/**
 	 * Class constructor, adds the necessary hooks.
 	 */
@@ -139,11 +142,11 @@ class PageHooks {
 							formId: "' . $id . '",
 							target: "#hbspt-form-' . $form_div_uuid . '",
 							shortcode: "wp",
-							' . LEADIN_FORMS_PAYLOAD . '
+							' . LeadinFilters::get_leadin_forms_payload() . '
 						});
 					</script>
 					<div class="hbspt-form" id="hbspt-form-' . $form_div_uuid . '"></div>
-					<' . 'script charset="utf-8" type="text/javascript" src="' . LEADIN_FORMS_SCRIPT_URL . '" defer></script>
+					<' . 'script charset="utf-8" type="text/javascript" class="' . self::HUBSPOT_FORMS_SCRIPT_CLASS . '" src="' . LeadinFilters::get_leadin_forms_script_url() . '" defer></script>
         ';
 			case 'cta':
 				return '
@@ -191,8 +194,13 @@ class PageHooks {
 						},
 						set: function(value) {
 							hbspt._wpCreateForm = value;
-							for (var i = 0; i < hbspt._wpFormsQueue.length; i++) {
-								var formDef = hbspt._wpFormsQueue[i];
+							var formsQueueLength = hbspt._wpFormsQueue.length;
+							for (var i = 0; i < formsQueueLength; i++) {
+								var formDef = hbspt._wpFormsQueue.shift();
+								if (!document.currentScript) {
+									var formScriptClassName = '<?php echo esc_html( self::HUBSPOT_FORMS_SCRIPT_CLASS ); ?>'
+									hubspot.utils.currentScript = document.getElementsByClassName(formScriptClassName)[i];
+								}
 								hbspt._wpCreateForm.call(hbspt.forms, formDef);
 							}
 						},

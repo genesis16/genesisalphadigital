@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Documentation - Responsive WP Grid Plugin | WP Media Boxes</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="description" content="Learn how the Media Boxes works">
+    
+        <!-- loading the css -->
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+        
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+        <style>
+            body{
+                font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+                margin-left: 180px;
+                padding-bottom: 40px;
+            }
+            
+            .navigation{
+                width: 180px;
+                height: 100%;
+                background: #222;
+                position: absolute;
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+
+            .navigation ul{
+                width: 100%;
+            }
+
+            .navigation ul li:first-child{
+                padding-top: 30px !important;
+            }
+
+            .navigation ul li{
+                list-style: none;
+                padding: 3px 0;
+                font-size: 13px;
+                font-weight: 200;
+                float: none !important;
+            }
+            
+            .navigation ul li a{
+                color: #aaabae;
+                text-decoration: none;
+                text-shadow: none !important;
+            }
+
+            .navigation ul li a:hover,
+            .navigation ul li.active a{
+                background-color: rgba(69, 74, 84, 0.3);
+                color: #fff;
+            }
+        
+            .container{
+                width: 100%;
+                padding: 0px 40px;
+                -webkit-box-sizing: border-box; 
+                   -moz-box-sizing: border-box; 
+                        box-sizing: border-box;
+            }
+
+            section{
+                padding-bottom: 60px;
+            }
+
+            .highlight{
+                background-color: #FDFDB1;
+            }
+
+            .filters li{
+                margin: 15px 0;
+            }
+
+            .content{
+                background: #f1f1f1;
+                padding: 20px;
+            }
+
+            h4{
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+
+            img{
+                max-width: 100%;
+            }
+        </style>
+
+        <!-- Various Icons (Favicon, Touch Icon,... -->
+        <link rel="shortcut icon" href="assets/img/favicon.ico">
+        <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-touch-icon-114x114.png">
+        
+    </head>
+    
+    <body data-spy="scroll" data-target=".navbar" id="top">
+    
+        <!-- ========================= NAVIGATION BAR >> START ========================= -->
+        
+        <div class="navigation navbar">
+            <ul class="nav">
+                <li class="active"><a href="#overview">Overview</a></li>
+                <li><a href="#videotutorials">Video Tutorials</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#createskin">Create a Skin</a></li>
+                <li><a href="#createportfolio">Create a Portfolio</a></li>
+                <li><a href="#insertportfolios">Insert Portfolios</a></li>
+                <li><a href="#settings">Portfolio Settings</a></li>
+                <li><a href="#metadata">Post Meta Data</a></li>
+                <li><a href="#importexport">Import & Export</a></li>
+                <li><a href="#customposttypes">Custom Post Types</a></li>
+            </ul>
+        </div>
+        
+        <!-- ========================= NAVIGATION BAR >> END ========================= -->
+    
+    
+    
+        <!-- ========================= MAIN CONTAINER >> START ========================= -->
+        <div class="container">
+        
+            <!-- ========================= SECTION: OVERVIEW >> START ========================= -->
+            <section id="overview" style="padding-top:20px;">
+                
+                <h1>WP Media Boxes <small>by <a href="http://codecanyon.net/user/castlecode" target="_blank">castlecode</a></small></h1>
+
+                <br>
+
+                <div class="content">
+                    Thank you for purchasing this plugin. 
+                    <br>
+                    If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form 
+                    <a href="http://codecanyon.net/user/castlecode">here</a>. 
+                </div>
+                
+            </section>
+            <!-- ========================= SECTION: OVERVIEW >> END ========================= -->
+
+            
+            <!-- ========================= SECTION: VIDEO TUTORIALS >> START ========================= -->
+            <section id="videotutorials">
+                <h2>Video Tutorials | First Steps</h2>
+
+                <br>
+
+                <div class="content">
+                    This video tutorials will show you the basics for creating your first portfolio
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4>Step 1: Installing the Plugin</h4>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/wfgGIIGFEQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="col-sm-6"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4>
+                                Step 2: Making My First Skin
+                                <br>
+                                <small>You can skip this step and import all the skins from the example folder, see how <a href="#videotutorials-handystuff">here</a></small>
+                            </h4>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/CqidrXpl7wM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="col-sm-6"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4>
+                                Step 3: Creating My First Portfolio
+                                <br>    
+                                <small>See some examples on how to create a gallery <a href="#videotutorials-someexamples">here</a></small>
+                            </h4>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/BWoAEpr1pvo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="col-sm-6"></div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="videotutorials-someexamples">
+                <h2>Video Tutorials | Some Examples</h2>
+
+                <br>
+                    
+                <div class="content">
+                    Some examples on what you can do with the plugin
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4>Creating a Masonry Gallery Using the Custom Media Gallery</h4>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/m2O3idiHIW8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>Creating a Masonry Gallery with Custom Post Types</h4>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/hnEdgzt4pHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="videotutorials-handystuff">
+                <h2>Video Tutorials | Handy Stuff</h2>
+
+                <br>
+                    
+                <div class="content">
+                    Some handy stuff
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4>Importing and Exporting</h4>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/KN2cCnPn6Bk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>Adding Meta Data To My Posts</h4>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/oe3Bw7sY6Rg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4>Adding Custom Post Types</h4>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/kxdD19Yo1FM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>Creating Multiple Filter/Categories Groups</h4>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/0cXBSr-Lk04" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- ========================= SECTION: VIDEO TUTORIALS >> END ========================= -->
+
+            
+            <!-- ========================= SECTION: INSTALLATION >> START ========================= -->
+            <section id="installation">
+                <h2>Installation</h2>
+                
+                <br>
+
+                <div class="content">
+                    There are two ways to install the plugin. Using the Wordpess Plugin Uploader or via FTP. Before intstalling the plugin you need to unzip the downloaded file from CodeCanyon into your computer. Inside you'll find a file named "wp_media_boxes.zip" and a folder named "wp_media_boxes".
+
+                    <h4>Wordpress Plugin Uploader Steps:</h4>
+                                        
+                    <ul>
+                        <li>Log into your <strong>Wordpress admin panel</strong></li>
+                        <li>Go to <strong>Plugins > Add New</strong></li>
+                        <li>Click <strong>Upload</strong></li>
+                        <li>Click <strong>Choose File</strong> and select the "wp_media_boxes.zip" file</li>
+                        <li>Click <strong>Install Now</strong></li>
+                        <li>Click <strong>Activate Plugin</strong></li>
+                    </ul>
+
+                    <h4>FTP Steps:</h4>
+
+                    <ul>
+                        <li><strong>Upload</strong> the "wp_media_boxes" folder to the Wordpress plugins folder on your server using FTP (example: htttp://domain.com/wordpress/wp-contents/plugins/)</li>
+                        <li>Login into your <strong>Wordpress admin panel</strong></li>
+                        <li>Find the plugin and click <strong>Activate</strong></li>
+                    </ul>
+
+                    <h4>Update the plugin:</h4>
+
+                    You should update the via FTP. The process is same as the installation using FTP. <strong>DO NOT uninstall the plugin before updating it.</strong>
+                </div>
+            </section>
+            <!-- ========================= SECTION: INSTALLATION >> END ========================= -->
+
+          
+            <!-- ========================= SECTION: CREATE A SKING >> START ========================= -->
+            <section id="createskin">
+                <h2>Create a Skin</h2>
+                
+                <br>
+
+                <div class="content">
+                    Here you will see how to create your first skin. You can import all the skins from the live preview and skip this section so you can start faster, just go to the <a href="index.html#importexport">Import & Export</a> section.
+
+                    <h4>First Step:</h4>
+                    Go to the Media Boxes admin panel, through the left dashboard menu and click <strong>Skin Editor</strong> then click <strong>Create a new skin</strong>
+
+                    <br><br>
+                    <img src="img/skin1.png" alt="" style="max-width: 700px;">
+                    <br><br>
+
+                    <h4>Second Step:</h4>
+                    Enter a new name for your sking (this is for identification purpose in the admin panel).
+                    <br>
+                    Then you can drag items from the <strong>AVAILABLE ITEMS</strong> and <strong>EXTRA ITEMS</strong> sections into the <strong>THUMBNAIL OVERLAY</strong> and <strong>CONTENT</strong> sections.
+                    <br>
+                    Once you have items in the <strong>THUMBNAIL OVERLAY</strong> and <strong>CONTENT</strong> sections you'll notice few options you can play around with. For example:
+                    <ul>
+                        <li><strong>Pencil Icon:</strong> you can change the icon</li>
+                        <li><strong>Link Icon:</strong> you can set that when the user clicks on that item it links to a different page or it opens the lightbox</li>
+                        <li><strong>Trash Icon:</strong> you can remove the item from the section</li>
+                    </ul>
+
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <img src="img/skin2.png" alt="" style="width: 100%;">
+                        </div>
+                        <div class="col-sm-6">
+                            <img src="img/skin3.png" alt="" style="width: 100%;">
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <h4>Third Step:</h4>
+                    Navigate to the <strong>Apply Some Style</strong> part.
+                    <br>
+                    Here you can apply many different CSS styles to all the items selected in the previous step.
+                    <br> 
+                    The item you are currently styling is in the top right corner in a dropdown menu (which you can change).
+
+                    <br><br>
+                    <img src="img/skin4.png" alt="" style="max-width: 700px;">
+                    <br><br>
+
+                    <h4>Final Step:</h4>
+                    Don't forget to save it by clicking the green <strong>Save</strong> button. If you click <strong>Close</strong> or leave the page the changes will not be saved.
+                                        
+                </div>
+            </section>
+            <!-- ========================= SECTION: CREATE A SKING >> END ========================= -->
+            
+            
+            <!-- ========================= SECTION: CREATE A PORTFOLIO >> START ========================= -->
+            <section id="createportfolio">
+                <h2>Create a Portfolio</h2>
+                
+                <br>
+
+                <div class="content">
+                    Here you will see how to create your first portfolio.
+            
+                    <h4>First Step:</h4>
+                    You need to go to the Media Boxes admin panel, through the left dashboard menu and then click <strong>Create a new portfolio</strong>.
+
+                    <br><br>
+                    <img src="img/admin1.png" alt="" style="max-width: 700px;">
+                    <br><br>
+
+                    <h4>Second Step:</h4>
+                    Specify a portfolio name (just for identification purpose in the admin panel) and a <strong>UNIQUE</strong> shortcode id (which would be used in the shortcode).
+
+                    <br><br>
+                    <img src="img/admin2.png" alt="" style="max-width: 700px;">
+                    <br><br>
+
+                    <h4>Third Step:</h4>
+                    Select a <strong>Post Type</strong> so that the plugin can create the portfolio from that source, the plugin supports <strong>custom post types</strong> as well.
+                    <br>
+                    Then select the <strong>categories or tags</strong> that you wish to use with the plugin, if you don't want to use any then just click the 'x' so all of them are deselected.
+
+                    <br><br>
+                    <img src="img/admin3.png" alt="" style="max-width: 700px;">
+                    <br><br>
+
+                    <h4>Fourth Step:</h4>
+                    Select a skin, if you don't have any then import all the skins from the live preview, <strong>the plugin WILL NOT WORK without a skin.</strong>
+                    <br>
+                    Also you can drag <strong>Sorting, Search and Filters</strong> so they appear at the top of the portfolio.
+
+                    <br><br>
+                    <img src="img/admin4.png" alt="" style="max-width: 700px;">
+                    <br><br>
+
+                    <h4>Final Step:</h4>
+                    Don't forget to save it by clicking the green <strong>Save</strong> button. If you click <strong>Close</strong> or leave the page the changes will not be saved.
+
+                </div>
+            </section>
+            <!-- ========================= SECTION: CREATE A PORTFOLIO >> END ========================= -->
+
+
+            <!-- ========================= SECTION: INSERT PORTFOLIOS >> START ========================= -->
+            <section id="insertportfolios">
+                <h2>Insert Portfolios</h2>
+
+                <br>
+
+                <div class="content">
+                    Here you will see how to insert the portfolio you just created into your pages or posts.
+
+                    <h4>First Step:</h4>
+                    Copy the shortcode of any portfolio
+
+                    <br><br>
+                    <img src="img/insert1.png" alt="" style="max-width: 700px;">
+                    <br><br>
+
+                    <h4>Final Step:</h4>
+                    Paste it in any page or post
+
+                    <br><br>
+                    <img src="img/insert2.png" alt="" style="max-width: 700px;">
+                    <br><br>
+
+                </div>
+            </section>
+            <!-- ========================= SECTION: INSERT PORTFOLIOS >> END ========================= -->
+            
+
+            <!-- ========================= SECTION: SETTINGS >> START ========================= -->
+            <section id="settings">
+                <h2>Portfolio Settings</h2>
+
+                <br>
+
+                <div class="content">
+                    You can play around with all the options in the admin panel, if you put your mouse over any option you'll see a little description about it, so you know what it does.
+
+                    <br><br>
+                    <img src="img/settings1.png" alt="" style="max-width: 700px;">
+
+                </div>
+            </section>
+            <!-- ========================= SECTION: SETTINGS >> END ========================= -->
+
+
+            <!-- ========================= SECTION: POST META DATA >> START ========================= -->
+            <section id="metadata">
+                <h2>Post Meta Data</h2>
+
+                <br>
+
+                <div class="content">
+                    You can add some Meta Data so you can specify few extra things to each post. You'll find the Meta Data of the Media Boxes at the bottom of your post.
+
+                    <br><br>
+                    <img src="img/metadata1.png" alt="" style="max-width: 700px;">
+
+                </div>
+            </section>
+            <!-- ========================= SECTION: POST META DATA >> END ========================= -->
+
+
+            <!-- ========================= SECTION: IMPORT & EXPORT >> START ========================= -->
+            <section id="importexport">
+                <h2>Import & Export</h2>
+
+                <br>
+
+                <div class="content">
+                    Inside the file you downloaded from CodeCanyon you'll see a folder named "examples" inside that folder you'll find several .json files containing the portfolios and skins of the live preview.
+                    
+                    <br><br>
+                    <img src="img/importexport1.png" alt="" style="max-width: 200px;">
+                    <br><br>
+
+                    <h4>Import Portfolios and Skins:</h4>
+                    You can import the <strong>all portfolios.json</strong> and <strong>all skins.json</strong> files in order to get all the examples into your Wordpress installation, or choose to import only some of them. <br>
+                    You can import examples by going to the <strong>Import/Export</strong> option in the Media Boxes admin panel. Then scroll down to the <strong>PORTFOLIOS IMPORTER</strong> and <strong>SKINS IMPORTER</strong> section and select a .json file, then just click <strong>Import</strong>.
+
+                    <br><br>
+                    <img src="img/importexport2.png" alt="" style="max-width: 700px;">
+                    <br><br>
+
+                    <h4>Export Portfolios and Skins:</h4>
+                    You can also export your portfolios and skins (in case you wish to import them in another Wordpress installation). In order to do so go to the <strong>Import/Export</strong> option, choose the portfolios or skins you wish to export and click the <strong>Export</strong> button. A .json file will be downloaded to your computer.
+
+                    <br><br>
+                    <img src="img/importexport3.png" alt="" style="max-width: 700px;">
+                    <br><br>
+
+                </div>
+            </section>
+            <!-- ========================= SECTION: IMPORT & EXPORT >> END ========================= -->
+
+
+            <!-- ========================= SECTION: CUSTOM POST TYPES >> START ========================= -->
+            <section id="customposttypes">
+                <h2>Custom Post Types</h2>
+
+                <br>
+
+                <div class="content">
+                    You can add a custom post type and specify it as the source for one of your portfolios. 
+                    <br>
+                    There are many plugins for adding custom post types to your WP, but I would recommend you this one: <a target="blank" href="https://wordpress.org/plugins/custom-post-type-ui/">https://wordpress.org/plugins/custom-post-type-ui/</a> just download it and install it in your WP.
+
+                    <h4>First Step:</h4>
+                    Create a new custom post type and fill up the mandatory fields. Make sure that the <strong>Post Type Slug</strong> is <strong>UNIQUE</strong>.
+
+                    <br><br>
+                    <img src="img/custompost1.png" alt="" style="max-width: 500px;">
+                    <br><br>
+
+                    <h4>Second Step:</h4>
+                    Scroll down and select the built-in taxonomies that you wish to use with this custom post type. Then click <strong>Add Post Type</strong>.
+
+                    <br><br>
+                    <img src="img/custompost2.png" alt="" style="max-width: 500px;">
+                    <br><br>
+
+                    <h4>Final Step:</h4>
+                    You should see the new custom post type in the left dashboard menu, so just start adding posts.
+
+                    <br><br>
+                    <img src="img/custompost3.png" alt="" style="max-width: 500px;">
+                    <br><br>
+
+
+                </div>
+            </section>
+            <!-- ========================= SECTION: CUSTOM POST TYPES >> END ========================= -->
+
+
+        </div>
+        <!-- ========================= MAIN CONTAINER >> END ========================= -->
+     
+
+        <!-- loading javascripts -->
+        <script src="assets/js/jquery.js"></script> 
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/google-code-prettify/prettify.js"></script>
+        
+        <!-- init javascripts -->
+        <script src="assets/js/init.js"></script>
+
+
+
+    </body>
+    
+</html>

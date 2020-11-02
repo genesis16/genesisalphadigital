@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Atomic Blocks - Gutenberg Blocks Collection plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Atomic Blocks - Gutenberg Blocks Collection 2.8.6\n"
+"Project-Id-Version: Atomic Blocks - Gutenberg Blocks Collection 2.9.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/atomic-blocks\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-09-17T18:07:15+00:00\n"
+"POT-Creation-Date: 2020-10-28T16:49:37+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: atomic-blocks\n"
@@ -52,6 +52,8 @@ msgstr ""
 
 #: dist/getting-started/getting-started.php:51
 #: dist/init.php:131
+#: dist/migration/class-notice.php:96
+#: dist/migration/migrate-page/ab-migrate.php:14
 msgid "Genesis Blocks"
 msgstr ""
 
@@ -72,6 +74,7 @@ msgstr ""
 #: dist/getting-started/pages/ab-getting-started.php:13
 #: dist/getting-started/pages/ab-getting-started.php:206
 #: dist/getting-started/pages/settings-main.php:28
+#: dist/migration/migrate-page/ab-migrate.php:13
 msgid "Visit Atomic Blocks"
 msgstr ""
 
@@ -97,6 +100,7 @@ msgid "The Atomic Blocks collection is now ready to use in your posts and pages.
 msgstr ""
 
 #: dist/getting-started/pages/ab-getting-started.php:48
+#: dist/migration/migrate-page/ab-migrate.php:68
 msgid "Atomic Blocks Theme"
 msgstr ""
 
@@ -457,6 +461,100 @@ msgstr ""
 
 #: dist/getting-started/pages/settings-main.php:97
 msgid "View Documentation"
+msgstr ""
+
+#: dist/migration/class-install-genesis-blocks-api.php:68
+#: dist/migration/migrate-page/ab-migrate.php:39
+msgid "Successfully installed and activated Genesis Blocks!"
+msgstr ""
+
+#: dist/migration/class-install-genesis-blocks-api.php:137
+msgid "Unable to connect to the filesystem. Please confirm your credentials."
+msgstr ""
+
+#: dist/migration/class-install-genesis-blocks-api.php:142
+msgid "Unable to determine what plugin was installed."
+msgstr ""
+
+#: dist/migration/class-install-genesis-blocks-api.php:171
+msgid "The filesystem is currently unavailable for managing plugins."
+msgstr ""
+
+#: dist/migration/class-install-genesis-blocks-api.php:204
+msgid "There was no download_link in the API"
+msgstr ""
+
+#. translators: %1$s: the plugin name
+#: dist/migration/class-notice.php:93
+msgid "Atomic Blocks has moved! For future updates and improvements, migrate now to the new home of site building with Gutenberg: %1$s."
+msgstr ""
+
+#: dist/migration/class-notice.php:101
+msgid "Learn more about migrating"
+msgstr ""
+
+#: dist/migration/class-notice.php:106
+msgid "Not Now"
+msgstr ""
+
+#: dist/migration/class-notice.php:109
+#: dist/migration/migrate-page/migrate-page.php:48
+#: dist/migration/migrate-page/migrate-page.php:49
+msgid "Migrate"
+msgstr ""
+
+#: dist/migration/class-notice.php:114
+msgid "When you're ready, our migration tool is available in the main menu, under Atomic Blocks > Migrate."
+msgstr ""
+
+#: dist/migration/class-notice.php:117
+msgid "Okay"
+msgstr ""
+
+#: dist/migration/migrate-page/ab-migrate.php:14
+msgid "Get ready for"
+msgstr ""
+
+#: dist/migration/migrate-page/ab-migrate.php:24
+msgid "Atomic Blocks has moved!"
+msgstr ""
+
+#. translators: %1$s Genesis Pro website URL.
+#: dist/migration/migrate-page/ab-migrate.php:28
+msgid "Same powerful blocks, same beautiful designs, same innovative team. Atomic Blocks has been renamed to Genesis Blocks. %1$s"
+msgstr ""
+
+#: dist/migration/migrate-page/ab-migrate.php:34
+msgid "With our migration tool built right into Genesis Blocks, the transition between plugins will be simple and seamless - plus you'll be ready to receive the new blocks and features we're releasing soon."
+msgstr ""
+
+#: dist/migration/migrate-page/ab-migrate.php:36
+msgid "Install and Activate Genesis Blocks"
+msgstr ""
+
+#: dist/migration/migrate-page/ab-migrate.php:38
+msgid "Something went wrong. Try again."
+msgstr ""
+
+#: dist/migration/migrate-page/ab-migrate.php:41
+msgid "Already using Genesis Blocks?"
+msgstr ""
+
+#: dist/migration/migrate-page/ab-migrate.php:42
+msgid "Update to 1.1.0+ and visit Genesis Blocks → Migrate to begin your migration."
+msgstr ""
+
+#: dist/migration/migrate-page/ab-migrate.php:49
+msgid "Your server does not meet the minimum requirements for Genesis Blocks."
+msgstr ""
+
+#: dist/migration/migrate-page/ab-migrate.php:50
+msgid "In order to continue receiving the new blocks and new features we're working on, please update the following:"
+msgstr ""
+
+#. Translators: The version of PHP that the user has currently installed.
+#: dist/migration/migrate-page/ab-migrate.php:55
+msgid "Required PHP Version: PHP 7.1 or later (currently using PHP %s)"
 msgstr ""
 
 #. translators: %s This PHP class name. Will print AtomicBlocks\Newsletter\Mailchimp

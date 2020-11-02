@@ -4,11 +4,13 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit975de3d237aa0c43124095575abf10c3
+class ComposerStaticInitc8a5b877cf7bd3ae594dcd96cda90f0d
 {
     public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Leadin\\AssetsManager' => __DIR__ . '/../..' . '/src/class-assetsmanager.php',
         'Leadin\\Leadin' => __DIR__ . '/../..' . '/src/class-leadin.php',
+        'Leadin\\LeadinFilters' => __DIR__ . '/../..' . '/src/class-leadinfilters.php',
         'Leadin\\LeadinOptions' => __DIR__ . '/../..' . '/src/class-leadinoptions.php',
         'Leadin\\PageHooks' => __DIR__ . '/../..' . '/src/class-pagehooks.php',
         'Leadin\\admin\\AdminConstants' => __DIR__ . '/../..' . '/src/admin/class-adminconstants.php',
@@ -40,7 +42,7 @@ class ComposerStaticInit975de3d237aa0c43124095575abf10c3
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit975de3d237aa0c43124095575abf10c3::$classMap;
+            $loader->classMap = ComposerStaticInitc8a5b877cf7bd3ae594dcd96cda90f0d::$classMap;
 
         }, null, ClassLoader::class);
     }

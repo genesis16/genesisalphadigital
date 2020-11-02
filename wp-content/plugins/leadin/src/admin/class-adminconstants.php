@@ -1,6 +1,7 @@
 <?php
 namespace Leadin\admin;
 
+use Leadin\LeadinFilters;
 use Leadin\admin\Links;
 use Leadin\admin\utils\DeviceId;
 use Leadin\utils\Versions;
@@ -22,10 +23,10 @@ class AdminConstants {
 			'backgroundIframeUrl'   => Links::get_background_iframe_src(),
 			'deviceId'              => DeviceId::get(),
 			'didDisconnect'         => true,
-			'env'                   => constant( 'LEADIN_ENV' ),
-			'formsScript'           => constant( 'LEADIN_FORMS_SCRIPT_URL' ),
-			'formsScriptPayload'    => constant( 'LEADIN_FORMS_PAYLOAD' ),
-			'hubspotBaseUrl'        => constant( 'LEADIN_BASE_URL' ),
+			'env'                   => LeadinFilters::get_leadin_env(),
+			'formsScript'           => LeadinFilters::get_leadin_forms_script_url(),
+			'formsScriptPayload'    => LeadinFilters::get_leadin_forms_payload(),
+			'hubspotBaseUrl'        => LeadinFilters::get_leadin_base_url(),
 			'leadinPluginVersion'   => constant( 'LEADIN_PLUGIN_VERSION' ),
 			'locale'                => get_locale(),
 			'nonce'                 => wp_create_nonce( 'hubspot-ajax' ),

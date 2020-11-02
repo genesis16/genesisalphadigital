@@ -73,7 +73,7 @@ class LeadinAdmin {
 			wp_safe_redirect( admin_url( 'admin.php?page=leadin' ) );
 			exit;
 		} elseif ( ! empty( $portal_id ) && isset( $_GET['page'] ) && 'leadin' === $_GET['page'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$landing_page = MenuConstants::SETUP_GUIDE;
+			$landing_page = MenuConstants::USER_GUIDE;
 			wp_safe_redirect( admin_url( 'admin.php?page=' . $landing_page ) );
 			exit;
 		}
@@ -103,7 +103,7 @@ class LeadinAdmin {
 
 		if ( ! empty( $portal_id ) ) {
 			add_menu_page( __( 'HubSpot', 'leadin' ), __( 'HubSpot', 'leadin' ) . $notification_icon, 'edit_posts', MenuConstants::ROOT, array( $this, 'build_app' ), 'dashicons-sprocket', '25.100713' );
-			add_submenu_page( MenuConstants::ROOT, __( 'Setup Guide', 'leadin' ), __( 'Setup Guide', 'leadin' ), 'edit_posts', MenuConstants::SETUP_GUIDE, array( $this, 'build_app' ) );
+			add_submenu_page( MenuConstants::ROOT, __( 'User Guide', 'leadin' ), __( 'User Guide', 'leadin' ), 'edit_posts', MenuConstants::USER_GUIDE, array( $this, 'build_app' ) );
 			add_submenu_page( MenuConstants::ROOT, __( 'Reporting', 'leadin' ), __( 'Reporting', 'leadin' ), 'edit_posts', MenuConstants::REPORTING, array( $this, 'build_app' ) );
 			add_submenu_page( MenuConstants::ROOT, __( 'Contacts', 'leadin' ), __( 'Contacts', 'leadin' ), 'edit_posts', MenuConstants::CONTACTS, array( $this, 'build_app' ) );
 			add_submenu_page( MenuConstants::ROOT, __( 'Lists', 'leadin' ), __( 'Lists', 'leadin' ), 'edit_posts', MenuConstants::LISTS, array( $this, 'build_app' ) );

@@ -2,6 +2,7 @@
 
 namespace Leadin;
 
+use Leadin\LeadinFilters;
 use Leadin\LeadinOptions;
 use Leadin\admin\AdminConstants;
 
@@ -74,9 +75,9 @@ class AssetsManager {
 	 * @param Object $leadin_wordpress_info Object used to pass to the script loader.
 	 */
 	public static function enqueue_script_loader( $leadin_wordpress_info ) {
-		$embed_domain = constant( 'LEADIN_SCRIPT_LOADER_DOMAIN' );
+		$embed_domain = LeadinFilters::get_leadin_script_loader_domain();
 		$portal_id    = LeadinOptions::get_portal_id();
-		$embed_url    = "//$embed_domain/$portal_id.js?integration=WordPress";
+		$embed_url    = "https://$embed_domain/$portal_id.js?integration=WordPress";
 		wp_register_script( self::TRACKING_CODE, $embed_url, array( 'jquery' ), null, true ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 		wp_localize_script( self::TRACKING_CODE, 'leadin_wordpress', $leadin_wordpress_info );
 		wp_enqueue_script( self::TRACKING_CODE );

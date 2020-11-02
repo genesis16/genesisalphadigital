@@ -1,6 +1,14 @@
+= 7.46.2 (2020.10.27)
+- Released the updated user guide
+- Fix forms rendering on IE11
+
+= 7.45.6 (2020.10.20)
+- Use https instead of relative-protocol URLs for HubSpot scripts
+- Define custom filters instead of constants for HubSpot properties
+
 = 7.45.4 (2020.10.12)
 - Fix iframe communication for IE11
-- Fix for JS error when it is re-executed by jQuery and attempting to modify an immutable object 
+- Fix for JS error when it is re-executed by jQuery and attempting to modify an immutable object
 
 = 7.44.6 (2020.09.30)
 - Added a demo of the tools for new users

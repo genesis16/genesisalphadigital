@@ -2,6 +2,7 @@
 
 namespace Leadin\admin;
 
+use Leadin\LeadinFilters;
 use Leadin\admin\Links;
 use Leadin\LeadinOptions;
 
@@ -45,7 +46,7 @@ class PluginActionsManager {
 	public function leadin_plugin_advanced_features_link( $links ) {
 		$portal_id = LeadinOptions::get_portal_id();
 		if ( ! empty( $portal_id ) ) {
-			$url                    = LEADIN_BASE_URL . '/pricing/' . $portal_id . '/marketing?' . Links::get_query_params();
+			$url                    = LeadinFilters::get_leadin_base_url() . '/pricing/' . $portal_id . '/marketing?' . Links::get_query_params();
 			$advanced_features_link = '<a class="hubspot-menu-pricing" target="_blank" href="' . esc_attr( $url ) . '">' . esc_html( __( 'Upgrade', 'leadin' ) ) . '</a>';
 			array_push( $links, $advanced_features_link );
 		}

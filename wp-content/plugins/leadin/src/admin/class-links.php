@@ -2,8 +2,10 @@
 
 namespace Leadin\admin;
 
+use Leadin\LeadinFilters;
 use Leadin\LeadinOptions;
 use Leadin\admin\AdminFilters;
+use Leadin\admin\MenuConstants;
 use Leadin\admin\utils\Background;
 use Leadin\wp\User;
 use Leadin\utils\Versions;
@@ -21,28 +23,28 @@ class Links {
 	public static function get_routes_mapping() {
 		$portal_id      = get_option( 'leadin_portalId' );
 		$reporting_page = "/wordpress-plugin-ui/$portal_id/reporting";
-		$setup_guide    = "/wordpress-plugin-ui/$portal_id/onboarding/start";
+		$user_guide     = "/wordpress-plugin-ui/$portal_id/onboarding/start";
 
 		return array(
-			'leadin'             => $setup_guide,
-			'leadin_reporting'   => $reporting_page,
-			'leadin_chatflows'   => array(
+			MenuConstants::ROOT       => $user_guide,
+			MenuConstants::REPORTING  => $reporting_page,
+			MenuConstants::CHATFLOWS  => array(
 				''         => "/chatflows/$portal_id",
 				'settings' => "/live-messages-settings/$portal_id",
 			),
-			'leadin_contacts'    => "/contacts/$portal_id",
-			'leadin_lists'       => "/contacts/$portal_id/lists",
-			'leadin_forms'       => "/forms/$portal_id",
-			'leadin_email'       => array(
+			MenuConstants::CONTACTS   => "/contacts/$portal_id",
+			MenuConstants::LISTS      => "/contacts/$portal_id/lists",
+			MenuConstants::FORMS      => "/forms/$portal_id",
+			MenuConstants::EMAIL      => array(
 				''    => "/email/$portal_id",
 				'cms' => "/content/$portal_id/create/email",
 			),
-			'leadin_settings'    => array(
+			MenuConstants::SETTINGS   => array(
 				''      => "/wordpress-plugin-ui/$portal_id/settings",
 				'forms' => "/settings/$portal_id/marketing/form",
 			),
-			'leadin_setup_guide' => $setup_guide,
-			'leadin_pricing'     => "/pricing/$portal_id/marketing",
+			MenuConstants::USER_GUIDE => $user_guide,
+			MenuConstants::PRICING    => "/pricing/$portal_id/marketing",
 		);
 	}
 
@@ -163,7 +165,7 @@ class Links {
 		$signup_params['wp_gravatar'] = get_avatar_url( $wp_user->ID );
 
 		$affiliate_code = AdminFilters::apply_affiliate_code();
-		$signup_url     = LEADIN_SIGNUP_BASE_URL . '/signup/wordpress?';
+		$signup_url     = LeadinFilters::get_leadin_signup_base_url() . '/signup/wordpress?';
 
 		if ( $affiliate_code ) {
 			$signup_url     .= self::http_build_query( $signup_params );
@@ -195,7 +197,7 @@ class Links {
 
 		$query = '';
 
-		return LEADIN_BASE_URL . "/wordpress-plugin-ui$portal_id_url/background?$query" . self::get_query_params();
+		return LeadinFilters::get_leadin_base_url() . "/wordpress-plugin-ui$portal_id_url/background?$query" . self::get_query_params();
 	}
 
 	/**
@@ -203,7 +205,7 @@ class Links {
 	 */
 	public static function get_login_url() {
 		$portal_id = LeadinOptions::get_portal_id();
-		return LEADIN_BASE_URL . "/wordpress-plugin-ui/$portal_id/login?" . self::get_query_params();
+		return LeadinFilters::get_leadin_base_url() . "/wordpress-plugin-ui/$portal_id/login?" . self::get_query_params();
 	}
 
 	/**
@@ -212,7 +214,7 @@ class Links {
 	private static function get_connection_src() {
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.InputNotValidated
 		$portal_id = filter_var( wp_unslash( $_GET['leadin_connect'] ), FILTER_VALIDATE_INT );
-		return LEADIN_BASE_URL . "/wordpress-plugin-ui/onboarding/connect?portalId=$portal_id&" . self::get_query_params();
+		return LeadinFilters::get_leadin_base_url() . "/wordpress-plugin-ui/onboarding/connect?portalId=$portal_id&" . self::get_query_params();
 	}
 
 	/**
@@ -221,7 +223,7 @@ class Links {
 	 * @param String $wp_user_id WordPress user ID.
 	 */
 	private static function get_unauthed_src( $wp_user_id ) {
-		return LEADIN_BASE_URL . '/wordpress-plugin-ui/unauthed/' . get_user_meta( $wp_user_id, 'leadin_default_app', true );
+		return LeadinFilters::get_leadin_base_url() . '/wordpress-plugin-ui/unauthed/' . get_user_meta( $wp_user_id, 'leadin_default_app', true );
 	}
 
 	/**
@@ -307,6 +309,6 @@ class Links {
 		// Query string separator "?" may have been added to the URL already.
 		$add_separator = strpos( $sub_routes, '?' ) ? '&' : '?';
 
-		return LEADIN_BASE_URL . "$route$sub_routes" . $add_separator . self::get_query_params() . $browser_search_string;
+		return LeadinFilters::get_leadin_base_url() . "$route$sub_routes" . $add_separator . self::get_query_params() . $browser_search_string;
 	}
 }
