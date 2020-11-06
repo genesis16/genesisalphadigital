@@ -96,6 +96,24 @@ final class ApiTest extends TestCase {
 	}
 
 	/**
+	 * Tests that the Pro setting route is registered.
+	 *
+	 * @since 1.1.0
+	 * @covers Genesis\Blocks\Migration\Api::register_route_migrate_setting()
+	 */
+	public function test_register_route_migrate_pro_setting(): void {
+		Functions\expect( 'register_rest_route' )
+			->once()
+			->with(
+				'genesis-blocks',
+				'migrate-pro-settings',
+				Mockery::subset( [ 'methods' => 'POST' ] )
+			);
+
+		$this->instance->register_route_migrate_setting();
+	}
+
+	/**
 	 * Tests that the user meta route is registered.
 	 *
 	 * @since 1.1.0
@@ -158,6 +176,30 @@ final class ApiTest extends TestCase {
 			->with( [ 'success' => true ] );
 
 		$this->instance->get_migrate_setting_response();
+	}
+
+	/**
+	 * Tests the Pro setting migration response on success.
+	 *
+	 * @since 1.1.1
+	 * @covers Genesis\Blocks\Migration\Api::get_migrate_setting_response()
+	 */
+	public function test_get_migrate_pro_setting_response_on_success(): void {
+		$old_settings = include __DIR__ . '/fixtures/settings/pro-block-settings-permissions.php';
+
+		Functions\expect( 'get_option' )
+			->once()
+			->andReturn( $old_settings );
+
+		Functions\expect( 'update_option' )
+			->once()
+			->andReturn( true );
+
+		Functions\expect( 'rest_ensure_response' )
+			->once()
+			->with( [ 'success' => true ] );
+
+		$this->instance->get_migrate_pro_setting_response();
 	}
 
 	/**
@@ -231,7 +273,7 @@ final class ApiTest extends TestCase {
 	 */
 	public function test_get_migration_cleanup_response(): void {
 		Functions\expect( 'delete_option' )
-			->once();
+			->twice();
 
 		Functions\expect( 'update_option' )
 			->once();
@@ -242,6 +284,9 @@ final class ApiTest extends TestCase {
 		Functions\expect( 'rest_ensure_response' )
 			->once()
 			->with( [ 'success' => true ] );
+
+		Functions\expect( 'genesis_blocks_is_pro' )
+			->once();
 
 		$this->instance->get_migration_cleanup_response();
 	}

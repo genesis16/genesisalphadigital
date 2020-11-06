@@ -398,5 +398,3 @@ function alphaomegadigital_footer_widget() {
 	));
 }
 
-	
-	

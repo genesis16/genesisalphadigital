@@ -37,7 +37,7 @@ final class Module implements ModuleInterface {
 	public function is_enabled(): bool {
 		add_action( 'admin_init', [ $this, 'maybe_reactivate_migration' ] );
 
-		$has_completed_migration = get_option( 'genesis_blocks_migrated_from_atomic_blocks' );
+		$has_completed_migration = get_option( 'genesis_blocks_migrated_from_atomic_blocks' ) || get_option( 'genesis_blocks_pro_migrated_from_genesis_blocks_pro' );
 
 		return current_user_can( 'manage_options' ) && ! $has_completed_migration;
 	}
@@ -58,6 +58,7 @@ final class Module implements ModuleInterface {
 		}
 
 		delete_option( 'genesis_blocks_migrated_from_atomic_blocks' );
+		delete_option( 'genesis_blocks_pro_migrated_from_genesis_blocks_pro' );
 		wp_safe_redirect( admin_url( 'admin.php?page=genesis-blocks-migrate' ) );
 		exit;
 	}

@@ -1,5 +1,5 @@
 // @ts-check
-
+/* global genesisBlocksMigration */
 /**
  * External dependencies
  */
@@ -18,10 +18,15 @@ import { __ } from '@wordpress/i18n';
 const Intro = () => {
 	const developerNoticeUrl = 'https://wpeng.in/ab-gb-dev/';
 
+	let headerText = __( 'Atomic Blocks has been renamed to Genesis Blocks', 'genesis-blocks' );
+	if ( genesisBlocksMigration.isPro ) {
+		headerText = __( 'We need to update your blocks to give you the latest features!', 'genesis-blocks' );
+	}
+
 	return (
 		<>
 			<div>
-				<h2>{ __( 'Atomic Blocks has been renamed to Genesis Blocks', 'genesis-blocks' ) }</h2>
+				<h2>{ headerText }</h2>
 				<p>{ __( 'Same powerful blocks, same beautiful designs, same innovative team.', 'genesis-blocks' ) }</p>
 				<p>{ __( 'To continue receiving the best of what our team is building, we encourage you to migrate. Our migration tool makes this nice and easy, and for the majority of use cases, completely automated.', 'genesis-blocks' ) }</p>
 				<div className="dev-notice">

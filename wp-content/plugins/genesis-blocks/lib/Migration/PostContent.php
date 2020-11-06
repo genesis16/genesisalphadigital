@@ -195,7 +195,7 @@ final class PostContent {
 	 *
 	 * @return array The posts that were found.
 	 */
-	private function query_for_posts() {
+	public function query_for_posts() {
 		global $wpdb;
 
 		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching

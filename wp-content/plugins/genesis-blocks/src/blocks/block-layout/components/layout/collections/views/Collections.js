@@ -145,7 +145,7 @@ export function Collections( props ) {
 					{ renderViewAllButton() }
 					{ renderMainTitle() }
 				</div>
-				<a tabIndex="0" className="gb-collections-link"><span className="dashicons dashicons-info"></span>{ __( 'Learn about Collections', 'genesis-blocks' ) }</a>
+				<a target="_blank" rel="noreferrer" href="https://developer.wpengine.com/genesis-blocks/layouts-block/#collections" tabIndex="0" className="gb-collections-link"><span className="dashicons dashicons-info"></span>{ __( 'Learn about Collections', 'genesis-blocks' ) }</a>
 			</div>
 			<div className="gb-collections-body">
 				{ renderCollections(props.context.collections) }

@@ -99,6 +99,7 @@ class Admin {
 
 		$script_data = [
 			'gbUrl' => menu_page_url( 'genesis-blocks-getting-started', false ),
+			'isPro' => genesis_blocks_is_pro(),
 		];
 
 		wp_add_inline_script(
@@ -114,11 +115,15 @@ class Admin {
 	 * @since 1.1.0
 	 */
 	public function render_page() {
+		$title = __( 'Migrate from Atomic Blocks to Genesis Blocks', 'genesis-blocks' );
+		if ( genesis_blocks_is_pro() ) {
+			$title = __( 'Genesis Blocks Pro Migration Tool', 'genesis-blocks' );
+		}
 		?>
 		<div class="intro-wrap">
 			<div class="intro">
 				<img src="<?php echo esc_url( $this->plugin_info['url'] . '/lib/Settings/assets/images/genesis-planet-icon.svg' ); ?>" alt="Genesis Blocks">
-				<h1><?php echo esc_html__( 'Migrate from Atomic Blocks to Genesis Blocks', 'genesis-blocks' ); ?></h1>
+				<h1><?php echo esc_html( $title ); ?></h1>
 			</div>
 		</div>
 

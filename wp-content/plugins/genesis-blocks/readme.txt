@@ -4,7 +4,7 @@ Donate link: https://studiopress.com
 Tags: Blocks, editor, gutenberg, gutenberg blocks, page builder, block enabled, page building, block, WP Engine
 Requires at least: 5.3
 Tested up to: 5.5
-Stable tag: 1.1.1
+Stable tag: 1.2.0
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -96,6 +96,10 @@ Yes, you will need to have WordPress 5.3 or later installed to take advantage of
 3. Some of the many blocks included in Genesis Blocks
 
 == Changelog ==
+
+= 1.2.0 =
+* New: Introducing Collections, a curated suite of pattern designs to quickly build out beautiful pages and full websites.
+* Added support for migrating Genesis Blocks Pro users.
 
 = 1.1.1 =
 * Fixed an issue for sites migrating from Atomic Blocks where in some cases the migration did not complete due to an error when deactivating the Atomic Blocks plugin. 

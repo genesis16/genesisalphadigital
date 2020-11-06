@@ -45,7 +45,7 @@ const MigrateBlocks = ( { isStepActive, isStepComplete, stepIndex, goToNext } ) 
 		__( 'Migrate block settings.', 'genesis-blocks' ),
 		__( 'Migrate block content. Migrated: ', 'genesis-blocks' ) + ` ${ postsMigrated }.`,
 		__( 'Migrate favorite blocks.', 'genesis-blocks' ),
-		__( 'Deactivate Atomic Blocks.', 'genesis-blocks' ),
+		genesisBlocksMigration.isPro ? __( 'Clean up.', 'genesis-blocks' ) : __( 'Deactivate Atomic Blocks.', 'genesis-blocks' ),
 	];
 
 	/**
@@ -57,6 +57,7 @@ const MigrateBlocks = ( { isStepActive, isStepComplete, stepIndex, goToNext } ) 
 			method: 'POST',
 		} ).then( async () => {
 			setCurrentBlockMigrationStep( 1 );
+			await migrateProBlockSettings();
 			await migratePostContent();
 		} ).catch( ( result ) => {
 			if ( result.hasOwnProperty( 'message' ) ) {
@@ -67,6 +68,19 @@ const MigrateBlocks = ( { isStepActive, isStepComplete, stepIndex, goToNext } ) 
 			setIsInProgress( false );
 		} );
 	};
+
+	const migrateProBlockSettings = async () => {
+		await apiFetch( {
+			path: '/genesis-blocks/migrate-pro-settings',
+			method: 'POST',
+		} ).catch( ( result ) => {
+			if ( result.hasOwnProperty( 'message' ) ) {
+				setErrorMessage( result.message );
+			}
+			speak( __( 'The pro settings migration failed.', 'genesis-blocks' ) );
+			setIsError( true );
+		} );
+	}
 
 	/**
 	 * Step 2: Migrates post content, then triggers step 3.
@@ -82,7 +96,7 @@ const MigrateBlocks = ( { isStepActive, isStepComplete, stepIndex, goToNext } ) 
 			// Send migration requests until no posts with Atomic Blocks content are found.
 			if ( response.results && response.results.postsFound > 0 ) {
 				setPostsMigrated( postsMigrated => postsMigrated + response.results.postsFound );
-				await migratePostContent(); 
+				await migratePostContent();
 				return;
 			}
 			setCurrentBlockMigrationStep( 2 );
@@ -146,9 +160,9 @@ const MigrateBlocks = ( { isStepActive, isStepComplete, stepIndex, goToNext } ) 
 			goToNext();
 		} );
 	};
-	
+
 	/**
-	 * Sets initial migration state and begins migration step 1. 
+	 * Sets initial migration state and begins migration step 1.
 	 */
 	const migrate = async () => {
 		speak( __( 'The migration is now in progress', 'genesis-blocks' ) );
@@ -181,7 +195,7 @@ const MigrateBlocks = ( { isStepActive, isStepComplete, stepIndex, goToNext } ) 
 				) }
 				{ ( isInProgress || isSuccess ) && (
 					<>
-						<SubstepList 
+						<SubstepList
 							steps={migrationLabels}
 							currentStep={currentBlockMigrationStep}
 							complete={!isInProgress}/>
@@ -197,15 +211,42 @@ const MigrateBlocks = ( { isStepActive, isStepComplete, stepIndex, goToNext } ) 
 				) }
 				{ isSuccess && (
 					<>
-						<p>
-							<span role="img" aria-label={ __( 'party emoji', 'genesis-blocks' ) }>🎉</span>
-							&nbsp;
-							{ __( 'The migration completed successfully! Time to say goodbye to Atomic Blocks (it’s been fun!) and step into the FUTURE', 'genesis-blocks' ) }
-							&nbsp;
-							<span className="message-future">{ __( 'FUTURE', 'genesis-blocks' ) }</span>
-							&nbsp;
-							<sub>{ __( 'FUTURE', 'genesis-blocks' ) }</sub>.
-						</p>
+						{!genesisBlocksMigration.isPro && (
+							<p>
+								<span
+									role="img"
+									aria-label={__("party emoji", "genesis-blocks")}
+								>
+									🎉
+								</span>
+								&nbsp;
+								{__(
+									"The migration completed successfully! Time to say goodbye to Atomic Blocks (it’s been fun!) and step into the FUTURE",
+									"genesis-blocks"
+								)}
+								&nbsp;
+								<span className="message-future">
+									{__("FUTURE", "genesis-blocks")}
+								</span>
+								&nbsp;
+								<sub>{__("FUTURE", "genesis-blocks")}</sub>.
+							</p>
+						)}
+						{genesisBlocksMigration.isPro && (
+							<p>
+								<span
+									role="img"
+									aria-label={__("party emoji", "genesis-blocks")}
+								>
+									🎉
+								</span>
+								&nbsp;
+								{__(
+									"The migration completed successfully!",
+									"genesis-blocks"
+								)}
+							</p>
+						)}
 						<StepFooter>
 							{ /* @ts-ignore */ }
 							<a href={ genesisBlocksMigration.gbUrl } className="btn">

@@ -1,4 +1,5 @@
 // @ts-check
+/* global genesisBlocksMigration */
 
 /**
  * External dependencies
@@ -34,6 +35,11 @@ import { FIRST_STEP_NUMBER } from '../../constants';
 const BackUpSite = ( { isStepActive, isStepComplete, goToNext, goToPrevious, stepIndex } ) => {
 	const isFirstStep = FIRST_STEP_NUMBER === stepIndex;
 
+	let backupIntroText = __( 'Migrating from Atomic Blocks to Genesis Blocks is a one-way action. It can’t be undone. Please back up your site before you begin.', 'genesis-blocks' );
+	if ( genesisBlocksMigration.isPro ) {
+		backupIntroText = __( 'Migrating your Genesis Blocks content is a one-way action. It can’t be undone. Please back up your site before you begin.', 'genesis-blocks' )
+	}
+
 	return (
 		<Step isActive={ isStepActive } isComplete={ isStepComplete }>
 			<StepIcon
@@ -44,7 +50,7 @@ const BackUpSite = ( { isStepActive, isStepComplete, goToNext, goToPrevious, ste
 				heading={ __( 'Back Up Your Site', 'genesis-blocks' ) }
 				isStepActive={ isStepActive }
 			>
-				<p>{ __( 'Migrating from Atomic Blocks to Genesis Blocks is a one-way action. It can’t be undone. Please back up your site before you begin.', 'genesis-blocks' ) }</p>
+				<p>{ backupIntroText }</p>
 				<StepFooter>
 					{ ! isFirstStep && <ButtonPrevious onClick={ goToPrevious } /> }
 					<ButtonNext

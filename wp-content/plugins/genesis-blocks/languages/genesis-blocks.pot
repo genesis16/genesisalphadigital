@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Genesis Blocks plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Genesis Blocks 1.1.1\n"
+"Project-Id-Version: Genesis Blocks 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/genesis-blocks\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-10-29T11:14:43+00:00\n"
+"POT-Creation-Date: 2020-11-04T16:47:34+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: genesis-blocks\n"
@@ -113,6 +113,46 @@ msgstr ""
 
 #: includes/layout/register-layout-components.php:26
 #: includes/layout/register-layout-components.php:28
+#: includes/patterns/gb_slate_layout_about.php:24
+#: includes/patterns/gb_slate_layout_features.php:18
+#: includes/patterns/gb_slate_layout_homepage.php:18
+#: includes/patterns/gb_slate_layout_home_alt.php:18
+#: includes/patterns/gb_slate_section_accordion_text.php:18
+#: includes/patterns/gb_slate_section_accordion_text.php:24
+#: includes/patterns/gb_slate_section_call_to_action_accent.php:21
+#: includes/patterns/gb_slate_section_call_to_action_accent.php:28
+#: includes/patterns/gb_slate_section_contact_box.php:19
+#: includes/patterns/gb_slate_section_contact_box.php:24
+#: includes/patterns/gb_slate_section_contact_columns.php:19
+#: includes/patterns/gb_slate_section_contact_columns.php:26
+#: includes/patterns/gb_slate_section_content_boxes.php:19
+#: includes/patterns/gb_slate_section_content_boxes.php:25
+#: includes/patterns/gb_slate_section_features.php:18
+#: includes/patterns/gb_slate_section_features.php:24
+#: includes/patterns/gb_slate_section_feature_image_columns.php:18
+#: includes/patterns/gb_slate_section_feature_image_columns.php:24
+#: includes/patterns/gb_slate_section_feature_text_columns.php:18
+#: includes/patterns/gb_slate_section_feature_text_columns.php:24
+#: includes/patterns/gb_slate_section_hero.php:19
+#: includes/patterns/gb_slate_section_hero.php:25
+#: includes/patterns/gb_slate_section_hero_title.php:19
+#: includes/patterns/gb_slate_section_hero_title.php:23
+#: includes/patterns/gb_slate_section_hero_with_buttons.php:19
+#: includes/patterns/gb_slate_section_hero_with_buttons.php:23
+#: includes/patterns/gb_slate_section_image_and_text_cta.php:20
+#: includes/patterns/gb_slate_section_image_and_text_cta.php:26
+#: includes/patterns/gb_slate_section_image_text_columns.php:18
+#: includes/patterns/gb_slate_section_image_text_columns.php:24
+#: includes/patterns/gb_slate_section_numbered_list_image.php:18
+#: includes/patterns/gb_slate_section_numbered_list_image.php:24
+#: includes/patterns/gb_slate_section_team_members.php:19
+#: includes/patterns/gb_slate_section_team_members.php:23
+#: includes/patterns/gb_slate_section_testimonials.php:19
+#: includes/patterns/gb_slate_section_testimonials.php:24
+#: includes/patterns/gb_slate_section_testimonial_image.php:19
+#: includes/patterns/gb_slate_section_testimonial_image.php:25
+#: includes/patterns/gb_slate_section_text_with_cta.php:18
+#: includes/patterns/gb_slate_section_text_with_cta.php:23
 msgid "business"
 msgstr ""
 
@@ -122,6 +162,20 @@ msgstr ""
 
 #: includes/layout/register-layout-components.php:30
 #: includes/layout/register-layout-components.php:44
+#: includes/patterns/gb_slate_layout_features.php:21
+#: includes/patterns/gb_slate_layout_homepage.php:20
+#: includes/patterns/gb_slate_layout_home_alt.php:20
+#: includes/patterns/gb_slate_section_call_to_action_accent.php:22
+#: includes/patterns/gb_slate_section_call_to_action_accent.php:29
+#: includes/patterns/gb_slate_section_content_boxes.php:20
+#: includes/patterns/gb_slate_section_content_boxes.php:26
+#: includes/patterns/gb_slate_section_features.php:19
+#: includes/patterns/gb_slate_section_features.php:25
+#: includes/patterns/gb_slate_section_image_text_columns.php:19
+#: includes/patterns/gb_slate_section_image_text_columns.php:25
+#: includes/patterns/gb_slate_section_numbered_list_image.php:19
+#: includes/patterns/gb_slate_section_numbered_list_image.php:25
+#: includes/patterns/gb_slate_section_team_members.php:24
 msgid "product"
 msgstr ""
 
@@ -133,6 +187,45 @@ msgstr ""
 #: includes/layout/register-layout-components.php:45
 #: includes/layout/register-layout-components.php:60
 #: includes/layout/register-layout-components.php:77
+#: includes/patterns/gb_slate_layout_about.php:20
+#: includes/patterns/gb_slate_layout_about.php:25
+#: includes/patterns/gb_slate_layout_contact.php:18
+#: includes/patterns/gb_slate_layout_features.php:20
+#: includes/patterns/gb_slate_layout_features.php:25
+#: includes/patterns/gb_slate_layout_homepage.php:19
+#: includes/patterns/gb_slate_layout_homepage.php:25
+#: includes/patterns/gb_slate_layout_home_alt.php:19
+#: includes/patterns/gb_slate_layout_home_alt.php:25
+#: includes/patterns/gb_slate_section_accordion_text.php:20
+#: includes/patterns/gb_slate_section_accordion_text.php:25
+#: includes/patterns/gb_slate_section_contact_box.php:20
+#: includes/patterns/gb_slate_section_contact_box.php:25
+#: includes/patterns/gb_slate_section_contact_columns.php:20
+#: includes/patterns/gb_slate_section_contact_columns.php:27
+#: includes/patterns/gb_slate_section_features.php:21
+#: includes/patterns/gb_slate_section_features.php:26
+#: includes/patterns/gb_slate_section_feature_image_columns.php:25
+#: includes/patterns/gb_slate_section_feature_text_columns.php:19
+#: includes/patterns/gb_slate_section_feature_text_columns.php:25
+#: includes/patterns/gb_slate_section_hero.php:20
+#: includes/patterns/gb_slate_section_hero.php:26
+#: includes/patterns/gb_slate_section_hero_title.php:20
+#: includes/patterns/gb_slate_section_hero_title.php:26
+#: includes/patterns/gb_slate_section_hero_with_buttons.php:20
+#: includes/patterns/gb_slate_section_hero_with_buttons.php:26
+#: includes/patterns/gb_slate_section_image_and_text_cta.php:21
+#: includes/patterns/gb_slate_section_image_and_text_cta.php:27
+#: includes/patterns/gb_slate_section_image_text_columns.php:21
+#: includes/patterns/gb_slate_section_image_text_columns.php:26
+#: includes/patterns/gb_slate_section_numbered_list_image.php:21
+#: includes/patterns/gb_slate_section_numbered_list_image.php:26
+#: includes/patterns/gb_slate_section_team_members.php:25
+#: includes/patterns/gb_slate_section_testimonials.php:20
+#: includes/patterns/gb_slate_section_testimonials.php:25
+#: includes/patterns/gb_slate_section_testimonial_image.php:20
+#: includes/patterns/gb_slate_section_testimonial_image.php:26
+#: includes/patterns/gb_slate_section_text_with_cta.php:19
+#: includes/patterns/gb_slate_section_text_with_cta.php:24
 msgid "landing"
 msgstr ""
 
@@ -141,7 +234,6 @@ msgid "marketing"
 msgstr ""
 
 #: includes/layout/register-layout-components.php:47
-#: includes/patterns/gb_section_contact.php:17
 msgid "email"
 msgstr ""
 
@@ -155,6 +247,7 @@ msgstr ""
 
 #: includes/layout/register-layout-components.php:62
 #: includes/layout/register-layout-components.php:79
+#: includes/patterns/gb_slate_layout_about.php:26
 msgid "about"
 msgstr ""
 
@@ -171,6 +264,16 @@ msgstr ""
 
 #: includes/layout/register-layout-components.php:65
 #: includes/layout/register-layout-components.php:82
+#: includes/patterns/gb_slate_section_contact_columns.php:21
+#: includes/patterns/gb_slate_section_contact_columns.php:28
+#: includes/patterns/gb_slate_section_feature_image_columns.php:20
+#: includes/patterns/gb_slate_section_feature_image_columns.php:26
+#: includes/patterns/gb_slate_section_feature_text_columns.php:20
+#: includes/patterns/gb_slate_section_feature_text_columns.php:26
+#: includes/patterns/gb_slate_section_hero.php:21
+#: includes/patterns/gb_slate_section_hero.php:27
+#: includes/patterns/gb_slate_section_text_with_cta.php:20
+#: includes/patterns/gb_slate_section_text_with_cta.php:25
 msgid "portfolio"
 msgstr ""
 
@@ -188,11 +291,21 @@ msgstr ""
 
 #: includes/layout/register-layout-components.php:95
 #: includes/layout/register-layout-components.php:97
+#: includes/patterns/gb_slate_section_call_to_action_accent.php:18
+#: includes/patterns/gb_slate_section_call_to_action_accent.php:25
+#: includes/patterns/gb_slate_section_hero.php:18
+#: includes/patterns/gb_slate_section_hero.php:24
+#: includes/patterns/gb_slate_section_hero_title.php:18
+#: includes/patterns/gb_slate_section_hero_title.php:24
+#: includes/patterns/gb_slate_section_hero_with_buttons.php:18
+#: includes/patterns/gb_slate_section_hero_with_buttons.php:24
 #: src/blocks/block-post-grid/components/inspector.js:106
 msgid "header"
 msgstr ""
 
 #: includes/layout/register-layout-components.php:98
+#: includes/patterns/gb_slate_section_hero_title.php:25
+#: includes/patterns/gb_slate_section_hero_with_buttons.php:25
 msgid "hero"
 msgstr ""
 
@@ -206,6 +319,19 @@ msgstr ""
 #: includes/layout/register-layout-components.php:127
 #: includes/layout/register-layout-components.php:142
 #: includes/layout/register-layout-components.php:157
+#: includes/patterns/gb_slate_layout_about.php:19
+#: includes/patterns/gb_slate_layout_features.php:19
+#: includes/patterns/gb_slate_layout_features.php:24
+#: includes/patterns/gb_slate_section_accordion_text.php:19
+#: includes/patterns/gb_slate_section_call_to_action_accent.php:19
+#: includes/patterns/gb_slate_section_call_to_action_accent.php:26
+#: includes/patterns/gb_slate_section_features.php:20
+#: includes/patterns/gb_slate_section_feature_image_columns.php:19
+#: includes/patterns/gb_slate_section_image_and_text_cta.php:18
+#: includes/patterns/gb_slate_section_image_and_text_cta.php:24
+#: includes/patterns/gb_slate_section_image_text_columns.php:20
+#: includes/patterns/gb_slate_section_numbered_list_image.php:20
+#: includes/patterns/gb_slate_section_team_members.php:18
 msgid "services"
 msgstr ""
 
@@ -226,6 +352,11 @@ msgstr ""
 
 #: includes/layout/register-layout-components.php:140
 #: includes/layout/register-layout-components.php:155
+#: includes/patterns/gb_slate_layout_about.php:21
+#: includes/patterns/gb_slate_section_feature_image_columns.php:21
+#: includes/patterns/gb_slate_section_image_and_text_cta.php:19
+#: includes/patterns/gb_slate_section_image_and_text_cta.php:25
+#: includes/patterns/gb_slate_section_testimonial_image.php:21
 msgid "media"
 msgstr ""
 
@@ -239,6 +370,9 @@ msgstr ""
 
 #: includes/layout/register-layout-components.php:170
 #: includes/layout/register-layout-components.php:172
+#: includes/patterns/gb_slate_layout_about.php:18
+#: includes/patterns/gb_slate_layout_about.php:27
+#: includes/patterns/gb_slate_section_team_members.php:20
 msgid "team"
 msgstr ""
 
@@ -262,6 +396,11 @@ msgstr ""
 
 #: includes/layout/register-layout-components.php:187
 #: includes/layout/register-layout-components.php:189
+#: includes/patterns/gb_slate_layout_features.php:27
+#: includes/patterns/gb_slate_section_testimonials.php:18
+#: includes/patterns/gb_slate_section_testimonials.php:23
+#: includes/patterns/gb_slate_section_testimonial_image.php:18
+#: includes/patterns/gb_slate_section_testimonial_image.php:24
 #: src/blocks/block-testimonial/index.js:29
 msgid "testimonial"
 msgstr ""
@@ -276,21 +415,370 @@ msgstr ""
 msgid "review"
 msgstr ""
 
-#: includes/patterns/gb_section_contact.php:12
-msgid "Contact Info and Map"
+#: includes/patterns/gb_slate_layout_about.php:13
+#: includes/patterns/gb_slate_layout_contact.php:13
+#: includes/patterns/gb_slate_layout_features.php:13
+#: includes/patterns/gb_slate_layout_homepage.php:13
+#: includes/patterns/gb_slate_layout_home_alt.php:13
+#: includes/patterns/gb_slate_section_accordion_text.php:13
+#: includes/patterns/gb_slate_section_blog_posts.php:13
+#: includes/patterns/gb_slate_section_call_to_action_accent.php:13
+#: includes/patterns/gb_slate_section_contact_box.php:13
+#: includes/patterns/gb_slate_section_contact_columns.php:13
+#: includes/patterns/gb_slate_section_content_boxes.php:13
+#: includes/patterns/gb_slate_section_features.php:13
+#: includes/patterns/gb_slate_section_feature_image_columns.php:13
+#: includes/patterns/gb_slate_section_feature_text_columns.php:13
+#: includes/patterns/gb_slate_section_hero.php:13
+#: includes/patterns/gb_slate_section_hero_title.php:13
+#: includes/patterns/gb_slate_section_hero_with_buttons.php:13
+#: includes/patterns/gb_slate_section_image_and_text_cta.php:13
+#: includes/patterns/gb_slate_section_image_text_columns.php:13
+#: includes/patterns/gb_slate_section_numbered_list_image.php:13
+#: includes/patterns/gb_slate_section_team_members.php:13
+#: includes/patterns/gb_slate_section_testimonials.php:13
+#: includes/patterns/gb_slate_section_testimonial_image.php:13
+#: includes/patterns/gb_slate_section_text_with_cta.php:13
+msgid "Slate"
 msgstr ""
 
-#: includes/patterns/gb_section_contact.php:13
-#: includes/patterns/gb_section_contact.php:15
+#: includes/patterns/gb_slate_layout_about.php:16
+msgid "Slate About"
+msgstr ""
+
+#: includes/patterns/gb_slate_layout_about.php:28
+#: includes/patterns/gb_slate_layout_contact.php:25
+#: includes/patterns/gb_slate_layout_features.php:28
+#: includes/patterns/gb_slate_layout_home_alt.php:27
+#: includes/patterns/gb_slate_section_accordion_text.php:28
+#: includes/patterns/gb_slate_section_blog_posts.php:22
+#: includes/patterns/gb_slate_section_call_to_action_accent.php:31
+#: includes/patterns/gb_slate_section_contact_box.php:28
+#: includes/patterns/gb_slate_section_contact_columns.php:31
+#: includes/patterns/gb_slate_section_content_boxes.php:21
+#: includes/patterns/gb_slate_section_content_boxes.php:30
+#: includes/patterns/gb_slate_section_features.php:28
+#: includes/patterns/gb_slate_section_feature_image_columns.php:29
+#: includes/patterns/gb_slate_section_feature_text_columns.php:28
+#: includes/patterns/gb_slate_section_hero.php:29
+#: includes/patterns/gb_slate_section_hero_title.php:28
+#: includes/patterns/gb_slate_section_hero_with_buttons.php:28
+#: includes/patterns/gb_slate_section_image_and_text_cta.php:30
+#: includes/patterns/gb_slate_section_image_text_columns.php:27
+#: includes/patterns/gb_slate_section_numbered_list_image.php:29
+#: includes/patterns/gb_slate_section_team_members.php:27
+#: includes/patterns/gb_slate_section_testimonials.php:26
+#: includes/patterns/gb_slate_section_testimonial_image.php:28
+#: includes/patterns/gb_slate_section_text_with_cta.php:27
+msgid "slate"
+msgstr ""
+
+#: includes/patterns/gb_slate_layout_about.php:29
+msgid "slate about"
+msgstr ""
+
+#: includes/patterns/gb_slate_layout_contact.php:16
+msgid "Slate Contact"
+msgstr ""
+
+#: includes/patterns/gb_slate_layout_contact.php:19
+#: includes/patterns/gb_slate_layout_contact.php:22
+#: includes/patterns/gb_slate_section_accordion_text.php:21
+#: includes/patterns/gb_slate_section_call_to_action_accent.php:20
+#: includes/patterns/gb_slate_section_call_to_action_accent.php:27
+#: includes/patterns/gb_slate_section_contact_box.php:18
+#: includes/patterns/gb_slate_section_contact_box.php:23
+#: includes/patterns/gb_slate_section_contact_columns.php:18
+#: includes/patterns/gb_slate_section_contact_columns.php:25
+#: includes/patterns/gb_slate_section_content_boxes.php:18
+#: includes/patterns/gb_slate_section_content_boxes.php:24
 msgid "contact"
 msgstr ""
 
-#: includes/patterns/gb_section_contact.php:16
-msgid "map"
+#: includes/patterns/gb_slate_layout_contact.php:23
+#: includes/patterns/gb_slate_section_accordion_text.php:26
+#: src/blocks/block-accordion/index.js:57
+msgid "accordion"
 msgstr ""
 
-#: includes/patterns/gb_section_contact.php:18
-msgid "directions"
+#: includes/patterns/gb_slate_layout_contact.php:24
+#: includes/patterns/gb_slate_section_accordion_text.php:27
+msgid "toggle"
+msgstr ""
+
+#: includes/patterns/gb_slate_layout_contact.php:26
+msgid "slate contact"
+msgstr ""
+
+#: includes/patterns/gb_slate_layout_features.php:16
+msgid "Slate Features and Services"
+msgstr ""
+
+#: includes/patterns/gb_slate_layout_features.php:26
+#: includes/patterns/gb_slate_section_features.php:29
+#: includes/patterns/gb_slate_section_image_text_columns.php:28
+#: includes/patterns/gb_slate_section_numbered_list_image.php:30
+#: src/blocks/block-pricing-table-inner/components/description/index.js:33
+msgid "features"
+msgstr ""
+
+#: includes/patterns/gb_slate_layout_features.php:29
+#: includes/patterns/gb_slate_section_features.php:31
+msgid "slate features"
+msgstr ""
+
+#: includes/patterns/gb_slate_layout_homepage.php:16
+msgid "Slate Homepage"
+msgstr ""
+
+#: includes/patterns/gb_slate_layout_homepage.php:23
+#: includes/patterns/gb_slate_layout_home_alt.php:23
+msgid "homepage"
+msgstr ""
+
+#: includes/patterns/gb_slate_layout_homepage.php:24
+#: includes/patterns/gb_slate_layout_home_alt.php:24
+msgid "home"
+msgstr ""
+
+#: includes/patterns/gb_slate_layout_homepage.php:26
+#: includes/patterns/gb_slate_layout_home_alt.php:26
+#: src/blocks/block-column-inner/index.js:32
+#: src/blocks/block-layout/index.js:31
+msgid "layout"
+msgstr ""
+
+#: includes/patterns/gb_slate_layout_home_alt.php:16
+msgid "Slate Homepage Alternative"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_accordion_text.php:16
+msgid "Slate Accordion and Text"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_accordion_text.php:29
+msgid "slate accordion and text"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_blog_posts.php:16
+msgid "Slate Blog Posts"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_blog_posts.php:18
+#: includes/patterns/gb_slate_section_blog_posts.php:23
+msgid "blog"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_blog_posts.php:19
+#: includes/patterns/gb_slate_section_blog_posts.php:24
+msgid "posts"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_blog_posts.php:25
+msgid "slate blog posts"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_call_to_action_accent.php:16
+msgid "Slate Call To Action Accent"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_call_to_action_accent.php:30
+#: includes/patterns/gb_slate_section_contact_columns.php:30
+#: includes/patterns/gb_slate_section_content_boxes.php:27
+#: includes/patterns/gb_slate_section_features.php:27
+#: includes/patterns/gb_slate_section_hero.php:28
+#: includes/patterns/gb_slate_section_hero_with_buttons.php:27
+#: includes/patterns/gb_slate_section_image_and_text_cta.php:28
+#: includes/patterns/gb_slate_section_team_members.php:26
+#: includes/patterns/gb_slate_section_text_with_cta.php:26
+#: src/blocks/block-button/index.js:120
+msgid "button"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_call_to_action_accent.php:32
+msgid "slate call to action columns"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_contact_box.php:16
+msgid "Slate Contact Box"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_contact_box.php:26
+msgid "links"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_contact_box.php:27
+#: src/blocks/block-sharing/index.js:27
+msgid "social"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_contact_box.php:29
+msgid "slate contact box"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_contact_columns.php:16
+msgid "Slate Contact Columns"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_contact_columns.php:22
+#: includes/patterns/gb_slate_section_contact_columns.php:29
+#: includes/patterns/gb_slate_section_feature_text_columns.php:21
+#: includes/patterns/gb_slate_section_feature_text_columns.php:27
+msgid "agency"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_contact_columns.php:32
+msgid "slate contact columns"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_content_boxes.php:16
+msgid "Slate Content Boxes"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_content_boxes.php:28
+msgid "content"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_content_boxes.php:29
+msgid "boxes"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_content_boxes.php:31
+msgid "slate content boxes"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_features.php:16
+msgid "Slate Features"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_features.php:30
+#: includes/patterns/gb_slate_section_image_and_text_cta.php:29
+#: includes/patterns/gb_slate_section_image_text_columns.php:29
+#: includes/patterns/gb_slate_section_numbered_list_image.php:31
+msgid "columns"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_feature_image_columns.php:16
+msgid "Slate Feature Image and Text Columns"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_feature_image_columns.php:27
+#: src/blocks/block-column-inner/index.js:31
+#: src/blocks/block-column/index.js:27
+#: src/blocks/block-layout/index.js:32
+msgid "column"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_feature_image_columns.php:28
+#: includes/patterns/gb_slate_section_image_text_columns.php:30
+#: includes/patterns/gb_slate_section_numbered_list_image.php:28
+msgid "image"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_feature_image_columns.php:30
+msgid "slate feature image and text columns"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_feature_text_columns.php:16
+msgid "Slate Feature Text Columns"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_feature_text_columns.php:29
+msgid "slate feature text columns"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_hero.php:16
+msgid "Slate Media and Text"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_hero.php:30
+msgid "slate hero"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_hero_title.php:16
+msgid "Slate Hero Title"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_hero_title.php:27
+#: src/blocks/block-pricing-table-inner/components/title/index.js:33
+msgid "title"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_hero_title.php:29
+msgid "slate hero title"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_hero_with_buttons.php:16
+msgid "Slate Hero with Buttons"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_hero_with_buttons.php:29
+msgid "slate hero with buttons"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_image_and_text_cta.php:16
+msgid "Slate Image and Text CTA"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_image_and_text_cta.php:31
+msgid "slate image and text cta"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_image_text_columns.php:16
+msgid "Slate Image and Text Columns"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_image_text_columns.php:31
+msgid "slate image and text columns"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_numbered_list_image.php:16
+msgid "Slate Numbered List and Image"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_numbered_list_image.php:27
+#: src/blocks/block-accordion/index.js:58
+msgid "list"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_numbered_list_image.php:32
+msgid "slate numbered list and image"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_team_members.php:16
+msgid "Slate Team Members"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_team_members.php:28
+msgid "slate team members"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_testimonials.php:16
+msgid "Slate Testimonials"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_testimonials.php:27
+msgid "slate testimonials"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_testimonial_image.php:16
+msgid "Slate Testimonial Image"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_testimonial_image.php:27
+msgid "avatar"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_testimonial_image.php:29
+msgid "slate testimonial image"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_text_with_cta.php:16
+msgid "Slate Text with CTA"
+msgstr ""
+
+#: includes/patterns/gb_slate_section_text_with_cta.php:28
+msgid "slate text with cta"
 msgstr ""
 
 #: lib/Migration/Admin.php:64
@@ -301,23 +789,36 @@ msgstr ""
 msgid "Migrate"
 msgstr ""
 
-#: lib/Migration/Admin.php:121
+#: lib/Migration/Admin.php:118
 msgid "Migrate from Atomic Blocks to Genesis Blocks"
 msgstr ""
 
-#: lib/Migration/AdminNotice.php:56
-msgid "Welcome to Genesis Blocks! Would you like to migrate your Atomic Blocks content to Genesis Blocks?"
+#: lib/Migration/Admin.php:120
+msgid "Genesis Blocks Pro Migration Tool"
 msgstr ""
 
-#: lib/Migration/AdminNotice.php:57
+#: lib/Migration/AdminNotice.php:108
+msgid "Genesis Blocks Pro: We need to migrate your blocks to give you the latest features!"
+msgstr ""
+
+#: lib/Migration/AdminNotice.php:109
+#: lib/Migration/AdminNotice.php:116
 msgid "Migrate now"
 msgstr ""
 
-#: lib/Migration/Api.php:63
+#: lib/Migration/AdminNotice.php:115
+msgid "Welcome to Genesis Blocks! Would you like to migrate your Atomic Blocks content to Genesis Blocks?"
+msgstr ""
+
+#: lib/Migration/Api.php:75
 msgid "Settings migration failed"
 msgstr ""
 
-#: lib/Migration/Api.php:99
+#: lib/Migration/Api.php:90
+msgid "Pro settings migration failed"
+msgstr ""
+
+#: lib/Migration/Api.php:126
 msgid "Content migration failed"
 msgstr ""
 
@@ -630,27 +1131,31 @@ msgstr ""
 msgid "Previous"
 msgstr ""
 
-#: lib/Migration/js/src/components/intro.js:24
+#: lib/Migration/js/src/components/intro.js:21
 msgid "Atomic Blocks has been renamed to Genesis Blocks"
 msgstr ""
 
-#: lib/Migration/js/src/components/intro.js:25
+#: lib/Migration/js/src/components/intro.js:23
+msgid "We need to update your blocks to give you the latest features!"
+msgstr ""
+
+#: lib/Migration/js/src/components/intro.js:30
 msgid "Same powerful blocks, same beautiful designs, same innovative team."
 msgstr ""
 
-#: lib/Migration/js/src/components/intro.js:26
+#: lib/Migration/js/src/components/intro.js:31
 msgid "To continue receiving the best of what our team is building, we encourage you to migrate. Our migration tool makes this nice and easy, and for the majority of use cases, completely automated."
 msgstr ""
 
-#: lib/Migration/js/src/components/intro.js:31
+#: lib/Migration/js/src/components/intro.js:36
 msgid "Need to let the developer for this site know about this? Send them this link."
 msgstr ""
 
-#: lib/Migration/js/src/components/intro.js:33
+#: lib/Migration/js/src/components/intro.js:38
 msgid "Developer Notice"
 msgstr ""
 
-#: lib/Migration/js/src/components/intro.js:41
+#: lib/Migration/js/src/components/intro.js:46
 msgid "Let’s Migrate"
 msgstr ""
 
@@ -658,15 +1163,19 @@ msgstr ""
 msgid "Step completed"
 msgstr ""
 
-#: lib/Migration/js/src/components/steps/back-up-site.js:44
-msgid "Back Up Your Site"
-msgstr ""
-
-#: lib/Migration/js/src/components/steps/back-up-site.js:47
+#: lib/Migration/js/src/components/steps/back-up-site.js:38
 msgid "Migrating from Atomic Blocks to Genesis Blocks is a one-way action. It can’t be undone. Please back up your site before you begin."
 msgstr ""
 
-#: lib/Migration/js/src/components/steps/back-up-site.js:51
+#: lib/Migration/js/src/components/steps/back-up-site.js:40
+msgid "Migrating your Genesis Blocks content is a one-way action. It can’t be undone. Please back up your site before you begin."
+msgstr ""
+
+#: lib/Migration/js/src/components/steps/back-up-site.js:50
+msgid "Back Up Your Site"
+msgstr ""
+
+#: lib/Migration/js/src/components/steps/back-up-site.js:57
 msgid "I have backed up my site."
 msgstr ""
 
@@ -683,63 +1192,76 @@ msgid "Migrate favorite blocks."
 msgstr ""
 
 #: lib/Migration/js/src/components/steps/migrate-blocks.js:48
+msgid "Clean up."
+msgstr ""
+
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:48
 msgid "Deactivate Atomic Blocks."
 msgstr ""
 
-#: lib/Migration/js/src/components/steps/migrate-blocks.js:65
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:66
 msgid "The migration failed during settings migration."
 msgstr ""
 
-#: lib/Migration/js/src/components/steps/migrate-blocks.js:98
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:80
+msgid "The pro settings migration failed."
+msgstr ""
+
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:112
 msgid "The migration failed during post content migration"
 msgstr ""
 
-#: lib/Migration/js/src/components/steps/migrate-blocks.js:124
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:138
 msgid "The migration failed while migrating favorite blocks."
 msgstr ""
 
-#: lib/Migration/js/src/components/steps/migrate-blocks.js:144
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:158
 msgid "The migration was successful!"
 msgstr ""
 
-#: lib/Migration/js/src/components/steps/migrate-blocks.js:154
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:168
 msgid "The migration is now in progress"
 msgstr ""
 
-#: lib/Migration/js/src/components/steps/migrate-blocks.js:171
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:185
 msgid "Migrate Your Content"
 msgstr ""
 
-#: lib/Migration/js/src/components/steps/migrate-blocks.js:175
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:189
 msgid "Okay! Everything is ready. Let’s do this. While the migration is underway, don’t leave this page."
 msgstr ""
 
-#: lib/Migration/js/src/components/steps/migrate-blocks.js:178
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:192
 msgid "The following error occurred:"
 msgstr ""
 
-#: lib/Migration/js/src/components/steps/migrate-blocks.js:195
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:209
 msgid "Try Again"
 msgstr ""
 
-#: lib/Migration/js/src/components/steps/migrate-blocks.js:195
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:209
 msgid "Migrate Now"
 msgstr ""
 
-#: lib/Migration/js/src/components/steps/migrate-blocks.js:201
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:218
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:239
 msgid "party emoji"
 msgstr ""
 
-#: lib/Migration/js/src/components/steps/migrate-blocks.js:203
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:223
 msgid "The migration completed successfully! Time to say goodbye to Atomic Blocks (it’s been fun!) and step into the FUTURE"
 msgstr ""
 
-#: lib/Migration/js/src/components/steps/migrate-blocks.js:205
-#: lib/Migration/js/src/components/steps/migrate-blocks.js:207
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:229
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:232
 msgid "FUTURE"
 msgstr ""
 
-#: lib/Migration/js/src/components/steps/migrate-blocks.js:212
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:244
+msgid "The migration completed successfully!"
+msgstr ""
+
+#: lib/Migration/js/src/components/steps/migrate-blocks.js:253
 msgid "Get started with Genesis Blocks"
 msgstr ""
 
@@ -800,14 +1322,6 @@ msgstr ""
 
 #: src/blocks/block-accordion/index.js:50
 msgid "Add accordion block with a title and text."
-msgstr ""
-
-#: src/blocks/block-accordion/index.js:57
-msgid "accordion"
-msgstr ""
-
-#: src/blocks/block-accordion/index.js:58
-msgid "list"
 msgstr ""
 
 #: src/blocks/block-accordion/index.js:59
@@ -1049,10 +1563,6 @@ msgstr ""
 msgid "Add a customizable button."
 msgstr ""
 
-#: src/blocks/block-button/index.js:120
-msgid "button"
-msgstr ""
-
 #: src/blocks/block-button/index.js:121
 msgid "link"
 msgstr ""
@@ -1152,17 +1662,6 @@ msgstr ""
 #: src/blocks/block-column-inner/index.js:26
 #: src/blocks/block-column/index.js:23
 msgid "Add a pre-defined column layout."
-msgstr ""
-
-#: src/blocks/block-column-inner/index.js:31
-#: src/blocks/block-column/index.js:27
-#: src/blocks/block-layout/index.js:32
-msgid "column"
-msgstr ""
-
-#: src/blocks/block-column-inner/index.js:32
-#: src/blocks/block-layout/index.js:31
-msgid "layout"
 msgstr ""
 
 #: src/blocks/block-column-inner/index.js:33
@@ -2106,10 +2605,6 @@ msgstr ""
 msgid "Adds a product feature component with schema markup."
 msgstr ""
 
-#: src/blocks/block-pricing-table-inner/components/description/index.js:33
-msgid "features"
-msgstr ""
-
 #: src/blocks/block-pricing-table-inner/components/description/inspector.js:104
 #: src/blocks/block-pricing-table-inner/components/global/inspector.js:85
 #: src/blocks/block-pricing-table-inner/components/price/inspector.js:94
@@ -2220,10 +2715,6 @@ msgstr ""
 
 #: src/blocks/block-pricing-table-inner/components/title/index.js:24
 msgid "Adds a product title component with schema markup."
-msgstr ""
-
-#: src/blocks/block-pricing-table-inner/components/title/index.js:33
-msgid "title"
 msgstr ""
 
 #: src/blocks/block-pricing-table-inner/index.js:165
@@ -2340,10 +2831,6 @@ msgstr ""
 
 #: src/blocks/block-sharing/index.js:26
 msgid "sharing"
-msgstr ""
-
-#: src/blocks/block-sharing/index.js:27
-msgid "social"
 msgstr ""
 
 #: src/blocks/block-sharing/index.js:33

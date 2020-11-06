@@ -165,4 +165,16 @@ final class SettingTest extends TestCase {
 
 		$this->assertFalse( $this->instance->migrate() );
 	}
+
+	/**
+	 * Tests that migrated permissions settings matches the expected output.
+	 *
+	 * @since 1.1.2
+	 * @covers \Genesis\Blocks\Migration\Setting::migrate_permissions_data
+	 */
+	public function test_migrating_pro_settings_data_gives_expected_result(): void {
+		$old_settings      = include __DIR__ . '/fixtures/settings/pro-block-settings-permissions.php';
+		$expected_settings = include __DIR__ . '/fixtures/settings/expected-pro-block-settings-permissions.php';
+		$this->assertSame( $expected_settings, $this->instance->migrate_permissions_data( $old_settings ) );
+	}
 }
