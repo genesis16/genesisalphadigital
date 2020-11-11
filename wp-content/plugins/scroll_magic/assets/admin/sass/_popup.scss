@@ -1,0 +1,277 @@
+.wpsg-import-scene{
+    &.active{
+        display: flex;
+    }
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #202224;    
+    z-index: 99999;
+    overflow: hidden;
+    .wpsg-import-right-bar{
+        width: 220px;
+        height: 100%;
+        background: #323438;
+        padding: 75px 40px 0px 40px;
+        max-width: 250px;
+        max-height: 100%;
+        flex: 0 0 auto;
+        input[type=radio]{
+            display:none;
+        }
+        input:checked + span{
+            color: #fff;
+        }
+        label{
+            text-transform: capitalize;
+            font-weight: 500;
+            font-size: 17px;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        h1{
+            font-weight: 500;
+            font-size: 17px;
+            color: #fff;
+            i{
+                padding-right: 5px;
+            }
+        }
+        ul{
+            font-size: 16px;
+            padding: 0px;
+            color: #797b7e;
+            li{
+                cursor: pointer;
+                padding:9px 0px;
+                margin:0px;
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .wpsg-import-body{
+        flex: 1 1 auto;
+        position: relative;
+        .wpsg-import-top-bar{
+            position: relative;
+            padding: 0px 50px ;
+            height: 70px;
+            display : flex;
+            align-items : center;
+            color: #797b7e;
+            input{
+                padding: unset;
+                font-size: 20px;;
+                font-weight: 600;
+                color: #fff;
+                background: transparent;
+                border: unset;
+                box-shadow: unset;
+            }
+            i.scrollyicon-clearclose{
+                font-weight: 500;
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                right: 50px;
+                transform: translate(0px, -50%);
+                font-size: 30px;
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+        .wpsg-all-scene{
+            display: block;
+            padding: 20px 200px 0px 50px;
+            height: calc(100vh - 150px);
+            overflow: auto;
+            .wpsg-loading{
+                width: 100% ;
+                height: calc(100% - 150px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 70px;
+                left: 0px;
+                background: #202224;
+                z-index: 2;
+                h1{
+                    font-size: 50px;
+                    color: #fff;
+                    font-weight: 600;
+                }
+            }
+            ul.wpsg-scenes{
+                margin: unset;
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                li.wpsg-scene{
+                    max-width: 340px;
+                    position: relative;
+                    margin: unset;
+                    .wpsg-scene-avater{
+                        width: 100%;
+                        height: 150px;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position:center center;
+                    }
+                    .wpsg-scene-info{
+                        height: 60px;
+                        background:#2a2c2f;
+                        h2{
+                            text-transform: capitalize;
+                            position: relative;
+                            z-index: 1;
+                            padding: 7px 12px 7px 12px;
+                            margin:unset;
+                            color: #b3b7bc;
+                        }
+                        .wpsg-scene-tag{
+                            font-size: 11px;
+                            font-weight: 500;
+                            color: #fff;
+                            background: #185ABC;
+                            padding: 0px 3px 0px 3px;
+                            margin: 0px 0px 0px 12px;
+                        }
+                        .wpsg-scene-import{
+                            opacity: 0 ;
+                            position: absolute;
+                            top:0px;
+                            left: 0px;
+                            width: 100%;
+                            height: 100%;
+                            background: #185ABC;
+                            .wpsg-scene-import-function{
+                                width: 110px;
+                                display: flex;
+                                position: absolute;
+                                top: 25%;
+                                left: 50%;
+                                transform: translateX(-50%);   
+                                a{
+                                    text-decoration: none;
+                                    &:first-child{
+                                        margin-right: 10px;
+                                    }
+                                    width: 50px;
+                                    height: 50px;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                    color: #fff;
+                                    border-radius: 30px;
+                                    background: #fff;
+                                    color: #185ABC;
+                                    cursor: pointer;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    i{
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        h2{
+                            position: relative;
+                            z-index: 1;
+                            color:#fff;
+                        }
+                        .wpsg-scene-import{
+                            opacity: 1;
+                            transition: all .3s
+                        }
+                    }
+                }
+            }
+        }
+        .wpsg-import-footer{
+            z-index: 2;
+            background: #202224;
+            color: #797b7e;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 93%;
+            padding: 0px 50px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            span{
+                font-size: 17px;
+                font-weight: 500;
+            }
+            .wpsg-import-footer-pagination{
+                width: 100%;
+                flex: 1 1;
+                text-align: right;
+                .wpsg-import-footer-pagination-container{
+                    display: inline-block;
+                    .paginationjs{
+                        .paginationjs-pages{
+                            ul{
+                                margin:unset;
+                                display:flex;
+                                li{
+                                    height: 30px;
+                                    width: 30px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin:unset;
+                                    font-size: 17px;
+                                    font-weight: 500;
+                                    &.active{
+                                        background: #185ABC;
+                                        a{
+                                            color: #fff;
+                                        }
+                                    }
+                                    a{
+                                        box-shadow: unset;
+                                        text-decoration: none;
+                                        color: #797b7e;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .wpsg-import-footer-pagination-number{
+                    display: inline-block;
+                    select{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size:17px !important;
+                        font-weight: 500 !important;
+                        background: transparent;
+                        border: unset;
+                        color: #747679;
+                        border:unset;
+                        option{
+                            background: #202224;
+                            &:hover{
+                                background: #185ABC !important;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+
+    }
+}

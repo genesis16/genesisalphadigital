@@ -1,0 +1,81 @@
+$primaryColor: #3498db;
+$successColor: #27ae60;
+$dangerColor: #e74c3c;
+
+$darkColor: #202224;
+$bgInput : #2a2c2f;
+$bgColor: #323438;
+$hlColor: #185ABC;
+$hl2Color: #185ABC;
+
+$txtColor: #b7bbc0;
+$hlTxtColor:#ffffff;
+
+@import "editor";
+@import "ranger"; 
+@import "toggle-switch";
+@import "_topbar.scss";
+@import "_content.scss";
+@import "_popup.scss";
+.bb_sm_icon {
+	background: url('../img/bb_sm.png')!important;
+	background-size: cover!important;
+}
+.bb_sm_imagesequence_icon {
+	background: url('../img/imagesequence.png')!important;
+	background-size: cover!important;
+}
+.bb_sm_imagesgroup {
+	background: url('../img/bb_sm_imagesgroup.png')!important;
+	background-size: cover!important;
+}
+.bb_sm_single_image_icon {
+	background: url('../img/bb_sm_single_image_icon.png')!important;
+	background-size: cover!important;
+}
+
+div[data-vc-shortcode-param-name="bbsm_scene"] {
+	.vc_checkbox-label {
+		display: inline-block;
+		width: 45%;
+	}
+}
+#wpfooter{
+	padding-top: 0;
+}
+.wpsg_raiting{
+    display: inline-block;
+    .wpsg_content_star{
+        display: inline-block;
+        a{
+            text-decoration: none;
+            cursor: pointer;
+            color: rgb(255, 218, 11);
+            padding: 1px;
+            display: inline-block;
+            font-size: 16px;
+            &:hover ~ a{
+                color: rgb(102, 102, 102);
+            }
+        }
+    }
+}
+.wpbb-scrollmagic-iframe-pages{
+    overflow: hidden;
+}
+
+.notification-select-layers {
+    position: absolute;
+    top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #b7bbc0;
+    font-weight: 500;
+    font-size: 14px;
+}
+.notification-select-layers i {
+    font-size: 18px;
+    margin-right: 10px;
+}
