@@ -145,7 +145,13 @@ input[type="search"] {
 
 /* Typographical Elements
 --------------------------------------------- */
-
+:root {
+    --darkblue: #2b2663;
+    --black: #000000;
+    --navy: #181728;
+    --violet: #443d94;
+    --royalblue: #0066cc;
+}
 body {
 	background-color: #fff;
 	color: #000;

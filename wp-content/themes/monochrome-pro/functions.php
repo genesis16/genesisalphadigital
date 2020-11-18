@@ -406,3 +406,63 @@ return $file_types;
 }
 add_filter('upload_mimes', 'add_file_types_to_uploads');
 
+
+// -- Add Custom colour palette
+
+function alphaomegadigital_setup_theme_supported_features() {
+add_theme_support( 'editor-color-palette', array(
+	array(
+		'name'  => __( 'Darkblue', 'alphaomegadigital' ),
+		'slug'  => 'darkblue',
+		'color'	=> '#2b2663',
+	),
+	array(
+		'name'  => __( 'Black', 'alphaomegadigital' ),
+		'slug'  => 'black',
+		'color' => '#000000',
+	),
+	array(
+		'name'  => __( 'Navy', 'alphaomegadigital' ),
+		'slug'  => 'navy',
+		'color' => '#181728',
+	),
+	array(
+		'name'	=> __( 'Violet', 'alphaomegadigital' ),
+		'slug'	=> 'violet',
+		'color'	=> '#443d94',
+	),
+	array(
+		'name'  => __( 'Royalblue', 'alphaomegadigital' ),
+		'slug'  => 'Royalblue',
+		'color' => '#0066cc',
+	),
+		array(
+		'name'  => __( 'White', 'alphaomegadigital' ),
+		'slug'  => 'white',
+		'color' => '#ffffff',
+	),
+		array(
+		'name'  => __( 'Lightgrey', 'alphaomegadigital' ),
+		'slug'  => 'lightgrey',
+		'color' => '#808080',
+	),
+) );
+}
+add_action( 'after_setup_theme', 'alphaomegadigital_setup_theme_supported_features' );
+
+// Add support for post formats
+add_theme_support( 'post-formats', array(
+	'aside',
+	'audio',
+	'chat',
+	'gallery',
+	'image',
+	'link',
+	'quote',
+	'status',
+	'video'
+) );
+// Add support for post format images
+add_theme_support( 'genesis-post-format-images' );
+
+
