@@ -21,7 +21,7 @@ class Essential_Grid {
 	/**
 	 * Plugin version, used for cache-busting of style and script file references.
 	 */
-	const VERSION = '3.0.7';
+	const VERSION = '3.0.8';
 	const TABLE_GRID = 'eg_grids';
 	const TABLE_ITEM_SKIN = 'eg_item_skins';
 	const TABLE_ITEM_ELEMENTS = 'eg_item_elements';
@@ -2337,20 +2337,41 @@ class Essential_Grid {
 		$filter_start = $base->getVar($this->grid_params, 'filter-start', '');
 		$filterall_visible = $base->getVar($this->grid_params, 'filter-all-visible', 'on');
 		$filter_all_text = $base->getVar($this->grid_params, 'filter-all-text', __('Filter - All', EG_TEXTDOMAIN));
-		$filter_dropdown_text = $base->getVar($this->grid_params, 'filter-dropdown-text', __('Filter Categories', EG_TEXTDOMAIN));
 		$show_count = $base->getVar($this->grid_params, 'filter-counter', 'off');
 		$search_text = $base->getVar($this->grid_params, 'search-text', __('Search...', EG_TEXTDOMAIN));
+		
+		foreach($this->grid_params as $gkey => $gparam){
+			if(strpos($gkey, 'filter-selected') === false) continue;
+			
+			$fil_id = intval(str_replace('filter-selected-', '', $gkey));
+			$fil_id = ($fil_id == 0) ? '' : '-'.$fil_id;
+			$filter_dropdown_text = $base->getVar($this->grid_params, 'filter-dropdown-text'.$fil_id, __('Filter Categories', EG_TEXTDOMAIN));
+			$filters_arr = array();
 
-		$filter_grouping = $base->getVar($this->grid_params, 'filter-grouping', 'false');
-		$listing_type = $base->getVar($this->grid_params, 'filter-listing', 'list');
-		$filter_selected = $base->getVar($this->grid_params, 'filter-selected', array());
+			$filters_arr['filter'.$fil_id]['filter-grouping'] = $base->getVar($this->grid_params, 'filter-grouping'.$fil_id, 'false');
+			$filters_arr['filter'.$fil_id]['filter-listing'] = $base->getVar($this->grid_params, 'filter-listing'.$fil_id, 'list');
+			$filters_arr['filter'.$fil_id]['filter-selected'] = $base->getVar($this->grid_params, 'filter-selected'.$fil_id, array());
+			$filters_arr['filter'.$fil_id]['custom'] = true;
+			
+			
+			$navigation_c->set_filter_settings('filter'.$fil_id, $filters_arr['filter'.$fil_id]);
+			
+			$navigation_c->set_filter_text($filter_all_text, $fil_id);
+			$navigation_c->set_filterall_visible($filterall_visible, $fil_id);
+			$navigation_c->set_dropdown_text($filter_dropdown_text, $fil_id);
+			$navigation_c->set_show_count($show_count, $fil_id);
+		}
+		
+		//$filter_grouping = $base->getVar($this->grid_params, 'filter-grouping', 'false');
+		//$listing_type = $base->getVar($this->grid_params, 'filter-listing', 'list');
+		//$filter_selected = $base->getVar($this->grid_params, 'filter-selected', array());
 		//$selected = $base->getVar($this->grid_params, 'filter-selected', array());
-		$filters_arr['filter-grouping'] = $filter_grouping;
-		$filters_arr['filter-listing'] = $listing_type;
-		$filters_arr['filter-selected'] = $filter_selected; //array(); //always give empty array (metas ect. may still be checked if Grid was a post based grid before.
-		$filters_arr['custom'] = true; //array(); //always give empty array (metas ect. may still be checked if Grid was a post based grid before.
+		//$filters_arr['filter-grouping'] = $filter_grouping;
+		//$filters_arr['filter-listing'] = $listing_type;
+		//$filters_arr['filter-selected'] = $filter_selected; //array(); //always give empty array (metas ect. may still be checked if Grid was a post based grid before.
+		//$filters_arr['custom'] = true; //array(); //always give empty array (metas ect. may still be checked if Grid was a post based grid before.
 
-		$navigation_c->set_filter_settings('filter', $filters_arr);
+		//$navigation_c->set_filter_settings('filter', $filters_arr);
 
 		$nav_type = $base->getVar($this->grid_params, 'nagivation-type', 'internal');
 		$do_nav = ($nav_type == 'internal') ? true : false;
@@ -2386,10 +2407,10 @@ class Essential_Grid {
 
 		if($do_nav){ //only do if internal is selected
 			$navigation_c->set_special_class('esg-fgc-'.$this->grid_id);
-			$navigation_c->set_dropdown_text($filter_dropdown_text);
-			$navigation_c->set_show_count($show_count);
-			$navigation_c->set_filterall_visible($filterall_visible);
-			$navigation_c->set_filter_text($filter_all_text);
+			//$navigation_c->set_dropdown_text($filter_dropdown_text);
+			//$navigation_c->set_show_count($show_count);
+			//$navigation_c->set_filterall_visible($filterall_visible);
+			//$navigation_c->set_filter_text($filter_all_text);
 			$navigation_c->set_specific_styles($nav_styles);
 			$navigation_c->set_search_text($search_text);
 			$navigation_c->set_layout($nav_layout); //set the layout
@@ -2695,7 +2716,8 @@ class Essential_Grid {
 
 			switch($this->custom_special){
 				case 'related':
-					$posts = Essential_Grid_Base::get_related_posts($max_entries);
+					$related_by = $base->getVar($this->grid_params, 'relatedbased', 'both');
+					$posts = Essential_Grid_Base::get_related_posts($max_entries,$related_by);
 				break;
 				case 'popular':
 					$posts = Essential_Grid_Base::get_popular_posts($max_entries);
@@ -3293,9 +3315,9 @@ class Essential_Grid {
 
 		$skins_html = '';
 
-		if($lightbox_mode == 'content' || $lightbox_mode == 'content-gallery' || $lightbox_mode == 'woocommerce-gallery'){
+		/*if($lightbox_mode == 'content' || $lightbox_mode == 'content-gallery' || $lightbox_mode == 'woocommerce-gallery'){
 			$item_skin->set_lightbox_rel('ess-'.$this->grid_id);
-		}
+		}*/
 
 		if(!empty($posts) && count($posts) > 0){
 			foreach($posts as $key => $post){
@@ -3303,7 +3325,12 @@ class Essential_Grid {
 				$is_visible = $this->check_if_visible($post['ID'], $this->grid_id);
 
 				if($is_visible == false) continue; // continue if invisible
-
+				
+				if($lightbox_mode == 'content' || $lightbox_mode == 'content-gallery' || $lightbox_mode == 'woocommerce-gallery'){
+					//$item_skin->set_lightbox_rel('ess-'.$this->grid_id);
+					$item_skin->set_lightbox_rel('ess-'.$post['ID']);
+				}
+				
 				$post_media_source_data = $base->get_post_media_source_data($post['ID'], $post_media_source_type);
 				$post_video_ratios = $m->get_post_video_ratios($post['ID']);
 
@@ -3586,10 +3613,12 @@ class Essential_Grid {
 					$sorts['date'] = strtotime($base->getVar($post, 'post_date'));
 				break;
 				case 'title':
-					$sorts['title'] = substr($base->getVar($post, 'post_title', ''), 0, 10);
+					$sorts['title'] = $base->getVar($post, 'post_title', '');
+					$sorts['title'] = (strlen($sorts['title']) > 10) ? substr($sorts['title'], 0, 10) : $sorts['title'];
 				break;
 				case 'excerpt':
-					$sorts['excerpt'] = substr(strip_tags($base->getVar($post, 'post_excerpt', '')), 0, 10);
+					$sorts['excerpt'] = $base->getVar($post, 'post_excerpt', '');
+					$sorts['excerpt'] = (strlen($sorts['excerpt']) > 10) ? substr($sorts['excerpt'], 0, 10) : $sorts['excerpt'];
 				break;
 				case 'id':
 					$sorts['id'] = $base->getVar($post, 'ID');
@@ -3693,10 +3722,12 @@ class Essential_Grid {
 					$sorts['date'] = strtotime($base->getVar($post, 'date'));
 				break;
 				case 'title':
-					$sorts['title'] = substr($base->getVar($post, 'title', ''), 0, 10);
+					$sorts['title'] = $base->getVar($post, 'title', '');
+					$sorts['title'] = (strlen($sorts['title']) > 10) ? substr($sorts['title'], 0, 10) : $sorts['title'];
 				break;
 				case 'excerpt':
-					$sorts['excerpt'] = substr(strip_tags($base->getVar($post, 'excerpt', '')), 0, 10);
+					$sorts['excerpt'] = $base->getVar($post, 'excerpt', '');
+					$sorts['excerpt'] = (strlen($sorts['excerpt']) > 10) ? substr($sorts['excerpt'], 0, 10) : $sorts['excerpt'];
 				break;
 				case 'id':
 					$sorts['id'] = $base->getVar($post, 'post_id');
@@ -3772,10 +3803,12 @@ class Essential_Grid {
 					$sorts['date'] = strtotime($base->getVar($post, 'date'));
 				break;
 				case 'title':
-					$sorts['title'] = substr($base->getVar($post, 'title', ''), 0, 10);
+					$sorts['title'] = $base->getVar($post, 'title', '');
+					$sorts['title'] = (strlen($sorts['title']) > 10) ? substr($sorts['title'], 0, 10) : $sorts['title'];
 				break;
 				case 'excerpt':
-					$sorts['excerpt'] = substr(strip_tags($base->getVar($post, 'excerpt', '')), 0, 10);
+					$sorts['excerpt'] = $base->getVar($post, 'excerpt', '');
+					$sorts['excerpt'] = (strlen($sorts['excerpt']) > 10) ? substr($sorts['excerpt'], 0, 10) : $sorts['excerpt'];
 				break;
 				case 'id':
 					$sorts['id'] = $base->getVar($post, 'post_id');
@@ -4275,10 +4308,10 @@ class Essential_Grid {
 			// echo '}'."\n";
 		}
 		
-        echo 'var essapi_'.$this->grid_api_name.';'."\n";
-		echo 'function esginit_'.$this->grid_api_name .'() {'."\n";
+        echo 'var essapi_'.$this->grid_api_name.'_'.$esg_grid_serial.';'."\n";
+		echo 'function esginit_'.$this->grid_api_name.'_'.$esg_grid_serial .'() {'."\n";
         echo 'jQuery(document).ready(function() {'."\n";
-        echo '	essapi_'.$this->grid_api_name.' = jQuery("#esg-grid-'.$this->grid_div_name.'-'.$esg_grid_serial.'").tpessential({'."\n";
+        echo '	essapi_'.$this->grid_api_name.'_'.$esg_grid_serial.' = jQuery("#esg-grid-'.$this->grid_div_name.'-'.$esg_grid_serial.'").tpessential({'."\n";
 
 		do_action('essgrid_output_grid_javascript_options', $this);
 
@@ -4320,7 +4353,7 @@ class Essential_Grid {
 			echo '        row:'.$rows.','."\n";
 		}
 		$token = wp_create_nonce('Essential_Grid_Front');
-		echo '		apiName: "essapi_'.$this->grid_api_name.'",'."\n";
+		echo '		apiName: "essapi_'.$this->grid_api_name.'_'.$esg_grid_serial.'",'."\n";
 		echo '        loadMoreAjaxToken:"'.$token.'",'."\n";
 		echo '        loadMoreAjaxUrl:"'.admin_url('admin-ajax.php').'",'."\n";
 		echo '        loadMoreAjaxAction:"Essential_Grid_Front_request_ajax",'."\n";
@@ -4359,11 +4392,13 @@ class Essential_Grid {
         // 2.3.7
         $videoplaybackingrid		  = $base->getVar($this->grid_params, 'videoplaybackingrid','on');
         $videoplaybackonhover		  = $base->getVar($this->grid_params, 'videoplaybackonhover','off');
+        $videomuteinline		  	  = $base->getVar($this->grid_params, 'videomuteinline','on');
         $videocontrolsinline		  = $base->getVar($this->grid_params, 'videocontrolsinline','off');
         $keeplayersovermedia		  = $base->getVar($this->grid_params, 'keeplayersovermedia','off');
 		
 		echo '        videoPlaybackInGrid: "' . $videoplaybackingrid . '",'."\n";
 		echo '        videoPlaybackOnHover: "' . $videoplaybackonhover . '",'."\n";
+		echo '        videoInlineMute: "' . $videomuteinline . '",'."\n";
 		echo '        videoInlineControls: "' . $videocontrolsinline . '",'."\n";
 		echo '        keepLayersInline: "' . $keeplayersovermedia . '",'."\n";
 		
@@ -4576,9 +4611,9 @@ class Essential_Grid {
 		echo '});'."\n";
 		
 		echo '} // End of EsgInitScript'."\n";
-		echo 'var once_'.$this->grid_api_name .' = false;'."\n";
-		echo 'if (document.readyState === "loading") document.addEventListener(\'readystatechange\',function() { if((document.readyState === "interactive" || document.readyState === "complete") && !once_'.$this->grid_api_name .' )	{ once_'.$this->grid_api_name .' = true; esginit_'.$this->grid_api_name .'();}}); else {once_'.$this->grid_api_name .' = true;  esginit_'.$this->grid_api_name .'();}'."\n";
-						
+		echo 'var once_'.$this->grid_api_name.'_'.$esg_grid_serial .' = false;'."\n";
+		echo 'if (document.readyState === "loading") document.addEventListener(\'readystatechange\',function() { if((document.readyState === "interactive" || document.readyState === "complete") && !once_'.$this->grid_api_name.'_'.$esg_grid_serial .' )	{ once_'.$this->grid_api_name.'_'.$esg_grid_serial .' = true; esginit_'.$this->grid_api_name.'_'.$esg_grid_serial .'();}}); else {once_'.$this->grid_api_name.'_'.$esg_grid_serial .' = true;  esginit_'.$this->grid_api_name.'_'.$esg_grid_serial .'();}'."\n";
+		
 		echo '</script>'."\n";
 
 		if($js_to_footer && $is_demo == false){

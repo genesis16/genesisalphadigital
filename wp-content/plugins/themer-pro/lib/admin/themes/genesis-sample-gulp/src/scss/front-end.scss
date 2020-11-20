@@ -135,7 +135,7 @@
 /* Buttons
 ---------------------------------------------------------------------------- */
 
-.ab-block-cta .ab-button {
+.gb-block-cta .gb-button {
 	font-family: "Source Sans Pro", sans-serif;
 	font-weight: $font-weight--semibold;
 }
@@ -300,14 +300,14 @@
 	}
 }
 
-/* Atomic Blocks
+/* Genesis Blocks
 ---------------------------------------------------------------------------- */
 
-.ab-block-post-grid h2 a {
+.gb-block-post-grid h2 a {
 	text-decoration: none;
 }
 
-.ab-block-container.alignfull::before {
+.gb-block-container.alignfull::before {
 
 	@media only screen and (max-width: 510px) {
 		content: " ";
@@ -315,7 +315,7 @@
 	}
 }
 
-.ab-block-container.alignfull::after {
+.gb-block-container.alignfull::after {
 
 	@media only screen and (max-width: 510px) {
 		clear: both;

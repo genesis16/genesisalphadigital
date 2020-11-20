@@ -85,7 +85,7 @@ class Essential_Grid_Facebook {
 	 * @param    string    $user_id 	Facebook User id (not name)
 	 * @param    int       $item_count 	number of photos to pull
 	 */
-	public function get_photo_sets($user_id,$item_count=10,$access_token){
+	public function get_photo_sets($user_id,$item_count,$access_token){ //item_count = 10
 		//photoset params
 		//$oauth = wp_remote_fopen("https://graph.facebook.com/oauth/access_token?type=client_cred&client_id=".$app_id."&client_secret=".$app_secret);
 		//$oauth = json_decode($oauth);
@@ -101,7 +101,7 @@ class Essential_Grid_Facebook {
 	 * @param    string    $photo_set_id 	Photoset ID
 	 * @param    int       $item_count 	number of photos to pull
 	 */
-	 public function get_photo_set_photos($photo_set_id,$item_count=10,$access_token){
+	 public function get_photo_set_photos($photo_set_id,$item_count,$access_token){ //item_count = 10
  		//$oauth = wp_remote_fopen("https://graph.facebook.com/oauth/access_token?type=client_cred&client_id=".$app_id."&client_secret=".$app_secret);
  		//$oauth = json_decode($oauth);
  		$url = "https://graph.facebook.com/".$photo_set_id."/photos?fields=id,from,message,picture,images,link,name,type,status_type,created_time,updated_time,is_hidden,likes.limit(1).summary(true)&limit=100&access_token=" . $access_token;
@@ -1267,7 +1267,7 @@ class Essential_Grid_Flickr {
 	 * @param    string    $user_id 	flicker User id (not name)
 	 * @param    int       $item_count 	number of photos to pull
 	 */
-	public function get_photo_sets($user_id,$item_count=10,$current_photoset){
+	public function get_photo_sets($user_id,$item_count,$current_photoset){ //item_count = 10
 		//photoset params
 		$photo_set_params = $this->api_param_defaults + array(
 				'method'  => 'flickr.photosets.getList',
@@ -1601,6 +1601,8 @@ class Essential_Grid_Youtube {
 				$runs = ceil($count / 50);
 				$original_count = $count;
 				$supervisor_count = 0;
+				if(!isset($this->stream)) $this->stream = array();
+				
 				for ($i=0; $i < $runs && sizeof($this->stream) < $original_count && $supervisor_count < 20; $i++) {
 
 					$nextpage = empty($page_rsp->nextPageToken) ? '' : "&pageToken=".$page_rsp->nextPageToken;
@@ -1614,7 +1616,7 @@ class Essential_Grid_Youtube {
 
 					if(!empty($page_rsp) && !isset($page_rsp->error->message) ){
 						$count = $this->youtube_playlist_output_array($page_rsp->items,$count);
-						//if( empty($nextpage) ) $i = $runs;
+						if( empty($nextpage) ) $i = $runs;
 					}
 					else {
 						echo __("YouTube reports: ",EG_TEXTDOMAIN).$page_rsp->error->message;

@@ -221,11 +221,14 @@ class Essential_Grid_Meta {
 		/* 2.1.6 allows for shortcodes inside custom meta */
 		if(strpos($text, '[') !== false && strpos($text, ']') !== false) {
 			$text = preg_replace('/"/', "'", $text);
+			//3.0.8 fixed output multiselect metadata
+			$text = str_replace( '"rn','"',str_replace("'rn","'",$text) );
+			$text = str_replace(array('","',"','"), ', ', str_replace(array('["', '"]',"['","']"), '', $text));
 		}
 		
-		$text = str_replace('","', ',', str_replace(array('["', '"]'), '', $text));
+		 
 		
-		return apply_filters('essgrid_get_meta_value_by_handle', $text, $post_id, $handle);
+		return apply_filters('essgrid_get_meta_value_by_handle', $text , $post_id, $handle);
 	}
 	
 	

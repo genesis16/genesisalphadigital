@@ -143,6 +143,10 @@ function themer_pro_update() {
 	// Update to Themer Pro 1.5.3
 	if ( version_compare( get_option( 'themer_pro_version_number' ), '1.5.3', '<' ) )
 		update_option( 'themer_pro_version_number', '1.5.3' );
+
+	// Update to Themer Pro 1.5.4
+	if ( version_compare( get_option( 'themer_pro_version_number' ), '1.5.4', '<' ) )
+		update_option( 'themer_pro_version_number', '1.5.4' );
 	
 	// Finalize the update sequence.
 	themer_pro_activate_post();

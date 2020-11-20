@@ -111,6 +111,14 @@ $all_metas = $eg_meta->get_all_meta();
 						--><span class="eg-tooltip-wrap" title="<?php _e('Disable Video Playback on Hover', EG_TEXTDOMAIN); ?>"><?php _e('Disable', EG_TEXTDOMAIN); ?></span>	
 
 						<div class="div13"></div>
+						<label for="videomuteinline" class="eg-tooltip-wrap" title="<?php _e('Mute / Unmute Video Inline', EG_TEXTDOMAIN); ?>"><?php _e('Mute Inline Video', EG_TEXTDOMAIN); ?></label><!--
+						--><input type="radio" name="videomuteinline" value="on" <?php checked($base->getVar($grid, array('params', 'videomuteinline'), 'on'), 'on'); ?>><!--
+						--><span class="eg-tooltip-wrap" title="<?php _e('Mute Video Inline', EG_TEXTDOMAIN); ?>"><?php _e('Enable', EG_TEXTDOMAIN); ?></span><div class="space18"></div><!--
+						--><input type="radio"  name="videomuteinline" value="off" <?php checked($base->getVar($grid, array('params', 'videomuteinline'), 'on'), 'off'); ?>><!--
+						--><span class="eg-tooltip-wrap" title="<?php _e('Unmute Video inline', EG_TEXTDOMAIN); ?>"><?php _e('Disable', EG_TEXTDOMAIN); ?></span>	
+
+
+						<div class="div13"></div>
 						<label for="keeplayersovermedia" class="eg-tooltip-wrap" title="<?php _e('Keep the Layers over the Video', EG_TEXTDOMAIN); ?>"><?php _e('Keep Layers on Playback', EG_TEXTDOMAIN); ?></label><!--
 						--><input type="radio" name="keeplayersovermedia" value="on" <?php checked($base->getVar($grid, array('params', 'keeplayersovermedia'), 'off'), 'on'); ?>><!--
 						--><span class="eg-tooltip-wrap" title="<?php _e('Allow Video Playback on hover', EG_TEXTDOMAIN); ?>"><?php _e('Enable', EG_TEXTDOMAIN); ?></span><div class="space18"></div><!--
@@ -654,11 +662,10 @@ $all_metas = $eg_meta->get_all_meta();
 										ob_end_clean();
 										
 										//2.3.7 display html of item skin preview
-                    $skins_html .= htmlspecialchars_decode($current_skin_html);
-										//2.3.7 replace placeholders with demo data
+                    					$skins_html .= htmlspecialchars_decode($current_skin_html);
 										$skins_html = str_replace(
-											array( '%favorites%' , '%author_name%' , '%likes_short%' , '%date%' , '%retweets%' , '%likes%' , '%views_short%' , '%dislikes_short%' , '%duration%' , '%num_comments%','Likes (Facebook,Twitter,YouTube,Vimeo,Instagram)','Likes Short (Facebook,Twitter,YouTube,Vimeo,Instagram)' , 'Date Modified', 'Views (flickr,YouTube, Vimeo)' , 'Views Short (flickr,YouTube, Vimeo)', 'Cat. List' , 'Excerpt'),
-											array( '314' , 'Author' , '1.2K' , '2020-06-28' , '35' , '123' , '54' , '13' , '9:32' , '12' , '231' , '1.2K' , '2020-06-28', '231' , '1.2K' , 'News, Journey, Company', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.'),
+											array( '%favorites%' , '%eg-clients-icon%', '%eg-clients-icon-dark%', '%author_name%' , '%likes_short%' , '%date%' , '%retweets%' , '%likes%' , '%views_short%' , '%dislikes_short%' , '%duration%' , '%num_comments%','Likes (Facebook,Twitter,YouTube,Vimeo,Instagram)','Likes Short (Facebook,Twitter,YouTube,Vimeo,Instagram)' , 'Date Modified', 'Views (flickr,YouTube, Vimeo)' , 'Views Short (flickr,YouTube, Vimeo)', 'Cat. List' , 'Excerpt'),
+											array( '314' , EG_PLUGIN_URL . '/admin/assets/images/client.png' , EG_PLUGIN_URL . '/admin/assets/images/client_dark.png' , 'Author' , '1.2K' , '2020-06-28' , '35' , '123' , '54' , '13' , '9:32' , '12' , '231' , '1.2K' , '2020-06-28', '231' , '1.2K' , 'News, Journey, Company', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.'),
 											$skins_html
 										);
 

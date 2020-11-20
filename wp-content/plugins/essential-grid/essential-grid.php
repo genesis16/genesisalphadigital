@@ -6,9 +6,9 @@
 @copyright 2018 ThemePunch
 @wordpress-plugin
 Plugin Name:       Essential Grid
-Plugin URI:        https://essential.themepunch.com
+Plugin URI:        https://www.essential-grid.com
 Description:       Essential Grid - The Original Premium Grid Plugin
-Version:           3.0.7
+Version:           3.0.8
 Author:            ThemePunch
 Author URI:        https://themepunch.com
 Text Domain:       essential-grid

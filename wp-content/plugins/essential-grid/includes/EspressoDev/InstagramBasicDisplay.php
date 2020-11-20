@@ -56,7 +56,7 @@ class InstagramBasicDisplay
         }
     }
 
-    public function getLoginUrl($scopes = ['user_profile', 'user_media'], $state = '')
+    public function getLoginUrl($scopes = array('user_profile', 'user_media'), $state = '')
     {
         if (is_array($scopes) && count(array_intersect($scopes, $this->_scopes)) === count($scopes)) {
             return self::API_OAUTH_URL . '?client_id=' . $this->getAppId() . '&redirect_uri=' . urlencode($this->getRedirectUri()) . '&scope=' . implode(',',

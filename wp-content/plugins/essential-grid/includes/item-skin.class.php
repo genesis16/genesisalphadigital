@@ -3360,6 +3360,7 @@ class Essential_Grid_Item_Skin {
 								if(isset($this->post['ID']))
 									$text = $m->replace_all_meta_in_text(@$this->post['ID'], $text);
 							}else{
+								$text = $m->replace_all_custom_element_meta_in_text($this->media_sources, $text);
 								$text = $m->replace_all_custom_element_meta_in_text($this->layer_values, $text);
 							}
 						}
@@ -4156,7 +4157,8 @@ class Essential_Grid_Item_Skin {
 		$delay = '';
 		$duration = '';
 		$transition_split = '';
-
+		
+		
 		if($masonry){
 			$transition = '';
 			//$transition_split = '';
@@ -4192,7 +4194,7 @@ class Essential_Grid_Item_Skin {
 			}
 			else {
 				$data_transition_transition = '';
-			}
+			}			
 
 		}
 
@@ -4327,6 +4329,7 @@ class Essential_Grid_Item_Skin {
 						if($is_post){
 							$text = $m->replace_all_meta_in_text($this->post['ID'], $text);
 						}else{
+							$text = $m->replace_all_custom_element_meta_in_text($this->media_sources, $text);
 							$text = $m->replace_all_custom_element_meta_in_text($this->layer_values, $text);
 						}
 					}
@@ -4334,7 +4337,7 @@ class Essential_Grid_Item_Skin {
 					// Fix html tags
 					libxml_use_internal_errors(true);
 					$text_xml = "";
-					if(class_exists('DOMDocument')){
+					if( class_exists('DOMDocument') && defined('LIBXML_HTML_NOIMPLIED') && defined('LIBXML_HTML_NODEFDTD') ){
 						$dom = new DOMDocument();
 						$dom->loadHTML('<root>' . mb_convert_encoding($text, 'HTML-ENTITIES', 'UTF-8') . '</root>', LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
 						$text_xml = substr($dom->saveHTML(), 6, -8);
@@ -4390,7 +4393,7 @@ class Essential_Grid_Item_Skin {
 			}
 
 		}
-
+		
 		$link_to = $base->getVar($layer, array('settings', 'link-type'), 'none');
 		$link_target = $base->getVar($layer, array('settings', 'link-target'), '_self');
 		if($link_target !== 'disabled')

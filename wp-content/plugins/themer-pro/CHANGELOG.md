@@ -2,6 +2,10 @@
 
 https://cobaltapps.com/downloads/themer-pro-plugin/
 
+## [1.5.4] - 2020-11-14
+### Changed
+- Updated Genesis Sample Theme to version 3.4.0.
+
 ## [1.5.3] - 2020-10-11
 ### Added
 - Added new GeneratePress Hooks to Hooksmap feature.
