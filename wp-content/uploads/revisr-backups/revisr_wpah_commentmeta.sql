@@ -20,11 +20,12 @@ CREATE TABLE `wpah_commentmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `comment_id` (`comment_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `wpah_commentmeta` WRITE;
 /*!40000 ALTER TABLE `wpah_commentmeta` DISABLE KEYS */;
+INSERT INTO `wpah_commentmeta` VALUES (9,4305,'_wp_trash_meta_status','0'),(10,4305,'_wp_trash_meta_time','1605829413'),(11,4303,'_wp_trash_meta_status','0'),(12,4303,'_wp_trash_meta_time','1605829426');
 /*!40000 ALTER TABLE `wpah_commentmeta` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
