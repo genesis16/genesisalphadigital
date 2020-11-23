@@ -243,7 +243,7 @@ class UpdraftPlus_Admin {
 		}
 	}
 	
-	private function setup_all_admin_notices_udonly($service, $override = false) {// phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.Found -- Filter use
+	private function setup_all_admin_notices_udonly($service, $override = false) {// phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable -- Filter use
 		global $updraftplus;
 
 		if (UpdraftPlus_Options::get_updraft_option('updraft_debug_mode')) {
@@ -287,7 +287,7 @@ class UpdraftPlus_Admin {
 				add_action('all_admin_notices', array($this, 'show_admin_warning_multiple_storage_options'));
 				$updraftplus->log_wp_error($settings, true, true);
 			} elseif (!empty($settings['settings'])) {
-				foreach ($settings['settings'] as $instance_id => $storage_options) {
+				foreach ($settings['settings'] as $storage_options) {
 					if ('objects-us-west-1.dream.io' == $storage_options['endpoint']) {
 						add_action('all_admin_notices', array($this, 'show_admin_warning_dreamobjects'));
 					}
@@ -1006,6 +1006,43 @@ class UpdraftPlus_Admin {
 			'hosting_restriction_one_backup_permonth' => __("You have reached the monthly limit for the number of backups you can create at this time.", 'updraftplus').' '.__('Your hosting provider only allows you to take one backup per month.', 'updraftplus').' '.sprintf(__("Please contact your hosting company (%s) if you require further support.", 'updraftplus'), $hosting_company['name']),
 			'hosting_restriction_one_incremental_perday' => __("You have reached the daily limit for the number of incremental backups you can create at this time.", 'updraftplus').' '.__("Your hosting provider only allows you to take one incremental backup per day.", 'updraftplus').' '.sprintf(__("Please contact your hosting company (%s) if you require further support.", 'updraftplus'), $hosting_company['name']),
 			'hosting_restriction' => $updraftplus->is_hosting_backup_limit_reached(),
+			'conditional_logic' => array(
+				'day_of_the_week_options' => $updraftplus->list_days_of_the_week(),
+				'logic_options' => array(
+					array(
+						'label' => __('on every backup', 'updraftplus'),
+						'value' => '',
+					),
+					array(
+						'label' => __('if any of the following conditions are matched:', 'updraftplus'),
+						'value' => 'any',
+					),
+					array(
+						'label' => __('if all of the following conditions are matched:', 'updraftplus'),
+						'value' => 'all',
+					),
+				),
+				'operand_options' => array(
+					array(
+						'label' => __('Day of the week', 'updraftplus'),
+						'value' => 'day_of_the_week',
+					),
+					array(
+						'label' => __('Day of the month', 'updraftplus'),
+						'value' => 'day_of_the_month',
+					),
+				),
+				'operator_options' => array(
+					array(
+						'label' => __('is', 'updraftplus'),
+						'value' => 'is',
+					),
+					array(
+						'label' => __('is not', 'updraftplus'),
+						'value' => 'is_not',
+					),
+				)
+			),
 		));
 	}
 	
@@ -1964,7 +2001,7 @@ class UpdraftPlus_Admin {
 	 *
 	 * @return Array - information on the status, suitable for returning to the UI
 	 */
-	public function remove_backup_set_cleanup($delete_complete, $backups, $local_deleted, $remote_deleted, $sets_removed, $timestamps, $deleted_timestamps, $deletion_errors = array()) {
+	public function remove_backup_set_cleanup($delete_complete, $backups, $local_deleted, $remote_deleted, $sets_removed, $timestamps, $deleted_timestamps, $deletion_errors = array()) {// phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable -- $deletion_errors was used below but the code has been commented out.  Can both be removed?
 
 		global $updraftplus;
 
@@ -2195,6 +2232,7 @@ class UpdraftPlus_Admin {
 			'j' => $active_jobs,
 			'ds' => $download_status,
 			'u' => $logupdate_array,
+			'automatic_updates' => $updraftplus->is_automatic_updating_enabled()
 		);
 
 		$res['hosting_restriction'] = $updraftplus->is_hosting_backup_limit_reached();
@@ -2729,7 +2767,7 @@ class UpdraftPlus_Admin {
 			if (is_wp_error($created)) {
 				echo '<p>'.__('Backup directory could not be created', 'updraftplus').'...<br>';
 				echo '<ul class="disc">';
-				foreach ($created->get_error_messages() as $key => $msg) {
+				foreach ($created->get_error_messages() as $msg) {
 					echo '<li>'.htmlspecialchars($msg).'</li>';
 				}
 				echo '</ul></p>';
@@ -2891,7 +2929,7 @@ class UpdraftPlus_Admin {
 						$settings = UpdraftPlus_Storage_Methods_Interface::update_remote_storage_options_format('updraftvault');
 						if (!is_wp_error($settings)) {
 							if (!empty($settings['settings'])) {
-								foreach ($settings['settings'] as $instance_id => $storage_options) {
+								foreach ($settings['settings'] as $storage_options) {
 									if (!empty($storage_options['email'])) {
 										$email = $storage_options['email'];
 										break;
@@ -3164,7 +3202,7 @@ class UpdraftPlus_Admin {
 						<th></th>
 						<td>
 							<label>
-								<input type="checkbox" id="<?php echo $option_page; ?>_options_auto_updates" data-updraft_settings_test="updraft_auto_updates" name="<?php echo $option_page; ?>_options[updraft_auto_update]" value="1" <?php if (UpdraftPlus_Options::get_updraft_option('updraft_auto_updates')) echo 'checked="checked"'; ?> />
+								<input type="checkbox" id="<?php echo $option_page; ?>_options_auto_updates" data-updraft_settings_test="updraft_auto_updates" name="<?php echo $option_page; ?>_options[updraft_auto_update]" value="1" <?php if ($updraftplus->is_automatic_updating_enabled()) echo 'checked="checked"'; ?> />
 								<?php _e('Ask WordPress to update UpdraftPlus automatically when an update is available', 'updraftplus');?>
 							</label>
 							<?php
@@ -3370,7 +3408,7 @@ class UpdraftPlus_Admin {
 
 		foreach ($cron as $time => $job) {
 			if (!isset($job['updraft_backup_resume'])) continue;
-			foreach ($job['updraft_backup_resume'] as $hook => $info) {
+			foreach ($job['updraft_backup_resume'] as $info) {
 				if (isset($info['args'][1]) && $job_id == $info['args'][1]) {
 					global $updraftplus;
 					$jobdata = $updraftplus->jobdata_getarray($job_id);
@@ -3393,7 +3431,7 @@ class UpdraftPlus_Admin {
 
 		foreach ($cron as $time => $job) {
 			if (isset($job['updraft_backup_resume'])) {
-				foreach ($job['updraft_backup_resume'] as $hook => $info) {
+				foreach ($job['updraft_backup_resume'] as $info) {
 					if (isset($info['args'][1])) {
 						$job_id = $info['args'][1];
 						if (false === $this_job_only || $job_id == $this_job_only) {
@@ -4605,7 +4643,7 @@ ENDHERE;
 		// Next we need to build the services array using the remote storage destinations the user has selected to upload this backup set to
 		$selected_services = array();
 		
-		foreach ($services as $key => $storage_info) {
+		foreach ($services as $storage_info) {
 			$selected_services[] = $storage_info['value'];
 		}
 		
@@ -4787,7 +4825,7 @@ ENDHERE;
 			$updraftplus->log('Restore successful');
 			$s_val = 1;
 			if (!empty($this->entities_to_restore) && is_array($this->entities_to_restore)) {
-				foreach ($this->entities_to_restore as $k => $v) {
+				foreach ($this->entities_to_restore as $v) {
 					if ('db' != $v) $s_val = 2;
 				}
 			}
@@ -5301,7 +5339,12 @@ ENDHERE;
 			UpdraftPlus_Options::update_updraft_option('updraft_include_more_path', array());
 			
 			$relevant_keys = $updraftplus->get_settings_keys();
-			
+
+			if (isset($settings['updraft_auto_updates']) && in_array('updraft_auto_updates', $relevant_keys)) {
+				$updraftplus->set_automatic_updates($settings['updraft_auto_updates']);
+				unset($settings['updraft_auto_updates']); // unset the key and its value to prevent being processed the second time
+			}
+
 			if (method_exists('UpdraftPlus_Options', 'mass_options_update')) {
 				$original_settings = $settings;
 				$settings = UpdraftPlus_Options::mass_options_update($settings);
@@ -5896,7 +5939,7 @@ ENDHERE;
 		
 		$output = '<select id="updraftplus_clone_'.$name.'_options" name="updraftplus_clone_'.$name.'_options" data-'.$name.'_version="'.$name_version.'">';
 
-		foreach ($data as $key => $value) {
+		foreach ($data as $value) {
 			$output .= "<option value=\"$value\" ";
 			if ($value == $name_version) $output .= 'selected="selected"';
 			$output .= ">".htmlspecialchars($value) . ($value == $name_version ? ' ' . __('(current version)', 'updraftplus') : '')."</option>\n";
