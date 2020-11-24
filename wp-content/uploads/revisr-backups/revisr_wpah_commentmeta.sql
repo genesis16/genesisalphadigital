@@ -25,7 +25,6 @@ CREATE TABLE `wpah_commentmeta` (
 
 LOCK TABLES `wpah_commentmeta` WRITE;
 /*!40000 ALTER TABLE `wpah_commentmeta` DISABLE KEYS */;
-INSERT INTO `wpah_commentmeta` VALUES (9,4305,'_wp_trash_meta_status','0'),(10,4305,'_wp_trash_meta_time','1605829413'),(11,4303,'_wp_trash_meta_status','0'),(12,4303,'_wp_trash_meta_time','1605829426');
 /*!40000 ALTER TABLE `wpah_commentmeta` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
