@@ -1,1 +1,0 @@
-<input class="bb-hidden" name="<?php if(isset($field['param_name'])) echo esc_attr($field['param_name']); ?>" type="hidden" value="<?php if(isset($field['value'])) echo esc_attr($field['value']); ?>" />
