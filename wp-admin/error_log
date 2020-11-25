@@ -1731,3 +1731,105 @@ Response:
 [24-Nov-2020 02:03:54 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
 [24-Nov-2020 02:04:39 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
 [24-Nov-2020 02:04:39 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 01:37:12 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 01:37:12 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 01:37:26 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 01:37:26 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 01:51:08 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 01:51:08 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 01:51:22 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 01:51:22 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 01:57:10 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 01:57:10 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 02:03:55 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 02:03:55 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 02:04:32 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 02:04:32 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 02:05:38 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 02:05:38 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 02:07:48 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 02:07:48 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 02:08:43 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 02:08:43 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 02:09:45 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 02:09:45 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 02:10:03 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 02:10:03 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 02:10:34 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 02:10:34 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 02:21:06 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 02:21:06 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 02:21:36 UTC] PHP Fatal error:  Uncaught Unauthorized. API Key Invalid. API key has been disabled
+
+Request: 
+GET https://us20.api.mailchimp.com/3.0/lists?count=5&offset=0&fields=total_items,lists.id,lists.name,lists.web_id,lists.stats.member_count
+
+
+Response: 
+401 Unauthorized
+{"type":"http://developer.mailchimp.com/documentation/mailchimp/guides/error-glossary/","title":"API Key Invalid","status":401,"detail":"API key has been disabled","instance":"2713d6bf-e8dd-429d-8f40-1fdfd3478f04"}
+  thrown in /home/theal029/public_html/wp-content/plugins/mailchimp-for-wordpress-master/includes/api/class-api-v3-client.php on line 201
+[25-Nov-2020 02:21:40 UTC] PHP Fatal error:  Uncaught Unauthorized. API Key Invalid. API key has been disabled
+
+Request: 
+GET https://us20.api.mailchimp.com/3.0/lists?count=5&offset=0&fields=total_items,lists.id,lists.name,lists.web_id,lists.stats.member_count
+
+
+Response: 
+401 Unauthorized
+{"type":"http://developer.mailchimp.com/documentation/mailchimp/guides/error-glossary/","title":"API Key Invalid","status":401,"detail":"API key has been disabled","instance":"33b227c8-9945-40af-b019-56a48c2b7dc5"}
+  thrown in /home/theal029/public_html/wp-content/plugins/mailchimp-for-wordpress-master/includes/api/class-api-v3-client.php on line 201
+[25-Nov-2020 03:04:32 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 03:04:32 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 03:07:34 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 03:07:34 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 03:07:40 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 03:07:40 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 03:08:07 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 03:08:07 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 03:08:48 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 03:08:48 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 03:12:17 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 03:12:17 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 03:12:20 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 03:12:20 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 03:14:20 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 03:14:20 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 03:14:42 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 03:14:42 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 03:16:49 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 03:16:49 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 04:27:24 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 04:27:24 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 04:51:13 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 04:51:13 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 04:53:32 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 04:53:32 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 04:54:21 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 04:54:21 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 04:55:46 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 04:55:46 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 04:57:15 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 04:57:15 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 04:57:33 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 04:57:33 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 04:58:57 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 04:58:57 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 04:59:52 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 04:59:52 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 05:00:23 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 05:00:23 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 05:00:34 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 05:00:34 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 05:00:37 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 05:00:37 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 05:05:34 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 05:05:34 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 05:06:59 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 05:06:59 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 05:07:15 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 05:07:15 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 05:11:42 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 05:11:42 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
+[25-Nov-2020 05:12:05 UTC] PHP Warning:  Illegal string offset 'id' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 197
+[25-Nov-2020 05:12:05 UTC] PHP Warning:  Illegal string offset 'name' in /home/theal029/public_html/wp-content/plugins/genesis-blocks/src/blocks/block-newsletter/includes/newsletter-functions.php on line 198
